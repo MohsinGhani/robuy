@@ -33,14 +33,16 @@
     align-items: center;
     padding: 10px;
     padding-right: 30px;
+    border: none !important;
   }
   .btn2 {
     width: 100%;
     display: flex;
     justify-content: center;
+    border: none !important;
   }
   .btn-group {
-    border: none;
+    border: none !important;
     color: #95a0a7;
     background: #eaeef0;
     border-radius: 16px;
@@ -56,6 +58,7 @@
     border: none;
     color: #95a0a7;
     border-radius: 14px;
+    border: none !important;
   }
   .nav-icon {
     margin-left: 10px;
