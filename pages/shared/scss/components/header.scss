@@ -99,23 +99,29 @@
   }
 
   @media only screen and (max-width: 426px) {
+    .btn-container {
+      width: 83%;
+      margin-left: 30px;
+    }
     .btn {
       display: none !important;
     }
     .btn-none {
+      width: 78% !important;
       display: block;
-      width: 100%;
       margin-top: 10px;
+      margin-left: 3rem !important;
     }
+
     .btn-group2 {
+      width: 28%;
       border: none;
       color: #95a0a7;
       border-radius: 16px;
-      margin-left: 5px;
       font-family: "Inter";
       font-style: normal;
       font-weight: 600;
-      font-size: 12px;
+      font-size: 10px;
       line-height: 160.02%;
     }
     .icon-container {
@@ -124,35 +130,46 @@
       justify-content: flex-end;
       margin-right: 20px;
     }
+    .btn-none {
+      width: 90%;
+      background: #eaeef0;
+      overflow: scroll;
+      margin-bottom: 20px;
+      border-radius: 16px;
+    }
+    .nav-icon2 {
+      margin-right: 7px;
+    }
   }
 
   @media only screen and (max-width: 391px) {
     .btn-container {
-      width: 90%;
-      overflow: hidden;
+      width: 85%;
+      margin-left: 10px;
+      background-color: red !important;
     }
     .icon-container {
       margin-left: 20px;
       margin-right: 0px !important;
     }
     .logo-container {
-      width: 30%;
+      width: 100%;
     }
     .btn-none {
       width: 90%;
       background: #eaeef0;
       overflow: scroll;
-      margin-left: 20px;
       margin-bottom: 20px;
-
       border-radius: 17px;
+      margin-left: 30px !important;
     }
     .btn-group2 {
-      width: 40%;
+      width: 30%;
       background-color: #fff;
       border-radius: 14px;
       margin: 3px;
     }
+
     .nav-icon2 {
       margin-right: 10px;
     }
