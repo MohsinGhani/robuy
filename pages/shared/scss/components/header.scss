@@ -1,0 +1,175 @@
+.container {
+  width: 100%;
+  margin-top: 10px;
+  background-color: transparent !important;
+  .MuiPaper-root {
+    background-color: transparent !important;
+    color: black;
+    box-shadow: none;
+  }
+  .btn-container {
+    width: 97%;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent !important;
+  }
+  .logo-container {
+    width: 28%;
+    display: flex;
+    align-items: center;
+  }
+  .logoName {
+    margin-left: 8px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+  }
+  .btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    padding-right: 30px;
+  }
+  .btn2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .btn-group {
+    border: none;
+    color: #95a0a7;
+    background: #eaeef0;
+    border-radius: 16px;
+    margin-left: 5px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 160.02%;
+  }
+  .btn-groupLast {
+    background-color: #fff;
+    border: none;
+    color: #95a0a7;
+    border-radius: 14px;
+  }
+  .nav-icon {
+    margin-left: 10px;
+    padding: 8px;
+  }
+  .icon-container {
+    width: 28%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .twiter-box {
+    padding-left: 20px;
+  }
+  .btn-last {
+    background: linear-gradient(
+        89.08deg,
+        #4095d2 0.84%,
+        #aa39d2 37.68%,
+        #c0537d 61.71%,
+        #d38c39 97.89%
+      ),
+      #8d00d0;
+    border-radius: 31px;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 160.02%;
+    padding: 10px 16px;
+    margin-left: 30px;
+  }
+  .btn-none {
+    display: none;
+    border-radius: 17px;
+  }
+
+  @media only screen and (max-width: 426px) {
+    .btn {
+      display: none !important;
+    }
+    .btn-none {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+    }
+    .btn-group2 {
+      border: none;
+      color: #95a0a7;
+      border-radius: 16px;
+      margin-left: 5px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 160.02%;
+    }
+    .icon-container {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 391px) {
+    .btn-container {
+      width: 90%;
+      overflow: hidden;
+    }
+    .icon-container {
+      margin-left: 20px;
+      margin-right: 0px !important;
+    }
+    .logo-container {
+      width: 30%;
+    }
+    .btn-none {
+      width: 90%;
+      background: #eaeef0;
+      overflow: scroll;
+      margin-left: 20px;
+      margin-bottom: 20px;
+
+      border-radius: 17px;
+    }
+    .btn-group2 {
+      width: 40%;
+      background-color: #fff;
+      border-radius: 14px;
+      margin: 3px;
+    }
+    .nav-icon2 {
+      margin-right: 10px;
+    }
+    .twiter-box {
+      padding-left: 10px;
+    }
+    .btn-last {
+      width: 20%;
+      font-size: 14px;
+    }
+    .css-iajp3t-MuiButtonGroup-root .MuiButtonGroup-grouped:not(:last-of-type) {
+      border-top-right-radius: none !important;
+      border-bottom-right-radius: none !important;
+      border-right-color: transparent;
+      border-radius: 14px;
+    }
+  }
+  @media only screen and (max-width: 376px) {
+    .icon-container {
+      margin-right: 2rem !important;
+    }
+  }
+}
