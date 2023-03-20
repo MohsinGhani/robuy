@@ -7,6 +7,32 @@
     max-width: 350px;
     display: flex;
   }
+  // .mera-card {
+  //   border: 1px solid red;
+  //   margin: 50px;
+  //   width: 616px;
+  //   height: 228px;
+
+  //   box-shadow: inset 0 -10px 10px -10px red,
+  //     /* top shadow */ inset 0 10px 10px -10px blue,
+  //     /* bottom shadow */ inset -10px 0 10px -10px yellow,
+  //     /* left shadow */ inset 10px 0 10px -10px green; /* right shadow */
+
+  // }
+  .robuychildcontainer {
+    box-shadow: -95px 0 9px -151px #6f2cff, -15px 0 10px -65px #8d00d0,
+      -69px 0 141px -94px #399acf, 97px 0 87px -109px #d2cc38;
+    margin-top: 20px;
+
+    .cardChild {
+      padding: 26px;
+      width: 578px;
+      box-shadow: none;
+      margin-left: 10px;
+      margin-top: 22px;
+    }
+  }
+
   .union {
     margin-top: 30px;
     display: flex;
@@ -26,17 +52,21 @@
     margin-top: 16px;
 
     .MuiButton-contained1 {
-      padding: 8px 12px;
+      padding: 5px 20px;
       gap: 8px;
 
       width: 54px;
       height: 35px;
+      margin-top: 6px;
 
       font-family: "Inter", sans-serif;
       color: white;
       background: #6f2cff;
       border-radius: 22px;
       margin-right: 10px;
+      @include sm {
+        margin-top: 5px;
+      }
     }
     .MuiButton-contained2 {
       align-items: center;
@@ -83,6 +113,12 @@
 
   .MuiPaper-root {
     border-radius: 16px;
+    // box-shadow: 99px 0 101px -70px rgba(255, 0, 0, 0.5),
+    //   99px 0 101px -70px rgba(0, 255, 0, 0.5),
+    //   99px 0 101px -70px rgba(0, 0, 255, 0.5),
+    //   99px 0 101px -70px rgba(255, 255, 0, 0.5);
+
+    border-radius: 15px;
     @include sm {
       max-width: 350px;
     }
@@ -155,13 +191,7 @@
         }
       }
     }
-    .cardChild {
-      padding: 26px;
-      width: 578px;
-      box-shadow: none;
-      margin-left: 10px;
-      margin-top: 22px;
-    }
+
     .header {
       @include sm {
         max-width: 256px;
@@ -342,13 +372,11 @@
       }
       .MuiTypography-subtitle1 {
         font-family: "Inter", sans-serif;
-        margin-left: 20px;
+        margin-left: 18px;
         font-weight: 600;
         font-size: 20px;
         line-height: 120%;
-
         color: #1d2123;
-
         margin-bottom: 20px;
       }
       .MuiTypography-subtitle2 {
@@ -366,8 +394,7 @@
       .MuiButtonBase-root {
         padding: 8px 12px;
         gap: 8px;
-        margin-left: 22px;
-
+        margin-left: 15px;
         background: #ffffff;
         border-radius: 22px;
         font-family: "Inter", sans-serif;
@@ -377,7 +404,6 @@
         background: rgba(141, 0, 208, 0.1);
         color: #8d00d0;
         margin-bottom: 30px;
-
         margin-top: 20px;
       }
     }

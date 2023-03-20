@@ -19,8 +19,10 @@ const Robuy = () => {
   return (
     <>
       <Header />
+
+      <div className=" "></div>
       <div className="robuyContainer">
-        <Card sx={{ maxWidth: 658 }}>
+        <Card className="robuychildcontainer" sx={{ maxWidth: 658 }}>
           <Card className="cardChild">
             <div className="header">
               <div className="headerChild">
