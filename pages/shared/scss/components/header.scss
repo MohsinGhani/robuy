@@ -99,24 +99,42 @@
   }
 
   @media only screen and (max-width: 426px) {
+    .btn-container {
+      width: 82%;
+      margin-left: 30px;
+    }
     .btn {
       display: none !important;
     }
     .btn-none {
+      max-width: 90% !important;
       display: block;
-      width: 100%;
+      background: #eaeef0;
       margin-top: 10px;
+      margin-left: 3rem !important;
+      overflow: scroll;
+      margin-bottom: 20px;
     }
+
     .btn-group2 {
+      width: 28%;
       border: none;
       color: #95a0a7;
       border-radius: 16px;
-      margin-left: 5px;
       font-family: "Inter";
       font-style: normal;
       font-weight: 600;
-      font-size: 12px;
+      font-size: 10px;
       line-height: 160.02%;
+      background-color: #fff;
+      border-radius: 14px;
+      margin: 3px;
+    }
+    .MuiButtonGroup-grouped:not(:last-of-type) {
+      border-top-right-radius: none !important;
+      border-bottom-right-radius: none !important;
+      border-right-color: transparent;
+      border-radius: 14px;
     }
     .icon-container {
       width: 100%;
@@ -124,35 +142,39 @@
       justify-content: flex-end;
       margin-right: 20px;
     }
+    .nav-icon2 {
+      margin-right: 7px;
+    }
   }
 
   @media only screen and (max-width: 391px) {
     .btn-container {
-      width: 90%;
-      overflow: hidden;
+      width: 85%;
+      margin-left: 10px;
     }
     .icon-container {
       margin-left: 20px;
       margin-right: 0px !important;
     }
     .logo-container {
-      width: 30%;
+      width: 100%;
     }
     .btn-none {
-      width: 90%;
+      max-width: 90% !important;
+      display: block;
       background: #eaeef0;
+      margin-top: 10px;
       overflow: scroll;
-      margin-left: 20px;
       margin-bottom: 20px;
-
-      border-radius: 17px;
+      margin-left: 25px !important;
     }
     .btn-group2 {
-      width: 40%;
+      width: 30%;
       background-color: #fff;
       border-radius: 14px;
       margin: 3px;
     }
+
     .nav-icon2 {
       margin-right: 10px;
     }
@@ -163,7 +185,7 @@
       width: 20%;
       font-size: 14px;
     }
-    .css-iajp3t-MuiButtonGroup-root .MuiButtonGroup-grouped:not(:last-of-type) {
+    .MuiButtonGroup-grouped:not(:last-of-type) {
       border-top-right-radius: none !important;
       border-bottom-right-radius: none !important;
       border-right-color: transparent;
@@ -171,8 +193,16 @@
     }
   }
   @media only screen and (max-width: 376px) {
+    .btn-container {
+      width: 95%;
+    }
+
     .icon-container {
       margin-right: 2rem !important;
+    }
+    .btn-none {
+      max-width: 90% !important;
+      overflow: scroll !important;
     }
   }
 }
