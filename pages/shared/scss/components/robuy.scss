@@ -62,7 +62,7 @@
       font-family: "Inter", sans-serif;
       color: white;
       background: #6f2cff;
-      border-radius: 22px;
+      border-radius: 22px !important;
       margin-right: 10px;
       @include sm {
         margin-top: 5px;
@@ -80,7 +80,7 @@
       margin-right: 10px;
 
       background: #ffffff;
-      border-radius: 22px;
+      border-radius: 22px !important;
     }
     .MuiButton-contained3 {
       align-items: center;
@@ -94,7 +94,7 @@
       margin-right: 10px;
 
       background: #ffffff;
-      border-radius: 22px;
+      border-radius: 22px !important;
     }
     .MuiButton-contained4 {
       align-items: center;
@@ -107,7 +107,7 @@
       margin-right: 10px;
 
       background: #ffffff;
-      border-radius: 22px;
+      border-radius: 22px !important;
     }
   }
 
