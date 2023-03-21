@@ -31,21 +31,21 @@ export default function Header() {
 
           <Box className="btn">
             <ButtonGroup className="btn2">
-              <Button className="btn-group">
+              <Button className="btn-group1">
                 {" "}
                 <Image className="nav-icon" src={images.coin} />
                 Купить робуксы
               </Button>
-              <Button className="btn-group">
+              <Button className="btn-group2">
                 {" "}
                 <Image className="nav-icon" src={images.union} />
                 Бесплатно
               </Button>
-              <Button className="btn-group">
+              <Button className="btn-group3">
                 {" "}
                 <Image className="nav-icon" src={images.subtract} /> Мои Покупки
               </Button>
-              <Button className="btn-group">
+              <Button className="btn-group4">
                 {" "}
                 <Image className="nav-icon" src={images.vector3} /> Промокод
               </Button>

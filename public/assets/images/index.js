@@ -4,7 +4,7 @@ import Roblox from "./Roblox.png";
 import Vector from "./Vector.png";
 import logo from "./logo.png";
 import twiter from "./twiter.png";
-import coin from "./coin.png";
+import coin from "./coin.svg";
 import union from "./union.png";
 import subtract from "./subtract.png";
 import vector3 from "./vector3.png";

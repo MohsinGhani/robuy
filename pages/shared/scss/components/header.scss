@@ -53,6 +53,58 @@
     font-size: 12px;
     line-height: 160.02%;
   }
+  .btn-group1 {
+    border: none !important;
+    color: #95a0a7;
+    background: #eaeef0;
+    border-radius: 16px;
+    margin-left: 5px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 160.02%;
+  }
+  .btn-group2 {
+    border: none !important;
+    color: #95a0a7;
+    background: #eaeef0;
+    border-radius: 16px;
+    margin-left: 5px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 160.02%;
+    @include sm {
+      max-width: 390px !important;
+      color: #000 !important;
+    }
+  }
+  .btn-group3 {
+    border: none !important;
+    color: #95a0a7;
+    background: #eaeef0;
+    border-radius: 16px;
+    margin-left: 5px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 160.02%;
+  }
+  .btn-group4 {
+    border: none !important;
+    color: #95a0a7;
+    background: #eaeef0;
+    border-radius: 16px;
+    margin-left: 5px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 160.02%;
+  }
   .btn-groupLast {
     background-color: #fff;
     border: none;
@@ -177,6 +229,10 @@
 
     .nav-icon2 {
       margin-right: 10px;
+      @include sm {
+        max-width: 390px !important;
+        color: #000 !important;
+      }
     }
     .twiter-box {
       padding-left: 10px;

@@ -20,73 +20,75 @@ const RobuySecondPage = () => {
     <>
       <Header />
       <div className="robuySecondContainer">
-        <Card sx={{ maxWidth: 658 }}>
-          <img src={"/assets/images/image.svg"} alt="Edit Icon" />
-          <div className="robuySecConChild">
-            <div className="header">
-              <div className="headerChild">
-                <Typography variant="subtitle2">Блог Robuy</Typography>
-                <Typography variant="subtitle1">
-                  Новости и обновления
-                </Typography>
-              </div>
-              <Button>Подписаться</Button>
-            </div>
-            <CardContent>
-              <div className="buttonParent">
-                <Button variant="contained2">Последняя новость</Button>
-                <Button variant="contained1">Обновления</Button>
-              </div>
-              <div className="text">
-                <Typography variant="body2">
-                  В 2022 году в Roblox ежедневно заходили 56 миллионов игроков
-                </Typography>
-                <Typography variant="body1">
-                  Основатель и генеральный директор Roblox Corporation Дэвид
-                  Башуки опубликовал открытое письмо к геймерам, в котором
-                  похвастался значительным ростом популярности. По его словам, в
-                  2022 году число ежедневных посетителей Roblox выросло на 23% и
-                  составило свыше 56 млн игроков:
-                </Typography>
-              </div>
-            </CardContent>
-            <div className="textCard">
-              <Card>
-                <Typography variant="body1">
-                  Инвестиции, которые мы делаем для расширения вовлеченности в
-                  Roblox в разных{" "}
-                  <b>
-                    географических регионах и возрастных группах, приносят
-                    своиплоды.{" "}
-                  </b>
-                  В 2022 году наше сообщество выросло на 23% и превысило 56
-                  миллионов ежедневных пользователей по всему миру. Наши
-                  пользователи провели более 49.3 миллиардов часов вместе,
-                  создавая, играя, исследуя, обучаясь и общаясь. Сегодня более
-                  половины пользователей Roblox — это люди от 13 лет и старше,
-                  что свидетельствует о привлекательности нашей платформы для
-                  широкого круга аудитории.
-                </Typography>
-              </Card>
-            </div>
-            <div className="content">
-              <Typography variant="body1">
-                Заодно Дэвид сообщил, что студия прикладывает все возможные
-                усилия для обеспечения безопасной и комфортной игры:
-              </Typography>
+        <div className="robuyProject">
+          <Card sx={{ maxWidth: 658 }}>
+            <img src={"/assets/images/image.svg"} alt="Edit Icon" />
 
-              <Typography variant="body1">
-                Поскольку сообщество Roblox продолжает расти, мы уделяем большое
-                внимание обеспечению безопасной среды для наших пользователей.
-                За последний год мы увеличили наши инвестиции в ИИ и машинное
-                обучение для автономного обнаружения и предотвращения попыток
-                игроков вступить во вредоносные связи или загрузить вредоносный
-                контент.
-              </Typography>
-            </div>
-          </div>
-        </Card>
+            <div className="robuySecConChild">
+              <div className="header">
+                <div className="headerChild">
+                  <Typography variant="subtitle2">Блог Robuy</Typography>
+                  <Typography variant="subtitle1">
+                    Новости и обновления
+                  </Typography>
+                </div>
+                <Button>Подписаться</Button>
+              </div>
+              <CardContent>
+                <div className="buttonParent">
+                  <Button variant="contained2">Последняя новость</Button>
+                  <Button variant="contained1">Обновления</Button>
+                </div>
+                <div className="text">
+                  <Typography variant="body2">
+                    В 2022 году в Roblox ежедневно заходили 56 миллионов игроков
+                  </Typography>
+                  <Typography variant="body1">
+                    Основатель и генеральный директор Roblox Corporation Дэвид
+                    Башуки опубликовал открытое письмо к геймерам, в котором
+                    похвастался значительным ростом популярности. По его словам,
+                    в 2022 году число ежедневных посетителей Roblox выросло на
+                    23% и составило свыше 56 млн игроков:
+                  </Typography>
+                </div>
+              </CardContent>
+              <div className="textCard">
+                <Card>
+                  <Typography variant="body1">
+                    Инвестиции, которые мы делаем для расширения вовлеченности в
+                    Roblox в разных{" "}
+                    <b>
+                      географических регионах и возрастных группах, приносят
+                      своиплоды.{" "}
+                    </b>
+                    В 2022 году наше сообщество выросло на 23% и превысило 56
+                    миллионов ежедневных пользователей по всему миру. Наши
+                    пользователи провели более 49.3 миллиардов часов вместе,
+                    создавая, играя, исследуя, обучаясь и общаясь. Сегодня более
+                    половины пользователей Roblox — это люди от 13 лет и старше,
+                    что свидетельствует о привлекательности нашей платформы для
+                    широкого круга аудитории.
+                  </Typography>
+                </Card>
+              </div>
+              <div className="content">
+                <Typography variant="body1">
+                  Заодно Дэвид сообщил, что студия прикладывает все возможные
+                  усилия для обеспечения безопасной и комфортной игры:
+                </Typography>
 
+                <Typography variant="body1">
+                  Поскольку сообщество Roblox продолжает расти, мы уделяем
+                  большое внимание обеспечению безопасной среды для наших
+                  пользователей. За последний год мы увеличили наши инвестиции в
+                  ИИ и машинное обучение для автономного обнаружения и
+                  предотвращения попыток игроков вступить во вредоносные связи
+                  или загрузить вредоносный контент.
+                </Typography>
+              </div>
+            </div>
+          </Card>
+        </div>
         <div className="union">
           <Typography>
             <svg
