@@ -223,7 +223,7 @@
     .btn-group2 {
       width: 30%;
       background-color: #fff;
-      border-radius: 14px;
+      border-radius: 14px !important;
       margin: 3px;
     }
 
@@ -240,6 +240,7 @@
     .btn-last {
       width: 20%;
       font-size: 14px;
+      margin-left: 10px;
     }
     .MuiButtonGroup-grouped:not(:last-of-type) {
       border-top-right-radius: none !important;
