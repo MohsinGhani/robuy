@@ -518,6 +518,10 @@
               border-right-color: transparent;
               border-bottom-color: #eaeef0;
               border-left-color: #eaeef0;
+              @include sm {
+                top: -7px;
+                left: -30px;
+              }
             }
             .box4 {
               margin-top: 150px;
@@ -534,6 +538,10 @@
               border-right-color: #eaeef0;
               border-bottom-color: #eaeef0;
               border-left-color: transparent;
+              @include sm {
+                top: -7px;
+                right: -30px;
+              }
             }
           }
         }

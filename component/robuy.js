@@ -61,8 +61,10 @@ const Robuy = () => {
         </div>
 
         <div className="union">
-          <Typography></Typography>
-          <Typography>Посты блога</Typography>
+          <Typography>
+            <Image src={images.union2} />
+          </Typography>
+          <Typography> Посты блога</Typography>
         </div>
         <ButtonGroup>
           <Button variant="contained1">Все</Button>
