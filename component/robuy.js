@@ -1,8 +1,7 @@
 import React from "react";
-import Card from "@mui/material/Card";
 
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
+
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
@@ -13,6 +12,8 @@ import { ButtonGroup } from "@mui/material";
 import Image from "next/image";
 import { Box, useTheme } from "@mui/system";
 import Header from "./header";
+import CommonCard from "./commonCard";
+import Card from "@mui/material/Card";
 
 const Robuy = () => {
   const theme = useTheme();
@@ -75,54 +76,7 @@ const Robuy = () => {
         {/* <img src={icon} alt="Edit Icon" /> */}
 
         <div className="cardParent">
-          <div className="parentChild">
-            <Card sx={{ maxWidth: 320 }}>
-              {/* <img src={"/assets/images/miltroen.svg"} alt="Edit Icon" /> */}
-              {/* <img src={images.milto} alt="Edit Icon" /> */}
-              <div className="imgButton">
-                <Image src={images.milto} />
-                <Button variant="contained3">Новости</Button>
-              </div>
-
-              <CardContent className="firstCard">
-                <div className="box">
-                  <div className="box1"></div>
-                  <div className="box2"></div>
-                  <div className="box3"></div>
-                  <div className="box4"></div>
-                  <Typography variant="h5">
-                    Подростка в Сингапуре задержали за игру на ИГИЛ-сервере
-                    Roblox
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Правоохранительные органы Сингапура задержал...
-                  </Typography>
-                </div>
-              </CardContent>
-            </Card>
-            <Card sx={{ maxWidth: 320 }}>
-              <div className="imgButton">
-                <Image src={images.dragon} />
-                <Button variant="contained4">Игры</Button>
-              </div>
-
-              <CardContent className="secondCard">
-                <div className="box">
-                  <div className="box1"></div>
-                  <div className="box2"></div>
-                  <div className="box3"></div>
-                  <div className="box4"></div>
-                  <Typography variant="h5">
-                    Созданный в Roblox сурвайвал Creatures of Sonaria получит
-                    сериальную адаптацию
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Компания Wind Sun Sky Entertainment, которую возглавл...
-                  </Typography>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+          <CommonCard />
           <div className="virticalCard">
             <Card sx={{ display: "flex" }}>
               <Image src={images.Roblox} />
@@ -146,53 +100,6 @@ const Robuy = () => {
                   </div>
                 </CardContent>
               </Box>
-            </Card>
-          </div>
-          <div className="parentChild2">
-            <Card sx={{ maxWidth: 320 }}>
-              {/* <img src={"/assets/images/miltroen.svg"} alt="Edit Icon" /> */}
-              {/* <img src={images.milto} alt="Edit Icon" /> */}
-              <div className="imgButton">
-                <Image src={images.rolboxpapa} />
-                <Button variant="contained3">Новости</Button>
-              </div>
-
-              <CardContent className="firstChild">
-                <div className="box">
-                  <div className="box1"></div>
-                  <div className="box2"></div>
-                  <div className="box3"></div>
-                  <div className="box4"></div>
-                  <Typography variant="h5">
-                    Разработчики Roblox изменили звуковой эффект "Oof" из-за...
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Правоохранительные органы Сингапура задержал...
-                  </Typography>
-                </div>
-              </CardContent>
-            </Card>
-            <Card sx={{ maxWidth: 320 }}>
-              <div className="imgButton">
-                <Image src={images.cambro} />
-                <Button variant="contained4">Новости</Button>
-              </div>
-
-              <CardContent className="secondChild">
-                <div className="box">
-                  <div className="box1"></div>
-                  <div className="box2"></div>
-                  <div className="box3"></div>
-                  <div className="box4"></div>
-                  <Typography variant="h5">
-                    Созданный в Roblox сурвайвал Creatures of Sonaria получит
-                    сериальную адаптацию
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Компания Wind Sun Sky Entertainment, которую возглавл...
-                  </Typography>
-                </div>
-              </CardContent>
             </Card>
           </div>
         </div>

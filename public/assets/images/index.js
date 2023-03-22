@@ -8,6 +8,7 @@ import coin from "./coin.svg";
 import union from "./union.png";
 import subtract from "./subtract.png";
 import vector3 from "./vector3.png";
+import vector4 from "./vector4.svg";
 import union2 from "./union2.png";
 
 import rolboxpapa from "./rolboxPapa.png";
@@ -27,4 +28,5 @@ export default {
   union2,
   rolboxpapa,
   cambro,
+  vector4,
 };

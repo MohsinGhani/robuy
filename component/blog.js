@@ -13,6 +13,7 @@ import { ButtonGroup } from "@mui/material";
 import Image from "next/image";
 import { Box, useTheme } from "@mui/system";
 import Header from "./header";
+import CommonCard from "./commonCard";
 
 const RobuySecondPage = () => {
   const theme = useTheme();
@@ -25,66 +26,73 @@ const RobuySecondPage = () => {
             <img src={"/assets/images/image.svg"} alt="Edit Icon" />
 
             <div className="robuySecConChild">
-              <div className="header">
-                <div className="headerChild">
-                  <Typography variant="subtitle2">Блог Robuy</Typography>
-                  <Typography variant="subtitle1">
-                    Новости и обновления
-                  </Typography>
+              <div className="box">
+                <div className="box1"></div>
+                <div className="box2"></div>
+                <div className="box3"></div>
+                <div className="box4"></div>
+                <div className="header">
+                  <div className="headerChild">
+                    <Typography variant="subtitle2">Блог Robuy</Typography>
+                    <Typography variant="subtitle1">
+                      Новости и обновления
+                    </Typography>
+                  </div>
+                  <Button>Подписаться</Button>
                 </div>
-                <Button>Подписаться</Button>
-              </div>
-              <CardContent>
-                <div className="buttonParent">
-                  <Button variant="contained2">Последняя новость</Button>
-                  <Button variant="contained1">Обновления</Button>
+                <CardContent>
+                  <div className="buttonParent">
+                    <Button variant="contained2">Последняя новость</Button>
+                    <Button variant="contained1">Обновления</Button>
+                  </div>
+                  <div className="text">
+                    <Typography variant="body2">
+                      В 2022 году в Roblox ежедневно заходили 56 миллионов
+                      игроков
+                    </Typography>
+                    <Typography variant="body1">
+                      Основатель и генеральный директор Roblox Corporation Дэвид
+                      Башуки опубликовал открытое письмо к геймерам, в котором
+                      похвастался значительным ростом популярности. По его
+                      словам, в 2022 году число ежедневных посетителей Roblox
+                      выросло на 23% и составило свыше 56 млн игроков:
+                    </Typography>
+                  </div>
+                </CardContent>
+                <div className="textCard">
+                  <Card>
+                    <Typography variant="body1">
+                      Инвестиции, которые мы делаем для расширения вовлеченности
+                      в Roblox в разных{" "}
+                      <b>
+                        географических регионах и возрастных группах, приносят
+                        своиплоды.{" "}
+                      </b>
+                      В 2022 году наше сообщество выросло на 23% и превысило 56
+                      миллионов ежедневных пользователей по всему миру. Наши
+                      пользователи провели более 49.3 миллиардов часов вместе,
+                      создавая, играя, исследуя, обучаясь и общаясь. Сегодня
+                      более половины пользователей Roblox — это люди от 13 лет и
+                      старше, что свидетельствует о привлекательности нашей
+                      платформы для широкого круга аудитории.
+                    </Typography>
+                  </Card>
                 </div>
-                <div className="text">
-                  <Typography variant="body2">
-                    В 2022 году в Roblox ежедневно заходили 56 миллионов игроков
-                  </Typography>
+                <div className="content">
                   <Typography variant="body1">
-                    Основатель и генеральный директор Roblox Corporation Дэвид
-                    Башуки опубликовал открытое письмо к геймерам, в котором
-                    похвастался значительным ростом популярности. По его словам,
-                    в 2022 году число ежедневных посетителей Roblox выросло на
-                    23% и составило свыше 56 млн игроков:
+                    Заодно Дэвид сообщил, что студия прикладывает все возможные
+                    усилия для обеспечения безопасной и комфортной игры:
                   </Typography>
-                </div>
-              </CardContent>
-              <div className="textCard">
-                <Card>
-                  <Typography variant="body1">
-                    Инвестиции, которые мы делаем для расширения вовлеченности в
-                    Roblox в разных{" "}
-                    <b>
-                      географических регионах и возрастных группах, приносят
-                      своиплоды.{" "}
-                    </b>
-                    В 2022 году наше сообщество выросло на 23% и превысило 56
-                    миллионов ежедневных пользователей по всему миру. Наши
-                    пользователи провели более 49.3 миллиардов часов вместе,
-                    создавая, играя, исследуя, обучаясь и общаясь. Сегодня более
-                    половины пользователей Roblox — это люди от 13 лет и старше,
-                    что свидетельствует о привлекательности нашей платформы для
-                    широкого круга аудитории.
-                  </Typography>
-                </Card>
-              </div>
-              <div className="content">
-                <Typography variant="body1">
-                  Заодно Дэвид сообщил, что студия прикладывает все возможные
-                  усилия для обеспечения безопасной и комфортной игры:
-                </Typography>
 
-                <Typography variant="body1">
-                  Поскольку сообщество Roblox продолжает расти, мы уделяем
-                  большое внимание обеспечению безопасной среды для наших
-                  пользователей. За последний год мы увеличили наши инвестиции в
-                  ИИ и машинное обучение для автономного обнаружения и
-                  предотвращения попыток игроков вступить во вредоносные связи
-                  или загрузить вредоносный контент.
-                </Typography>
+                  <Typography variant="body1">
+                    Поскольку сообщество Roblox продолжает расти, мы уделяем
+                    большое внимание обеспечению безопасной среды для наших
+                    пользователей. За последний год мы увеличили наши инвестиции
+                    в ИИ и машинное обучение для автономного обнаружения и
+                    предотвращения попыток игроков вступить во вредоносные связи
+                    или загрузить вредоносный контент.
+                  </Typography>
+                </div>
               </div>
             </div>
           </Card>
@@ -117,93 +125,32 @@ const RobuySecondPage = () => {
         {/* <img src={icon} alt="Edit Icon" /> */}
 
         <div className="cardParent">
-          <div className="parentChild">
-            <Card sx={{ maxWidth: 320 }}>
-              {/* <img src={"/assets/images/miltroen.svg"} alt="Edit Icon" /> */}
-              {/* <img src={images.milto} alt="Edit Icon" /> */}
-              <div className="imgButton">
-                <Image src={images.milto} />
-                <Button variant="contained3">Новости</Button>
-              </div>
-
-              <CardContent>
-                <Typography variant="h5">
-                  Подростка в Сингапуре задержали за игру на ИГИЛ-сервере Roblox
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Правоохранительные органы Сингапура задержал...
-                </Typography>
-              </CardContent>
-            </Card>
-            <Card className="card2" sx={{ maxWidth: 320 }}>
-              <div className="imgButton">
-                <Image src={images.dragon} />
-                <Button variant="contained4">Игры</Button>
-              </div>
-
-              <CardContent>
-                <Typography variant="h5">
-                  Созданный в Roblox сурвайвал Creatures of Sonaria получит
-                  сериальную адаптацию
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Компания Wind Sun Sky Entertainment, которую возглавл...
-                </Typography>
-              </CardContent>
-            </Card>
-          </div>
+          <CommonCard />
           <div className="virticalCard">
             <Card sx={{ display: "flex" }}>
-              <Image src={images.Roblox} />
+              <div className="image">
+                <Image className="images" src={images.vector4} />
+              </div>
               <Box sx={{ display: "flex", flexDirection: "column" }}>
                 <CardContent sx={{ flex: "1 0 auto" }}>
-                  <Button variant="contained4">Игры</Button>
-                  <Typography variant="subtitle1">
-                    Roblox получила обновление графики
-                  </Typography>
-                  <Typography variant="subtitle2">
-                    Разработчики Roblox, одной из самых популярных песочниц в
-                    мире, выпустили обновление с различными графическими
-                    улучшениями. Патч подтянул текстуры всех материалов игры:
-                    Этим релизом мы улучшили визуальное...
-                  </Typography>
+                  <div className="box">
+                    <div className="box1"></div>
+                    <div className="box2"></div>
+                    <div className="box3"></div>
+                    <div className="box4"></div>
+                    <Button variant="contained4">Игры</Button>
+                    <Typography variant="subtitle1">
+                      Roblox получила обновление графики
+                    </Typography>
+                    <Typography variant="subtitle2">
+                      Разработчики Roblox, одной из самых популярных песочниц в
+                      мире, выпустили обновление с различными графическими
+                      улучшениями. Патч подтянул текстуры всех материалов игры:
+                      Этим релизом мы улучшили визуальное...
+                    </Typography>
+                  </div>
                 </CardContent>
               </Box>
-            </Card>
-          </div>
-          <div className="parentChild2">
-            <Card sx={{ maxWidth: 320 }}>
-              {/* <img src={"/assets/images/miltroen.svg"} alt="Edit Icon" /> */}
-              {/* <img src={images.milto} alt="Edit Icon" /> */}
-              <div className="imgButton">
-                <Image src={images.rolboxpapa} />
-                <Button variant="contained3">Новости</Button>
-              </div>
-
-              <CardContent>
-                <Typography variant="h5">
-                  Разработчики Roblox изменили звуковой эффект "Oof" из-за...
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Правоохранительные органы Сингапура задержал...
-                </Typography>
-              </CardContent>
-            </Card>
-            <Card sx={{ maxWidth: 320 }}>
-              <div className="imgButton">
-                <Image src={images.cambro} />
-                <Button variant="contained4">Новости</Button>
-              </div>
-
-              <CardContent>
-                <Typography variant="h5">
-                  Созданный в Roblox сурвайвал Creatures of Sonaria получит
-                  сериальную адаптацию
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Компания Wind Sun Sky Entertainment, которую возглавл...
-                </Typography>
-              </CardContent>
             </Card>
           </div>
         </div>

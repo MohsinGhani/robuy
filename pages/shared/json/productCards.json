@@ -2,24 +2,35 @@
   "products": [
     {
       "key": 0,
-      "title": "Professional Indemnity",
-      "image": "/assets/images/Management_Liability.jpg",
+      "title": "Разработчики Roblox изменили звуковой эффект Oof из-за...",
+      "image": "/public/assets/images/Management_Liability.jpg",
       "alt": "Professional Indemnity",
-      "selected": false
+      "selected": false,
+      "decription": "Правоохранительные органы Сингапура задержал..."
     },
     {
       "key": 1,
-      "title": "Management liability",
+      "title": "Разработчики Roblox изменили звуковой эффект Oof из-за...",
       "image": "/assets/images/pro_indemnity.svg",
       "alt": "Management liability",
-      "selected": false
+      "selected": false,
+      "decription": "Правоохранительные органы Сингапура задержал..."
     },
     {
       "key": 2,
-      "title": "Cyber Liability",
-      "image": "/assets/images/cyber_liability.svg",
-      "alt": "Cyber Liability",
-      "selected": false
+      "title": "Разработчики Roblox изменили звуковой эффект Oof из-за...",
+      "image": "/assets/images/pro_indemnity.svg",
+      "alt": "Management liability",
+      "selected": false,
+      "decription": "Правоохранительные органы Сингапура задержал..."
+    },
+    {
+      "key": 3,
+      "title": "Разработчики Roblox изменили звуковой эффект Oof из-за...",
+      "image": "/assets/images/pro_indemnity.svg",
+      "alt": "Management liability",
+      "selected": false,
+      "decription": "Правоохранительные органы Сингапура задержал..."
     }
   ],
   "moreProducts": [

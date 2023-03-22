@@ -9,6 +9,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap");
 
 .robuySecondContainer {
+  max-width: 680px;
   @include sm {
     max-width: 393px;
     display: flex;
@@ -19,6 +20,73 @@
     margin-top: 20px;
   }
   .robuySecConChild {
+    .box {
+      position: relative;
+      margin: 8px;
+      .box1 {
+        border-style: solid;
+        border-width: 2px;
+        height: 15px;
+        width: 15px;
+        border-top-left-radius: 13px;
+        position: absolute;
+        top: -27px;
+        left: -29px;
+        border-color: transparent;
+        border-top-color: #eaeef0;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: #eaeef0;
+      }
+
+      .box2 {
+        border-style: solid;
+        border-width: 2px;
+        height: 15px;
+        width: 15px;
+        border-top-right-radius: 13px;
+        position: absolute;
+        top: -27px;
+        right: -29px;
+        border-color: transparent;
+        border-top-color: #eaeef0;
+        border-right-color: #eaeef0;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+      }
+      .box3 {
+        margin-top: 150px;
+        border-style: solid;
+        border-width: 2px;
+        height: 15px;
+        width: 15px;
+        border-bottom-left-radius: 13px;
+        position: absolute;
+        bottom: -22px;
+        left: -29px;
+        border-color: transparent;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: #eaeef0;
+        border-left-color: #eaeef0;
+      }
+      .box4 {
+        margin-top: 150px;
+        border-style: solid;
+        border-width: 2px;
+        height: 15px;
+        width: 15px;
+        border-bottom-right-radius: 13px;
+        position: absolute;
+        bottom: -22px;
+        right: -29px;
+        border-color: transparent;
+        border-top-color: transparent;
+        border-right-color: #eaeef0;
+        border-bottom-color: #eaeef0;
+        border-left-color: transparent;
+      }
+    }
     .content {
       margin-left: 10px;
 
@@ -90,11 +158,11 @@
   }
 
   .MuiButtonGroup-root {
-    margin-right: 10px;
     margin-top: 16px;
     @include sm {
       margin-left: 10px;
     }
+
     .MuiButton-contained1 {
       padding: 8px 12px;
       gap: 8px;
@@ -285,6 +353,81 @@
   }
   .cardParent {
     display: flex;
+    .productCard_container {
+      max-width: 658px;
+      flex-wrap: wrap;
+      display: flex;
+      justify-content: space-between;
+      .firstCard {
+        .box {
+          position: relative;
+          margin: 8px;
+          .box1 {
+            border-style: solid;
+            border-width: 2px;
+            height: 15px;
+            width: 15px;
+            border-top-left-radius: 13px;
+            position: absolute;
+            top: -30px;
+            left: -29px;
+            border-color: transparent;
+            border-top-color: #eaeef0;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            border-left-color: #eaeef0;
+          }
+
+          .box2 {
+            border-style: solid;
+            border-width: 2px;
+            height: 15px;
+            width: 15px;
+            border-top-right-radius: 13px;
+            position: absolute;
+            top: -30px;
+            right: -29px;
+            border-color: transparent;
+            border-top-color: #eaeef0;
+            border-right-color: #eaeef0;
+            border-bottom-color: transparent;
+            border-left-color: transparent;
+          }
+          .box3 {
+            margin-top: 150px;
+            border-style: solid;
+            border-width: 2px;
+            height: 15px;
+            width: 15px;
+            border-bottom-left-radius: 13px;
+            position: absolute;
+            bottom: -30px;
+            left: -29px;
+            border-color: transparent;
+            border-top-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: #eaeef0;
+            border-left-color: #eaeef0;
+          }
+          .box4 {
+            margin-top: 150px;
+            border-style: solid;
+            border-width: 2px;
+            height: 15px;
+            width: 15px;
+            border-bottom-right-radius: 13px;
+            position: absolute;
+            bottom: -30px;
+            right: -29px;
+            border-color: transparent;
+            border-top-color: transparent;
+            border-right-color: #eaeef0;
+            border-bottom-color: #eaeef0;
+            border-left-color: transparent;
+          }
+        }
+      }
+    }
     .parentChild {
       display: flex;
       justify-content: space-between;
@@ -365,9 +508,9 @@
         }
       }
       margin-top: 16px;
+
       .MuiCardContent-root {
         padding: 30px;
-
         .MuiTypography-h5 {
           font-family: "Inter", sans-serif;
 
@@ -392,26 +535,98 @@
     }
   }
   .virticalCard {
-    margin-top: 15px;
     max-width: 659px;
-
+    .image {
+      width: 516px;
+      border-radius: 54px;
+      .images {
+      }
+    }
+    @include sm {
+      display: none;
+    }
     .MuiPaper-root {
       width: 100%;
-      @include sm {
-        display: none;
-      }
       .MuiCardContent-root {
         padding: 5px;
+
+        .box {
+          position: relative;
+          margin: 2px;
+          margin-right: 0px;
+
+          .box1 {
+            border-style: solid;
+            border-width: 2px;
+            height: 15px;
+            width: 15px;
+            border-top-left-radius: 13px;
+            position: absolute;
+            top: 0px;
+            left: 1px;
+            border-color: transparent;
+            border-top-color: #eaeef0;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            border-left-color: #eaeef0;
+          }
+
+          .box2 {
+            border-style: solid;
+            border-width: 2px;
+            height: 15px;
+            width: 15px;
+            border-top-right-radius: 13px;
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            border-color: transparent;
+            border-top-color: #eaeef0;
+            border-right-color: #eaeef0;
+            border-bottom-color: transparent;
+            border-left-color: transparent;
+          }
+          .box3 {
+            margin-top: 150px;
+            border-style: solid;
+            border-width: 2px;
+            height: 15px;
+            width: 15px;
+            border-bottom-left-radius: 13px;
+            position: absolute;
+            bottom: -18px;
+            left: 0px;
+            border-color: transparent;
+            border-top-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: #eaeef0;
+            border-left-color: #eaeef0;
+          }
+          .box4 {
+            margin-top: 150px;
+            border-style: solid;
+            border-width: 2px;
+            height: 15px;
+            width: 15px;
+            border-bottom-right-radius: 13px;
+            position: absolute;
+            bottom: -18px;
+            right: 4px;
+            border-color: transparent;
+            border-top-color: transparent;
+            border-right-color: #eaeef0;
+            border-bottom-color: #eaeef0;
+            border-left-color: transparent;
+          }
+        }
       }
       .MuiTypography-subtitle1 {
         font-family: "Inter", sans-serif;
-
+        margin-left: 18px;
         font-weight: 600;
         font-size: 20px;
         line-height: 120%;
-        margin-left: 24px;
         color: #1d2123;
-
         margin-bottom: 20px;
       }
       .MuiTypography-subtitle2 {
@@ -429,7 +644,7 @@
       .MuiButtonBase-root {
         padding: 8px 12px;
         gap: 8px;
-        margin-left: 22px;
+        margin-left: 15px;
         background: #ffffff;
         border-radius: 22px;
         font-family: "Inter", sans-serif;
@@ -439,7 +654,6 @@
         background: rgba(141, 0, 208, 0.1);
         color: #8d00d0;
         margin-bottom: 30px;
-
         margin-top: 20px;
       }
     }
