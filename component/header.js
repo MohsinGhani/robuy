@@ -33,7 +33,7 @@ export default function Header() {
             <ButtonGroup className="btn2">
               <Button className="btn-group1">
                 {" "}
-                <Image className="nav-icon" src={images.coin} />
+                <Image className="nav-icon" src={images.coin2} />
                 Купить робуксы
               </Button>
               <Button className="btn-group2">

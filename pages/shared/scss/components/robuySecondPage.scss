@@ -10,6 +10,8 @@
 
 .robuySecondContainer {
   max-width: 680px;
+  margin-right: 12px;
+
   @include sm {
     max-width: 393px;
     display: flex;

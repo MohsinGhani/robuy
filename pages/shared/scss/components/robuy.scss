@@ -3,6 +3,8 @@
 .robuyContainer {
   display: flex;
   flex-direction: column;
+  margin-right: 14px;
+
   @include sm {
     max-width: 350px;
     display: flex;
