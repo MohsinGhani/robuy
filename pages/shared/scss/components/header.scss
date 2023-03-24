@@ -266,4 +266,24 @@
       overflow: scroll !important;
     }
   }
+  @media only screen and (max-width: 1024px) {
+    .btn2 {
+      width: 100% !important;
+    }
+  }
+  @media only screen and (max-width: 1280px) {
+    .btn2 {
+      width: 99%;
+    }
+  }
+  @media only screen and (max-width: 1440px) {
+    .btn2 {
+      width: 87%;
+    }
+  }
+  @media only screen and (max-width: 1500px) {
+    .btn2 {
+      width: 84%;
+    }
+  }
 }
