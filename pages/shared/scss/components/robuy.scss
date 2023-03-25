@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   margin-right: 60px;
+  margin-top: 66px;
 
   @include sm {
     max-width: 350px;
@@ -31,7 +32,7 @@
   }
 
   .robuychildcontainer {
-    box-shadow: 9px 120px 71px -158px #d2395e, 9px -120px 68px -154px #8d00d0,
+    box-shadow: 8px 120px 71px -170px #d2395e, 9px -120px 68px -170px #8d00d0,
       -69px 0 140px -94px #399acf, 97px 0 87px -107px #d2cc38;
     margin-top: 20px;
 
