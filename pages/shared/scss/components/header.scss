@@ -312,13 +312,13 @@
   @include sm {
     position: relative;
   }
-  .MuiPaper-root {
-    background-color: transparent;
+  .navbar {
+    background-color: #f6f6f6;
+    padding: 15px 0px;
     box-shadow: none;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 15px;
 
     .MuiTypography-h6 {
       font-family: "Inter", sans-serif;

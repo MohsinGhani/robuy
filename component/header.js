@@ -121,58 +121,48 @@ function DrawerAppBar(props) {
 
   return (
     <div className="headerParent">
-      <Box>
-        <CssBaseline />
-        <AppBar component="nav">
-          <Typography variant="h6" component="div">
-            <Image src={images.logo} />
-            Robuy
-          </Typography>
-          <div className="tabContainer">
-            <Box className="btn">
+      <AppBar component="nav" className="navbar">
+        <Typography variant="h6" component="div">
+          <Image src={images.logo} />
+          Robuy
+        </Typography>
+        <div className="tabContainer">
+          <Box className="btn">
+            {" "}
+            <ButtonGroup className="btn2">
               {" "}
-              <ButtonGroup className="btn2">
-                {" "}
-                <Button className="btn-group1">
-                  <Image className="nav-icon" src={images.coin2} />
-                  Купить робуксы
-                </Button>
-                <Button className="btn-group2">
-                  <Image className="nav-icon" src={images.union} />
-                  Бесплатно
-                </Button>
-                <Button className="btn-group3">
-                  <Image className="nav-icon" src={images.subtract} /> Мои
-                  Покупки
-                </Button>
-                <Button className="btn-group4">
-                  <Image className="nav-icon" src={images.vector3} />
-                  Промокод
-                </Button>
-                <Button className="btn-groupLast">
-                  <Image className="nav-icon" src={images.union2} /> Блог
-                </Button>
-              </ButtonGroup>
-            </Box>
-          </div>
-          <Box className="button-icon">
-            <div className="twiter-box">
-              <Image src={images.Vector} />
-            </div>
-            <div className="vector">
-              <Image src={images.twiter} />
-            </div>
-
-            <Button className="">Войти</Button>
+              <Button className="btn-group1">
+                <Image className="nav-icon" src={images.coin2} />
+                Купить робуксы
+              </Button>
+              <Button className="btn-group2">
+                <Image className="nav-icon" src={images.union} />
+                Бесплатно
+              </Button>
+              <Button className="btn-group3">
+                <Image className="nav-icon" src={images.subtract} /> Мои Покупки
+              </Button>
+              <Button className="btn-group4">
+                <Image className="nav-icon" src={images.vector3} />
+                Промокод
+              </Button>
+              <Button className="btn-groupLast">
+                <Image className="nav-icon" src={images.union2} /> Блог
+              </Button>
+            </ButtonGroup>
           </Box>
-        </AppBar>
-        <Box component="nav">
-          <Drawer variant="temporary" open={mobileOpen}></Drawer>
+        </div>
+        <Box className="button-icon">
+          <div className="twiter-box">
+            <Image src={images.Vector} />
+          </div>
+          <div className="vector">
+            <Image src={images.twiter} />
+          </div>
+
+          <Button className="">Войти</Button>
         </Box>
-        <Box component="main">
-          <Toolbar />
-        </Box>
-      </Box>
+      </AppBar>
     </div>
   );
 }
