@@ -16,6 +16,27 @@ import CommonCard from "./commonCard";
 import Card from "@mui/material/Card";
 
 const Robuy = () => {
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    const client = createClient({
+      space: "c288e1xhsyct",
+      accessToken: "9F8haQVl_uqqdxbrDbTh6noeplOE4qbhBHNn9CekcLo",
+    });
+
+    client
+      .getEntries({ content_type: "blog" })
+      .then((response) => {
+        // Handle the retrieved entries here
+        console.log(response.items);
+        setBlogs(response.items);
+      })
+
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
   const theme = useTheme();
   return (
     <>
@@ -67,13 +88,20 @@ const Robuy = () => {
           </Typography>
           <Typography> Посты блога</Typography>
         </div>
+        {blogs?.map((blog) => {
+        console.log("🚀 ~ blog:", blog);
+        return (
+          <>
         <ButtonGroup>
           <Button variant="contained1">Все</Button>
           <Button variant="contained2">Новости</Button>
           <Button variant="contained3">Игры</Button>
           <Button variant="contained4">Обновления</Button>
         </ButtonGroup>
-        {/* <img src={icon} alt="Edit Icon" /> */}
+        </>
+        )},
+        
+       
 
         <div className="cardParent">
           <CommonCard />
