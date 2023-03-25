@@ -3,11 +3,13 @@
 .robuyContainer {
   display: flex;
   flex-direction: column;
-  margin-right: 14px;
+  margin-right: 60px;
 
   @include sm {
     max-width: 350px;
     display: flex;
+    margin-left: 55px;
+    margin-top: 64px;
   }
 
   .robuyParent {
@@ -29,8 +31,8 @@
   }
 
   .robuychildcontainer {
-    box-shadow: 9px 120px 71px -151px #d2395e, 9px -120px 71px -151px #8d00d0,
-      -69px 0 141px -94px #399acf, 97px 0 87px -109px #d2cc38;
+    box-shadow: 9px 120px 71px -158px #d2395e, 9px -120px 68px -154px #8d00d0,
+      -69px 0 140px -94px #399acf, 97px 0 87px -107px #d2cc38;
     margin-top: 20px;
 
     // box-shadow: 0 0 10px red;
@@ -396,12 +398,12 @@
 
     .header {
       @include sm {
-        max-width: 273px;
+        max-width: 294px;
         /* margin-right: 50px; */
         display: flex;
         flex-direction: column;
         margin-left: -10px;
-        width: 254px;
+        width: 304px;
       }
 
       background-color: #eaeef0;
