@@ -123,7 +123,7 @@ const Robuy = () => {
               {/* <Button variant="contained1">Все</Button>
               <Button variant="contained2">Новости</Button>
               <Button variant="contained3">Игры</Button>
-              <Button variant="contained4">Обновления</Button> */}
+              <Button variant="contained4">Обновления</Button> ...*/}
             </ButtonGroup>
           );
         })}
