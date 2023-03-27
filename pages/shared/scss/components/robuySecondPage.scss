@@ -10,11 +10,15 @@
 
 .robuySecondContainer {
   max-width: 680px;
-  margin-right: 12px;
+  margin-right: 65px;
+
+  margin-top: 78px;
 
   @include sm {
     max-width: 393px;
     display: flex;
+    margin-right: 0px;
+    margin-top: 117px;
   }
   .robuyProject {
     box-shadow: 9px -123px 71px -151px #8d00d0, -69px 0 141px -94px #399acf,
@@ -141,11 +145,12 @@
   }
   display: flex;
   flex-direction: column;
+
   .union {
     @include sm {
       margin-left: 20px;
     }
-    margin-top: 30px;
+    margin-top: 42px;
     display: flex;
     .MuiTypography-root {
       font-family: "Inter", sans-serif;
@@ -169,7 +174,6 @@
       padding: 8px 12px;
       gap: 8px;
 
-      width: 54px;
       height: 35px;
 
       font-family: "Inter", sans-serif;
@@ -183,7 +187,7 @@
       padding: 8px 12px;
       font-family: "Inter", sans-serif;
       gap: 8px;
-
+      height: 35px;
       font-weight: 600;
       font-size: 16px;
       color: #8d00d0;
@@ -197,7 +201,7 @@
       padding: 8px 12px;
       font-family: "Inter", sans-serif;
       color: #8d00d0;
-
+      height: 35px;
       font-weight: 600;
       font-size: 16px;
 
@@ -213,7 +217,7 @@
       font-size: 16px;
       font-family: "Inter", sans-serif;
       color: #8d00d0;
-
+      height: 35px;
       margin-right: 10px;
 
       background: #ffffff;

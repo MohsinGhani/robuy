@@ -40,12 +40,16 @@
 
     margin-top: 20px;
     .cardChild {
-      padding: 32px;
+      padding: 28px;
       /* width: 578px; */
       box-shadow: none;
       /* margin-left: 10px; */
       margin-top: 7px;
       .newsCard {
+        padding: 0px;
+
+        margin-top: 26px;
+
         .buttonParent {
           @include sm {
             margin-top: 8px;
@@ -399,7 +403,7 @@
 
     .header {
       @include sm {
-        max-width: 294px;
+        max-width: 255px;
         /* margin-right: 50px; */
         display: flex;
         flex-direction: column;
@@ -413,6 +417,7 @@
       border-top-right-radius: 16px;
       display: flex;
       flex-direction: row;
+      max-width: 538px;
       justify-content: space-between;
       .MuiButtonBase-root {
         background: linear-gradient(
