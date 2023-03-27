@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useState, useEffect } from "react";
 import CardContent from "@mui/material/CardContent";
 
 import Button from "@mui/material/Button";
@@ -14,9 +14,11 @@ import { Box, useTheme } from "@mui/system";
 import Header from "./header";
 import CommonCard from "./commonCard";
 import Card from "@mui/material/Card";
+import { createClient } from "contentful";
 
 const Robuy = () => {
   const [blogs, setBlogs] = useState([]);
+  const [tags, setTags] = useState([]);
 
   useEffect(() => {
     const client = createClient({
@@ -24,12 +26,35 @@ const Robuy = () => {
       accessToken: "9F8haQVl_uqqdxbrDbTh6noeplOE4qbhBHNn9CekcLo",
     });
 
+    client.getTags().then((response) => {
+      setTags(
+        response.items?.map((t) => ({
+          id: t.sys?.id,
+          name: t.name,
+        }))
+      );
+    });
+
     client
       .getEntries({ content_type: "blog" })
       .then((response) => {
-        // Handle the retrieved entries here
-        console.log(response.items);
-        setBlogs(response.items);
+        const result = response.items?.map((item) => {
+          const test = tags.filter((t) => {
+            const tt = item.metadata?.tags?.map((iTag) => {
+              if (iTag.sys?.id === t.id) {
+                return t;
+              }
+            });
+
+            return tt[0] ? tt[0] : null;
+          });
+
+          return {
+            ...item,
+            fields: { ...item.fields, tags: test },
+          };
+        });
+        setBlogs(result);
       })
 
       .catch((error) => {
@@ -81,27 +106,27 @@ const Robuy = () => {
             </div>
           </Card>
         </div>
-
         <div className="union">
           <Typography>
             <Image src={images.union2} />
           </Typography>
           <Typography> Посты блога</Typography>
         </div>
+
         {blogs?.map((blog) => {
-        console.log("🚀 ~ blog:", blog);
-        return (
-          <>
-        <ButtonGroup>
-          <Button variant="contained1">Все</Button>
-          <Button variant="contained2">Новости</Button>
-          <Button variant="contained3">Игры</Button>
-          <Button variant="contained4">Обновления</Button>
-        </ButtonGroup>
-        </>
-        )},
-        
-       
+          console.log("blog", blog);
+          return (
+            <ButtonGroup>
+              {blog?.fields?.tags?.map((t) => {
+                return <Button variant="contained3">{t.name}</Button>;
+              })}
+              {/* <Button variant="contained1">Все</Button>
+              <Button variant="contained2">Новости</Button>
+              <Button variant="contained3">Игры</Button>
+              <Button variant="contained4">Обновления</Button> */}
+            </ButtonGroup>
+          );
+        })}
 
         <div className="cardParent">
           <CommonCard />
