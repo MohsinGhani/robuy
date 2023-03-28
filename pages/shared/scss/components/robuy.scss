@@ -180,7 +180,6 @@
       font-weight: 600;
       font-size: 16px;
       line-height: 160.02%;
-
       color: #1d2123;
       margin-right: 7px;
     }
@@ -192,11 +191,9 @@
     .MuiButton-contained1 {
       padding: 5px 20px;
       gap: 8px;
-
       width: 54px;
       height: 35px;
       margin-top: 6px;
-
       font-family: "Inter", sans-serif;
       color: white;
       background: #6f2cff;
@@ -207,11 +204,11 @@
       }
     }
     .MuiButton-contained2 {
-      align-items: center;
+      // display: flex;
+      // width: 20%;
       padding: 8px 12px;
       font-family: "Inter", sans-serif;
       gap: 8px;
-
       font-weight: 600;
       font-size: 16px;
       color: #8d00d0;

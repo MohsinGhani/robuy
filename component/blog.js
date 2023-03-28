@@ -1,29 +1,71 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Card from "@mui/material/Card";
-
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-
 import images from "../public/assets/images/index";
-
 import { ButtonGroup } from "@mui/material";
-
 import Image from "next/image";
 import { Box, useTheme } from "@mui/system";
 import Header from "./header";
-import CommonCard from "./commonCard";
+import CommonCards from "./commonCards";
+import { useRouter } from "next/router";
+import { createClient } from "contentful";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 const RobuySecondPage = () => {
-  const theme = useTheme();
+  const [blog, setBlog] = useState(null);
+  const [tags, setTags] = useState([]);
+  const router = useRouter();
+  const { id } = router.query;
+
+  useEffect(() => {
+    const client = createClient({
+      space: "c288e1xhsyct",
+      accessToken: "9F8haQVl_uqqdxbrDbTh6noeplOE4qbhBHNn9CekcLo",
+    });
+
+    client.getTags().then((response) => {
+      setTags(
+        response.items?.map((t) => ({
+          id: t.sys?.id,
+          name: t.name,
+        }))
+      );
+    });
+    console.log("id", id);
+
+    client.getEntry(id).then((response) => {
+      console.log("response", response);
+
+      const filteredTags = tags.filter((t) => {
+        const tt = response.metadata?.tags?.map((iTag) => {
+          if (iTag.sys?.id === t.id) {
+            return t;
+          }
+        });
+
+        return tt[0] ? tt[0] : null;
+      });
+
+      const result = {
+        ...response,
+        fields: { ...response.fields, tags: filteredTags },
+      };
+
+      setBlog(result);
+    });
+  }, [id]);
+  const description = blog?.fields?.description;
+
   return (
     <>
       <Header />
       <div className="robuySecondContainer">
         <div className="robuyProject">
           <Card sx={{ maxWidth: 658 }}>
-            <img src={"/assets/images/image.svg"} alt="Edit Icon" />
+            <img src={blog?.fields?.image?.fields?.file?.url} alt="Edit Icon" />
 
             <div className="robuySecConChild">
               <div className="box">
@@ -42,27 +84,31 @@ const RobuySecondPage = () => {
                 </div>
                 <CardContent>
                   <div className="buttonParent">
-                    <Button variant="contained2">Последняя новость</Button>
-                    <Button variant="contained1">Обновления</Button>
+                    {blog?.fields?.tags?.map((t) => (
+                      <Button variant="contained1"> {t.name} </Button>
+                    ))}
+                    {/* <Button variant="contained2">Последняя новость</Button>
+                    <Button variant="contained1">Обновления</Button> */}
                   </div>
                   <div className="text">
                     <Typography variant="body2">
-                      В 2022 году в Roblox ежедневно заходили 56 миллионов
-                      игроков
+                      {blog?.fields?.title}
                     </Typography>
-                    <Typography variant="body1">
-                      Основатель и генеральный директор Roblox Corporation Дэвид
-                      Башуки опубликовал открытое письмо к геймерам, в котором
-                      похвастался значительным ростом популярности. По его
-                      словам, в 2022 году число ежедневных посетителей Roblox
-                      выросло на 23% и составило свыше 56 млн игроков:
-                    </Typography>
+
+                    {/* <Typography variant="body2" color="text.secondary">
+                      {documentToReactComponents(description)}
+                    </Typography> */}
+                    {/* {console.log("🚀 ~ blog:", blog)}
+                    {blog?.fields?.description?.content?.map((d) => {
+                      console.log("🚀 ~ d:", d);
+                    })} */}
                   </div>
                 </CardContent>
                 <div className="textCard">
                   <Card>
                     <Typography variant="body1">
-                      Инвестиции, которые мы делаем для расширения вовлеченности
+                      {documentToReactComponents(description)}
+                      {/* Инвестиции, которые мы делаем для расширения вовлеченности
                       в Roblox в разных{" "}
                       <b>
                         географических регионах и возрастных группах, приносят
@@ -74,11 +120,11 @@ const RobuySecondPage = () => {
                       создавая, играя, исследуя, обучаясь и общаясь. Сегодня
                       более половины пользователей Roblox — это люди от 13 лет и
                       старше, что свидетельствует о привлекательности нашей
-                      платформы для широкого круга аудитории.
+                      платформы для широкого круга аудитории. */}
                     </Typography>
                   </Card>
                 </div>
-                <div className="content">
+                {/* <div className="content">
                   <Typography variant="body1">
                     Заодно Дэвид сообщил, что студия прикладывает все возможные
                     усилия для обеспечения безопасной и комфортной игры:
@@ -92,12 +138,12 @@ const RobuySecondPage = () => {
                     предотвращения попыток игроков вступить во вредоносные связи
                     или загрузить вредоносный контент.
                   </Typography>
-                </div>
+                </div> */}
               </div>
             </div>
           </Card>
         </div>
-        <div className="union">
+        {/* <div className="union">
           <Typography>
             <svg
               width="16"
@@ -115,16 +161,16 @@ const RobuySecondPage = () => {
             </svg>
           </Typography>
           <Typography>Посты блога</Typography>
-        </div>
-        <ButtonGroup>
+        </div> */}
+        {/* <ButtonGroup>
           <Button variant="contained1">Все</Button>
           <Button variant="contained2">Новости</Button>
           <Button variant="contained3">Игры</Button>
           <Button variant="contained4">Обновления</Button>
-        </ButtonGroup>
+        </ButtonGroup> */}
         {/* <img src={icon} alt="Edit Icon" /> */}
 
-        <div className="cardParent">
+        {/* <div className="cardParent">
           <CommonCard />
           <div className="virticalCard">
             <Card sx={{ display: "flex" }}>
@@ -153,7 +199,8 @@ const RobuySecondPage = () => {
               </Box>
             </Card>
           </div>
-        </div>
+        </div> */}
+        <CommonCards />
       </div>
     </>
   );

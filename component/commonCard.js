@@ -10,10 +10,12 @@ import Image from "next/image";
 import { createClient } from "contentful";
 import { useState, useEffect } from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { useRouter } from "next/router";
 
 const CommonCard = () => {
   const [blogs, setBlogs] = useState([]);
   const [tags, setTags] = useState([]);
+  const router = useRouter();
 
   useEffect(() => {
     const client = createClient({
@@ -57,15 +59,21 @@ const CommonCard = () => {
       });
   }, []);
 
+  const handler = (id) => {
+    router.push({
+      pathname: "/blog",
+      query: { id },
+    });
+  };
+
   return (
     <div className="productCard_container">
       {blogs?.map((blog) => {
-        console.log("🚀 ~ blog:", blog);
-
-        const { title, description, tags } = blog.fields;
+        const { description } = blog.fields;
+        const id = blog?.sys?.id;
 
         return (
-          <Card sx={{ maxWidth: 320 }}>
+          <Card sx={{ maxWidth: 320 }} onClick={() => handler(id)}>
             <div className="imgButton">
               <img src={blog?.fields?.image?.fields?.file?.url} />
               {blog?.fields?.tags?.map((t) => {

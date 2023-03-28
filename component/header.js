@@ -104,25 +104,26 @@ import * as React from "react";
 import images from "../public/assets/images/index";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import CssBaseline from "@mui/material/CssBaseline";
 import Image from "next/image";
-import Drawer from "@mui/material/Drawer";
-import IconButton from "@mui/material/IconButton";
-
-import MenuIcon from "@mui/icons-material/Menu";
-import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { Button, ButtonGroup } from "@mui/material";
+import { useRouter } from "next/router";
 
 const drawerWidth = 240;
 
 function DrawerAppBar(props) {
   const [mobileOpen] = React.useState(false);
+  const router = useRouter();
 
   return (
     <div className="headerParent">
       <AppBar component="nav" className="navbar">
-        <Typography variant="h6" component="div">
+        <Typography
+          variant="h6"
+          component="div"
+          className="cp"
+          onClick={() => router.push("/")}
+        >
           <Image src={images.logo} />
           Robuy
         </Typography>
