@@ -1,5 +1,4 @@
 import React from "react";
-import CommonCard from "./commonCard";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
@@ -10,8 +9,9 @@ import { createClient } from "contentful";
 import { Box } from "@mui/system";
 import { useState, useEffect } from "react";
 import Card from "@mui/material/Card";
+import BlogCard from "./blogCard";
 
-const CommonCards = () => {
+const BlogList = () => {
   const [blogs, setBlogs] = useState([]);
   const [tags, setTags] = useState([]);
 
@@ -21,40 +21,40 @@ const CommonCards = () => {
       accessToken: "9F8haQVl_uqqdxbrDbTh6noeplOE4qbhBHNn9CekcLo",
     });
 
-    client.getTags().then((response) => {
-      setTags(
-        response.items?.map((t) => ({
+    const fetchData = async () => {
+      try {
+        const responseTags = await client.getTags();
+        const tagsData = responseTags.items?.map((t) => ({
           id: t.sys?.id,
           name: t.name,
-        }))
-      );
-    });
+        }));
+        setTags(tagsData);
 
-    client
-      .getEntries({ content_type: "blog" })
-      .then((response) => {
-        const result = response.items?.map((item) => {
-          const filteredTags = tags.filter((t) => {
+        const responseEntries = await client.getEntries({
+          content_type: "blog",
+        });
+        const resultData = responseEntries.items?.map((item) => {
+          const filteredTags = tagsData.filter((t) => {
             const tt = item.metadata?.tags?.map((iTag) => {
               if (iTag.sys?.id === t.id) {
                 return t;
               }
             });
-
             return tt[0] ? tt[0] : null;
           });
-
           return {
             ...item,
             fields: { ...item.fields, tags: filteredTags },
           };
         });
-        setBlogs(result);
-      })
-
-      .catch((error) => {
+        console.log("resultData", resultData);
+        setBlogs(resultData);
+      } catch (error) {
         console.log(error);
-      });
+      }
+    };
+
+    fetchData();
   }, []);
 
   return (
@@ -67,15 +67,18 @@ const CommonCards = () => {
       </div>
 
       <ButtonGroup>
-        {blogs?.map((blog) =>
-          blog?.fields?.tags?.map((t) => (
-            <Button variant="contained2"> {t.name} </Button>
-          ))
-        )}
+        {tags?.map((t) => (
+          <Button variant="contained2"> {t.name} </Button>
+        ))}
       </ButtonGroup>
 
       <div className="cardParent cp">
-        <CommonCard />
+        <div className="productCard_container">
+          {blogs.map((blog) => (
+            <BlogCard blog={blog} />
+          ))}
+        </div>
+
         <div className="virticalCard">
           <Card sx={{ display: "flex" }}>
             <Image src={images.Roblox} />
@@ -106,4 +109,4 @@ const CommonCards = () => {
   );
 };
 
-export default CommonCards;
+export default BlogList;

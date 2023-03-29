@@ -2,10 +2,9 @@ import React from "react";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { useTheme } from "@mui/system";
 import Header from "./header";
 import Card from "@mui/material/Card";
-import CommonCards from "./commonCards";
+import BlogList from "./blogList";
 
 const Robuy = () => {
   return (
@@ -51,7 +50,7 @@ const Robuy = () => {
             </div>
           </Card>
         </div>
-        <CommonCards />
+        <BlogList />
       </div>
     </>
   );
