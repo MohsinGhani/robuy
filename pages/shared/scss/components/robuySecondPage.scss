@@ -10,17 +10,19 @@
 
 .robuySecondContainer {
   max-width: 680px;
-  margin-right: 12px;
+  margin-right: 65px;
 
   @include sm {
     max-width: 393px;
     display: flex;
+    margin: 0%;
   }
   .robuyProject {
     box-shadow: 9px -123px 71px -151px #8d00d0, -69px 0 141px -94px #399acf,
       97px 0 87px -109px #d2cc38;
     margin-top: 90px;
   }
+
   .robuySecConChild {
     .box {
       position: relative;
@@ -143,7 +145,7 @@
   flex-direction: column;
   .union {
     @include sm {
-      margin-left: 20px;
+      margin-left: 30px;
     }
     margin-top: 30px;
     display: flex;
@@ -212,10 +214,8 @@
       font-weight: 600;
       font-size: 16px;
       font-family: "Inter", sans-serif;
-      color: #8d00d0;
-
+      color: #8d00d0
       margin-right: 10px;
-
       background: #ffffff;
       border-radius: 22px;
     }
@@ -227,10 +227,9 @@
 
     img {
       width: 100%;
-      // margin-top: 20px;
+      margin-top: 20px;
       @include sm {
         height: auto;
-        width: auto;
       }
     }
     .MuiCardContent-root {
@@ -467,9 +466,9 @@
         .MuiButtonBase-root {
           position: absolute;
           bottom: 0;
+          left: 0;
           padding: 8px 12px;
           gap: 8px;
-
           background: #ffffff;
           border-radius: 22px;
           font-family: "Inter", sans-serif;
@@ -536,6 +535,7 @@
       }
     }
   }
+
   .virticalCard {
     max-width: 659px;
     .image {

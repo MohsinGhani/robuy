@@ -7,7 +7,6 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { useRouter } from "next/router";
 
 const BlogCard = ({ blog }) => {
-  console.log("🚀 ~ blog?.fields?.tags:", blog?.fields?.tags);
   const router = useRouter();
 
   const handler = (id) => {

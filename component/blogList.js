@@ -47,7 +47,6 @@ const BlogList = () => {
             fields: { ...item.fields, tags: filteredTags },
           };
         });
-        console.log("resultData", resultData);
         setBlogs(resultData);
       } catch (error) {
         console.log(error);

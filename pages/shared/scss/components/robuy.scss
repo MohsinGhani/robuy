@@ -458,10 +458,9 @@
   }
   .cardParent {
     display: flex;
+    margin-left: 10px;
     .productCard_container {
       display: flex;
-      /* width: 152%; */
-      /* width: 500px; */
       max-width: 668px;
       flex-wrap: wrap;
       .firstCard {
