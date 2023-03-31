@@ -148,7 +148,7 @@
         width: 15px;
         border-bottom-left-radius: 13px;
         position: absolute;
-        bottom: 0;
+        bottom: 0px;
         left: 0;
         border-color: transparent;
         border-top-color: transparent;
@@ -164,7 +164,7 @@
         width: 15px;
         border-bottom-right-radius: 13px;
         position: absolute;
-        bottom: 0;
+        bottom: 0px;
         right: 0;
         border-color: transparent;
         border-top-color: transparent;
@@ -459,89 +459,90 @@
   }
   .cardParent {
     display: flex;
-    // margin-left: 10px;
     .productCard_container {
       display: flex;
       max-width: 668px;
       flex-wrap: wrap;
-      .firstCard {
-        padding: 30px;
-        .box {
-          position: relative;
-          margin: 9px;
-          .box1 {
-            border-style: solid;
-            border-width: 2px;
-            height: 15px;
-            width: 15px;
-            border-top-left-radius: 13px;
-            position: absolute;
-            top: -34px;
-            left: -30px;
-            border-color: transparent;
-            border-top-color: #eaeef0;
-            border-right-color: transparent;
-            border-bottom-color: transparent;
-            border-left-color: #eaeef0;
-          }
+      // .firstCard {
+      //   padding: 30px;
+      //   max-height: 250px;
+      //   .box {
+      //     position: relative;
+      //     margin: 9px;
 
-          .box2 {
-            border-style: solid;
-            border-width: 2px;
-            height: 15px;
-            width: 15px;
-            border-top-right-radius: 13px;
-            position: absolute;
-            top: -34px;
-            right: -30px;
-            border-color: transparent;
-            border-top-color: #eaeef0;
-            border-right-color: #eaeef0;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-          }
-          .box3 {
-            margin-top: 150px;
-            border-style: solid;
-            border-width: 2px;
-            height: 15px;
-            width: 15px;
-            border-bottom-left-radius: 13px;
-            position: absolute;
-            bottom: -32px;
-            left: -30px;
-            border-color: transparent;
-            border-top-color: transparent;
-            border-right-color: transparent;
-            border-bottom-color: #eaeef0;
-            border-left-color: #eaeef0;
-            @include sm {
-              top: -7px;
-              left: -30px;
-            }
-          }
-          .box4 {
-            margin-top: 150px;
-            border-style: solid;
-            border-width: 2px;
-            height: 15px;
-            width: 15px;
-            border-bottom-right-radius: 13px;
-            position: absolute;
-            bottom: -32px;
-            right: -32px;
-            border-color: transparent;
-            border-top-color: transparent;
-            border-right-color: #eaeef0;
-            border-bottom-color: #eaeef0;
-            border-left-color: transparent;
-            @include sm {
-              top: -7px;
-              right: -30px;
-            }
-          }
-        }
-      }
+      //     .box1 {
+      //       border-style: solid;
+      //       border-width: 2px;
+      //       height: 15px;
+      //       width: 15px;
+      //       border-top-left-radius: 13px;
+      //       position: absolute;
+      //       top: -34px;
+      //       left: -30px;
+      //       border-color: transparent;
+      //       border-top-color: #eaeef0;
+      //       border-right-color: transparent;
+      //       border-bottom-color: transparent;
+      //       border-left-color: #eaeef0;
+      //     }
+
+      //     .box2 {
+      //       border-style: solid;
+      //       border-width: 2px;
+      //       height: 15px;
+      //       width: 15px;
+      //       border-top-right-radius: 13px;
+      //       position: absolute;
+      //       top: -34px;
+      //       right: -30px;
+      //       border-color: transparent;
+      //       border-top-color: #eaeef0;
+      //       border-right-color: #eaeef0;
+      //       border-bottom-color: transparent;
+      //       border-left-color: transparent;
+      //     }
+      //     .box3 {
+      //       margin-top: 150px;
+      //       border-style: solid;
+      //       border-width: 2px;
+      //       height: 15px;
+      //       width: 15px;
+      //       border-bottom-left-radius: 13px;
+      //       position: absolute;
+      //       bottom: -32px;
+      //       left: -30px;
+      //       border-color: transparent;
+      //       border-top-color: transparent;
+      //       border-right-color: transparent;
+      //       border-bottom-color: #eaeef0;
+      //       border-left-color: #eaeef0;
+      //       @include sm {
+      //         top: -7px;
+      //         left: -30px;
+      //       }
+      //     }
+      //     .box4 {
+      //       margin-top: 150px;
+      //       border-style: solid;
+      //       border-width: 2px;
+      //       height: 15px;
+      //       width: 15px;
+      //       border-bottom-right-radius: 13px;
+      //       position: absolute;
+      //       bottom: -32px;
+      //       right: -32px;
+      //       border-color: transparent;
+      //       border-top-color: transparent;
+      //       border-right-color: #eaeef0;
+      //       border-bottom-color: #eaeef0;
+      //       border-left-color: transparent;
+      //       @include sm {
+      //         top: -7px;
+      //         right: -30px;
+      //       }
+      //     }
+      //   }
+      // }
     }
 
     .parentChild {

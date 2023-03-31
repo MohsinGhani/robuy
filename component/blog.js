@@ -51,6 +51,10 @@ const RobuySecondPage = () => {
     fetchData();
   }, [id]);
   const description = blog?.fields?.description;
+  const description2 = blog?.fields?.description2;
+  const description3 = blog?.fields?.description3;
+
+  console.log("🚀 ~ blog:", blog);
 
   return (
     <>
@@ -92,13 +96,15 @@ const RobuySecondPage = () => {
                     </Typography>
                   </div>
                 </CardContent>
+                <div className="description1">
+                  {documentToReactComponents(description)}
+                </div>
 
-                <div className="textCard">
-                  <Card>
-                    <Typography variant="body1">
-                      {documentToReactComponents(description)}
-                    </Typography>
-                  </Card>
+                <div className="description2">
+                  {documentToReactComponents(description2)}
+                </div>
+                <div className="description3">
+                  {documentToReactComponents(description3)}
                 </div>
               </div>
             </div>

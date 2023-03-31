@@ -13,6 +13,8 @@ import union2 from "./union2.png";
 import coin2 from "./coin2.png";
 import rolboxpapa from "./rolboxPapa.png";
 import cambro from "./cambro.png";
+import Vector25 from "./Vector25.svg";
+import Vector27 from "./Vector27.svg";
 
 export default {
   milto,
@@ -30,4 +32,6 @@ export default {
   cambro,
   vector4,
   coin2,
+  Vector25,
+  Vector27,
 };

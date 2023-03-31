@@ -28,7 +28,7 @@ const Robuy = () => {
                   </div>
                   <Button>Подписаться</Button>
                 </div>
-                <img src={"/assets/images/image.svg"} alt="Edit Icon" />
+                <img src={"/assets/images/image.svg"} alt="#" />
                 <CardContent className="newsCard">
                   <div className="buttonParent">
                     <Button variant="contained2">Последняя новость</Button>
