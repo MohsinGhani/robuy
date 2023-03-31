@@ -10,21 +10,21 @@
 
 .robuySecondContainer {
   max-width: 680px;
-  margin-right: 65px;
-
-  margin-top: 78px;
+  margin-right: 60px;
+  margin-top: 40px;
 
   @include sm {
     max-width: 393px;
     display: flex;
-    margin-right: 0px;
-    margin-top: 117px;
+    margin-right: 6px;
+    margin-top: 72px;
   }
   .robuyProject {
-    box-shadow: 9px -123px 71px -151px #8d00d0, -69px 0 141px -94px #399acf,
+    box-shadow: 9px -123px 71px -160px #8d00d0, -69px 0 141px -94px #399acf,
       97px 0 87px -109px #d2cc38;
-    margin-top: 20px;
+    margin-top: 90px;
   }
+
   .robuySecConChild {
     .box {
       position: relative;
@@ -148,7 +148,7 @@
 
   .union {
     @include sm {
-      margin-left: 20px;
+      margin-left: 30px;
     }
     margin-top: 42px;
     display: flex;
@@ -173,7 +173,7 @@
     .MuiButton-contained1 {
       padding: 8px 12px;
       gap: 8px;
-
+      text-transform: inherit;
       height: 35px;
 
       font-family: "Inter", sans-serif;
@@ -187,6 +187,7 @@
       padding: 8px 12px;
       font-family: "Inter", sans-serif;
       gap: 8px;
+      text-transform: inherit;
       height: 35px;
       font-weight: 600;
       font-size: 16px;
@@ -202,6 +203,7 @@
       font-family: "Inter", sans-serif;
       color: #8d00d0;
       height: 35px;
+      text-transform: inherit;
       font-weight: 600;
       font-size: 16px;
 
@@ -214,12 +216,12 @@
       align-items: center;
       padding: 8px 12px;
       font-weight: 600;
+      text-transform: inherit;
       font-size: 16px;
       font-family: "Inter", sans-serif;
       color: #8d00d0;
-      height: 35px;
-      margin-right: 10px;
 
+      margin-right: 10px;
       background: #ffffff;
       border-radius: 22px;
     }
@@ -234,7 +236,6 @@
       // margin-top: 20px;
       @include sm {
         height: auto;
-        width: auto;
       }
     }
     .MuiCardContent-root {
@@ -248,6 +249,7 @@
           @include sm {
             padding-left: 3px;
             padding-right: 7px;
+            text-transform: inherit;
             width: 63%;
             margin-right: 10px;
             font-size: 13px;
@@ -265,6 +267,7 @@
           color: #6f2cff;
           @include sm {
             width: 38%;
+            text-transform: inherit;
             font-size: 13px;
           }
           background: rgba(141, 0, 208, 0.1);
@@ -298,7 +301,6 @@
     .cardChild {
       padding: 40px;
       width: 578px;
-      // height: 240px;
     }
     .header {
       @include sm {
@@ -310,7 +312,7 @@
       }
       background-color: #eaeef0;
       padding: 20px;
-      //   margin: 30px;
+
       border-radius: 16px;
       display: flex;
       flex-direction: row;
@@ -330,6 +332,7 @@
         color: white;
         align-items: center;
         padding: 13px 24px;
+        text-transform: inherit;
       }
       .MuiTypography-subtitle1 {
         font-family: "Inter", sans-serif;
@@ -471,9 +474,10 @@
         .MuiButtonBase-root {
           position: absolute;
           bottom: 0;
+          text-transform: inherit;
+          left: 0;
           padding: 8px 12px;
           gap: 8px;
-
           background: #ffffff;
           border-radius: 22px;
           font-family: "Inter", sans-serif;
@@ -488,6 +492,7 @@
         .MuiButton-contained4 {
           position: absolute;
           bottom: 0;
+          text-transform: inherit;
           padding: 8px 12px;
           gap: 8px;
 
@@ -540,13 +545,12 @@
       }
     }
   }
+
   .virticalCard {
     max-width: 659px;
     .image {
       width: 516px;
       border-radius: 54px;
-      .images {
-      }
     }
     @include sm {
       display: none;
@@ -650,6 +654,7 @@
       .MuiButtonBase-root {
         padding: 8px 12px;
         gap: 8px;
+        text-transform: inherit;
         margin-left: 15px;
         background: #ffffff;
         border-radius: 22px;

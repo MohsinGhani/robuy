@@ -1,129 +1,39 @@
-// import * as React from "react";
-
-// import AppBar from "@mui/material/AppBar";
-// import Box from "@mui/material/Box";
-// import Toolbar from "@mui/material/Toolbar";
-
-// import Typography from "@mui/material/Typography";
-
-// import images from "../public/assets/images/index";
-// import Image from "next/image";
-// import { Button, ButtonGroup } from "@mui/material";
-
-// export default function Header() {
-//   return (
-//     <Box className="container">
-//       <AppBar position="static">
-//         <Toolbar className="btn-container">
-//           <Box className="logo-container">
-//             <div>
-//               <Image src={images.logo} />
-//             </div>
-//             <Typography
-//               className="logoName"
-//               variant="h6"
-//               noWrap
-//               component="div"
-//             >
-//               Robuy
-//             </Typography>
-//           </Box>
-
-//           <Box className="btn">
-//             <ButtonGroup className="btn2">
-//               <Button>
-//                 {" "}
-//                 <Image className="nav-icon" src={images.coin2} />
-//                 Купить робуксы
-//               </Button>
-//               <Button className="btn-group2">
-//                 {" "}
-//                 <Image className="nav-icon" src={images.union} />
-//                 Бесплатно
-//               </Button>
-//               <Button className="btn-group3">
-//                 {" "}
-//                 <Image className="nav-icon" src={images.subtract} /> Мои Покупки
-//               </Button>
-//               <Button className="btn-group4">
-//                 {" "}
-//                 <Image className="nav-icon" src={images.vector3} /> Промокод
-//               </Button>
-//               <Button className="btn-groupLast">
-//                 {" "}
-//                 <Image className="nav-icon" src={images.union2} /> Блог
-//               </Button>
-//             </ButtonGroup>
-//           </Box>
-
-//           <Box sx={{ flexGrow: 1 }} />
-//           <Box className="icon-container">
-//             <div>
-//               <Image src={images.Vector} />
-//             </div>
-
-//             <div className="twiter-box">
-//               <Image src={images.twiter} />
-//             </div>
-
-//             <Button className="btn-last">Войти</Button>
-//           </Box>
-//         </Toolbar>
-//       </AppBar>
-//       <Box className="btn-none">
-//         <ButtonGroup>
-//           <Button className="btn-group2">
-//             {" "}
-//             <Image className="nav-icon2" src={images.coin} />
-//             Купить робуксы
-//           </Button>
-//           <Button className="btn-group">
-//             {" "}
-//             <Image className="nav-icon" src={images.union} />
-//             Бесплатно
-//           </Button>
-//           <Button className="btn-group">
-//             {" "}
-//             <Image className="nav-icon" src={images.subtract} /> Мои Покупки
-//           </Button>
-//           <Button className="btn-group">
-//             {" "}
-//             <Image className="nav-icon" src={images.vector3} /> Промокод
-//           </Button>
-//           <Button className="btn-groupLast">
-//             {" "}
-//             <Image className="nav-icon" src={images.union2} /> Блог
-//           </Button>
-//         </ButtonGroup>
-//       </Box>
-//     </Box>
-//   );
-// }
-
 import * as React from "react";
 import images from "../public/assets/images/index";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import CssBaseline from "@mui/material/CssBaseline";
 import Image from "next/image";
-import Drawer from "@mui/material/Drawer";
-import IconButton from "@mui/material/IconButton";
-
-import MenuIcon from "@mui/icons-material/Menu";
-import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { Button, ButtonGroup } from "@mui/material";
+import { useRouter } from "next/router";
 
 const drawerWidth = 240;
 
 function DrawerAppBar(props) {
   const [mobileOpen] = React.useState(false);
+  const router = useRouter();
 
   return (
     <div className="headerParent">
       <AppBar component="nav" className="navbar">
-        <Typography variant="h6" component="div">
-          <Image src={images.logo} />
+        <Typography
+          variant="h6"
+          component="div"
+          className="cp"
+          onClick={() => router.push("/")}
+        >
+          <svg
+            width="16"
+            height="19"
+            viewBox="0 0 16 19"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5.96452 17.7001L0.964524 13.0604C0.349662 12.4899 0 11.6872 0 10.8463V3.51403C0 1.84943 1.34315 0.5 3 0.5H13C14.6569 0.5 16 1.84943 16 3.51403V10.8463C16 11.6872 15.6503 12.4899 15.0355 13.0604L10.0355 17.7001C8.88611 18.7666 7.11389 18.7666 5.96452 17.7001Z"
+              fill="#1D2123"
+            />
+          </svg>
           Robuy
         </Typography>
         <div className="tabContainer">
@@ -132,32 +42,123 @@ function DrawerAppBar(props) {
             <ButtonGroup className="btn2">
               {" "}
               <Button className="btn-group1">
-                <Image className="nav-icon" src={images.coin2} />
+                <svg
+                  width="15"
+                  height="16"
+                  viewBox="0 0 15 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M13.3763 2.83409C14.3806 3.40287 15 4.45463 15 5.59219V10.4072C15 11.5454 14.3806 12.5965 13.3763 13.1653L9.12313 15.5734C8.11875 16.1422 6.88062 16.1422 5.87625 15.5734L1.62313 13.1653C0.61875 12.5965 0 11.5454 0 10.4072V5.59219C0 4.45463 0.61875 3.40287 1.62313 2.83409L5.87625 0.426585C6.88062 -0.142195 8.11875 -0.142195 9.12313 0.426585L13.3763 2.83409ZM6.44562 1.5194L2.30375 3.86439C1.65125 4.23398 1.25 4.91615 1.25 5.65532V10.3447C1.25 11.0832 1.65125 11.766 2.30375 12.1356L6.44562 14.48C7.09812 14.8496 7.90125 14.8496 8.55375 14.48L12.6956 12.1356C13.3481 11.766 13.75 11.0832 13.75 10.3447V5.65532C13.75 4.91615 13.3481 4.23398 12.6956 3.86439L8.55375 1.5194C7.90125 1.14982 7.09812 1.14982 6.44562 1.5194ZM8.36563 2.8298L11.6337 4.67956C12.1694 4.98295 12.5 5.54377 12.5 6.15116V9.85129C12.5 10.4581 12.1694 11.0189 11.6337 11.3223L8.36563 13.1727C7.83 13.476 7.16938 13.476 6.63375 13.1727L3.36563 11.3223C2.83 11.0189 2.5 10.4581 2.5 9.85129V6.15116C2.5 5.54377 2.83 4.98295 3.36563 4.67956L6.63375 2.8298C7.16938 2.52641 7.83 2.52641 8.36563 2.8298ZM5.625 9.83965H9.375V6.16219H5.625V9.83965Z"
+                    fill="#95A0A7"
+                  />
+                </svg>
                 Купить робуксы
               </Button>
               <Button className="btn-group2">
-                <Image className="nav-icon" src={images.union} />
+                <svg
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M5.5 7.75C7.15685 7.75 8.5 6.40685 8.5 4.75C8.5 3.09315 7.15685 1.75 5.5 1.75C3.84315 1.75 2.5 3.09315 2.5 4.75C2.5 6.40685 3.84315 7.75 5.5 7.75ZM4.90476 8.75C3.02436 8.75 1.5 10.2744 1.5 12.1548C1.5 13.3119 2.43807 14.25 3.59524 14.25H7.40476C8.56193 14.25 9.5 13.3119 9.5 12.1548C9.5 10.2744 7.97564 8.75 6.09524 8.75H5.5H4.90476Z"
+                    fill="#95A0A7"
+                  />
+                  <path
+                    d="M10.5 8H12.5M14.5 8H12.5M12.5 8V6M12.5 8V10"
+                    stroke="#95A0A7"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
                 Бесплатно
               </Button>
               <Button className="btn-group3">
-                <Image className="nav-icon" src={images.subtract} /> Мои Покупки
+                <svg
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M15.5 8C15.5 11.866 12.366 15 8.5 15C4.63401 15 1.5 11.866 1.5 8C1.5 4.13401 4.63401 1 8.5 1C12.366 1 15.5 4.13401 15.5 8ZM11.125 6.25C11.125 7.69975 9.94975 8.875 8.5 8.875C7.05025 8.875 5.875 7.69975 5.875 6.25C5.875 4.80025 7.05025 3.625 8.5 3.625C9.94975 3.625 11.125 4.80025 11.125 6.25ZM8.50298 10.625C9.83444 10.625 11.0501 11.1206 11.9756 11.9375C11.4251 12.4234 10.7718 12.7957 10.0526 13.0175C9.59202 12.7672 9.0641 12.625 8.50298 12.625C7.94185 12.625 7.41394 12.7672 6.95332 13.0175C6.23411 12.7957 5.58087 12.4234 5.03033 11.9375C5.95582 11.1206 7.17152 10.625 8.50298 10.625Z"
+                    fill="#95A0A7"
+                  />
+                </svg>
+                Мои Покупки
               </Button>
               <Button className="btn-group4">
-                <Image className="nav-icon" src={images.vector3} />
+                <svg
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.49999 14C1.49999 14.5531 1.94686 15 2.49999 15H7.99999V10H1.49999V14ZM15 5H14.1844C14.3781 4.62188 14.5 4.20312 14.5 3.75C14.5 2.23438 13.2656 1 11.75 1C10.45 1 9.60936 1.66563 8.53124 3.13438C7.45311 1.66563 6.61249 1 5.31249 1C3.79686 1 2.56249 2.23438 2.56249 3.75C2.56249 4.20312 2.68124 4.62188 2.87811 5H2C1.44687 5 1 5.44688 1 6V8.5C1 8.775 1.225 9 1.5 9H15.5C15.775 9 16 8.775 16 8.5V6C16 5.44688 15.5531 5 15 5ZM5.30936 5C4.61874 5 4.05937 4.44062 4.05937 3.75C4.05937 3.05938 4.61874 2.5 5.30936 2.5C5.93124 2.5 6.39061 2.60313 7.99999 5H5.30936ZM11.75 5H9.05936C10.6656 2.60938 11.1125 2.5 11.75 2.5C12.4406 2.5 13 3.05938 13 3.75C13 4.44062 12.4406 5 11.75 5ZM9.05936 15H14.5C15.0531 15 15.5 14.5531 15.5 14V10H9.05936V15Z"
+                    fill="#95A0A7"
+                  />
+                </svg>
                 Промокод
               </Button>
               <Button className="btn-groupLast">
-                <Image className="nav-icon" src={images.union2} /> Блог
+                <svg
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M3 1C1.89543 1 1 1.89543 1 3V13C1 14.1046 1.89543 15 3 15H10H12H13C14.6569 15 16 13.6569 16 12V4C16 3.44772 15.5523 3 15 3H14V12C14 12.5523 13.5523 13 13 13C12.4477 13 12 12.5523 12 12V3C12 1.89543 11.1046 1 10 1H3ZM4 3C3.44772 3 3 3.44772 3 4V6C3 6.55228 3.44772 7 4 7H6C6.55228 7 7 6.55228 7 6V4C7 3.44772 6.55228 3 6 3H4ZM3 10C3 10.5523 3.44772 11 4 11H9C9.55229 11 10 10.5523 10 10C10 9.44771 9.55228 9 9 9H4C3.44772 9 3 9.44771 3 10Z"
+                    fill="#1D2123"
+                  />
+                </svg>{" "}
+                Блог
               </Button>
             </ButtonGroup>
           </Box>
         </div>
         <Box className="button-icon">
           <div className="twiter-box">
-            <Image src={images.Vector} />
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              // fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M13.5133 3.96661C13.5133 3.96661 15.2887 7.198 15.2887 11.1846C15.2887 11.1846 14.2407 12.9799 11.5161 13.0665C11.5161 13.0665 11.0722 12.5341 10.7024 12.0637C12.3174 11.6056 12.9339 10.5903 12.9339 10.5903C12.4284 10.9246 11.9476 11.1599 11.5161 11.3208C8.8598 12.4412 5.90388 12.0578 3.82292 10.8875C3.81685 10.8834 3.79472 10.8707 3.76208 10.8518C3.65993 10.7929 3.45489 10.6746 3.31744 10.578C3.31744 10.578 3.90922 11.5684 5.47497 12.0389C5.10511 12.5094 4.64895 13.0665 4.64895 13.0665C1.92429 12.9799 0.888672 11.1846 0.888672 11.1846C0.888672 7.198 2.66401 3.96661 2.66401 3.96661C4.43936 2.62948 6.1284 2.66662 6.1284 2.66662L6.25169 2.81519C4.03251 3.45899 3.00922 4.43708 3.00922 4.43708C3.00922 4.43708 3.28045 4.28851 3.73662 4.07803C6.57744 2.82491 10.0176 2.8252 12.9462 4.43708C12.9462 4.43708 11.9722 3.50852 9.87634 2.86471L10.0489 2.66662C10.0489 2.66662 11.738 2.62948 13.5133 3.96661ZM10.2832 10.0332C10.9859 10.0332 11.5407 9.41417 11.5407 8.65894C11.5407 7.90371 10.9859 7.28467 10.2832 7.28467C9.58045 7.28467 9.02566 7.90371 9.02566 8.65894C9.02566 9.41417 9.59278 10.0332 10.2832 10.0332ZM4.52566 8.65894C4.52566 7.90371 5.08045 7.28467 5.78319 7.28467C6.48593 7.28467 7.05306 7.90371 7.04073 8.65894C7.04073 9.41417 6.48593 10.0332 5.78319 10.0332C5.09278 10.0332 4.52566 9.41417 4.52566 8.65894Z"
+              />
+            </svg>
           </div>
           <div className="vector">
-            <Image src={images.twiter} />
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              // fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M15.1109 3.92854C14.5874 4.1427 14.0258 4.28794 13.4356 4.35279C14.0382 4.01962 14.4995 3.49118 14.7181 2.86344C14.1528 3.17197 13.5289 3.396 12.8642 3.51744C12.3318 2.9931 11.5746 2.6665 10.7348 2.6665C9.12354 2.6665 7.81711 3.87275 7.81711 5.35963C7.81711 5.57051 7.84288 5.77648 7.89266 5.97343C5.46823 5.861 3.31842 4.78851 1.87958 3.15883C1.62807 3.556 1.48498 4.01879 1.48498 4.51279C1.48498 5.44743 2.00045 6.27211 2.78253 6.75459C2.30439 6.73983 1.85469 6.61838 1.461 6.41652V6.45016C1.461 7.75487 2.46704 8.84377 3.801 9.0916C3.5566 9.15232 3.29888 9.18597 3.03226 9.18597C2.84386 9.18597 2.66167 9.16874 2.48303 9.13591C2.8545 10.2068 3.93165 10.9855 5.20786 11.0068C4.20982 11.7289 2.95139 12.1581 1.58454 12.1581C1.34904 12.1581 1.11706 12.145 0.888672 12.1212C2.17999 12.8868 3.71304 13.3332 5.36073 13.3332C10.7277 13.3332 13.6614 9.22865 13.6614 5.669L13.6516 5.32026C14.2248 4.94277 14.7207 4.46848 15.1109 3.92854Z" />
+            </svg>
           </div>
 
           <Button className="">Войти</Button>
