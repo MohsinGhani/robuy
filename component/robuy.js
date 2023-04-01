@@ -5,8 +5,11 @@ import Typography from "@mui/material/Typography";
 import Header from "./header";
 import Card from "@mui/material/Card";
 import BlogList from "./blogList";
+import { useRouter } from "next/router";
 
 const Robuy = () => {
+  const router = useRouter();
+
   return (
     <>
       <Header />
@@ -21,12 +24,16 @@ const Robuy = () => {
               <Card className="cardChild">
                 <div className="header">
                   <div className="headerChild">
-                    <Typography variant="subtitle2">Блог Robuy</Typography>
-                    <Typography variant="subtitle1">
+                    <Typography variant="h6" className="first-heading">
+                      Блог Robuy
+                    </Typography>
+                    <Typography variant="h6" className="sec-heading">
                       Новости и обновления
                     </Typography>
                   </div>
-                  <Button>Подписаться</Button>
+                  <Button onClick={() => router.push("https://robuy.gg/")}>
+                    Купить робуксы
+                  </Button>
                 </div>
                 <img src={"/assets/images/image.svg"} alt="#" />
                 <CardContent className="newsCard">

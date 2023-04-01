@@ -61,8 +61,10 @@ const BlogCard = ({ blog }) => {
         </div>
 
         <div className="card-content">
-          <Typography>{blog?.fields?.title}</Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="h2" className="post-title">
+            {blog?.fields?.title}
+          </Typography>
+          <Typography variant="body2" className="post-des">
             {documentToReactComponents(description)}
           </Typography>
         </div>

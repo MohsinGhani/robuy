@@ -102,10 +102,10 @@ const BlogList = () => {
                   <div className="box3"></div>
                   <div className="box4"></div>
                   <Button variant="contained4">Игры</Button>
-                  <Typography variant="subtitle1">
+                  <Typography variant="h6" className="subtitle1">
                     Roblox получила обновление графики
                   </Typography>
-                  <Typography variant="subtitle2">
+                  <Typography variant="h6" className="subtitle2">
                     Разработчики Roblox, одной из самых популярных песочниц в
                     мире, выпустили обновление с различными графическими
                     улучшениями. Патч подтянул текстуры всех материалов игры:

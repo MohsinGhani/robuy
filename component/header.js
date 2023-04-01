@@ -41,7 +41,10 @@ function DrawerAppBar(props) {
             {" "}
             <ButtonGroup className="btn2">
               {" "}
-              <Button className="btn-group1">
+              <Button
+                className="btn-group1"
+                onClick={() => router.push("https://robuy.gg/purchase")}
+              >
                 <svg
                   width="15"
                   height="16"
@@ -58,7 +61,10 @@ function DrawerAppBar(props) {
                 </svg>
                 Купить робуксы
               </Button>
-              <Button className="btn-group2">
+              <Button
+                className="btn-group2"
+                onClick={() => router.push("https://robuy.gg/free")}
+              >
                 <svg
                   width="17"
                   height="16"
@@ -81,7 +87,10 @@ function DrawerAppBar(props) {
                 </svg>
                 Бесплатно
               </Button>
-              <Button className="btn-group3">
+              <Button
+                className="btn-group3"
+                onClick={() => router.push("https://robuy.gg/")}
+              >
                 <svg
                   width="17"
                   height="16"
@@ -98,7 +107,10 @@ function DrawerAppBar(props) {
                 </svg>
                 Мои Покупки
               </Button>
-              <Button className="btn-group4">
+              <Button
+                className="btn-group4"
+                onClick={() => router.push("https://robuy.gg/")}
+              >
                 <svg
                   width="17"
                   height="16"
@@ -113,7 +125,10 @@ function DrawerAppBar(props) {
                 </svg>
                 Промокод
               </Button>
-              <Button className="btn-groupLast">
+              <Button
+                className="btn-groupLast"
+                onClick={() => router.push("https://robuy.gg/")}
+              >
                 <svg
                   width="17"
                   height="16"
@@ -161,7 +176,7 @@ function DrawerAppBar(props) {
             </svg>
           </div>
 
-          <Button className="">Войти</Button>
+          <Button>Войти</Button>
         </Box>
       </AppBar>
     </div>

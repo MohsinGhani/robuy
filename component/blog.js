@@ -54,8 +54,6 @@ const RobuySecondPage = () => {
   const description2 = blog?.fields?.description2;
   const description3 = blog?.fields?.description3;
 
-  console.log("🚀 ~ blog:", blog);
-
   return (
     <>
       <Header />
@@ -63,10 +61,7 @@ const RobuySecondPage = () => {
         <div className="robuyProject">
           <Card sx={{ maxWidth: 658 }}>
             <div className="top-icon">
-              <img
-                src={blog?.fields?.image?.fields?.file?.url}
-                alt="Edit Icon"
-              />
+              <img src={blog?.fields?.image?.fields?.file?.url} />
             </div>
 
             <div className="robuySecConChild">
