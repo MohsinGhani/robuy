@@ -52,14 +52,14 @@
       p {
         width: 100% !important;
         max-height: 68px !important;
-        display: -webkit-box;
-        -webkit-box-orient: horizontal;
+        display: -webkit-box !important;
+        -webkit-box-orient: horizontal !important;
         overflow: hidden !important;
         text-overflow: ellipsis !important;
-        font-family: "Inter";
+        font-family: "Inter" !important;
         font-style: normal;
         font-weight: 400;
-        font-size: 14px;
+        font-size: 14px !important;
         line-height: 160.02%;
       }
     }
