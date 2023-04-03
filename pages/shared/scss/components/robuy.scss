@@ -35,12 +35,11 @@
       -69px 0 140px -94px #399acf, 97px 0 87px -107px #d2cc38;
     margin-top: 20px;
     .cardChild {
-      padding: 28px;
       box-shadow: none;
-      margin-top: -20px;
+      padding: 5px 20px 15px 32px;
+
       .newsCard {
         padding: 0px;
-
         margin-top: 26px;
 
         .buttonParent {
@@ -83,7 +82,7 @@
           }
 
           .MuiTypography-body2 {
-            font-family: "Inter", sans-serif;
+            font-family: "Inter";
             font-weight: 600;
             font-size: 19px;
             line-height: 120%;
@@ -92,12 +91,10 @@
             color: #1d2123;
           }
           .MuiTypography-body1 {
-            font-family: "Inter", sans-serif;
-
+            font-family: "Inter";
             font-weight: 400;
             font-size: 14px;
-            line-height: 160.02%;
-
+            line-height: 160%;
             color: #95a0a7;
           }
         }
