@@ -23,6 +23,7 @@ function DrawerAppBar(props) {
           onClick={() => router.push("/")}
         >
           <svg
+            onClick={() => router.push("/")}
             width="16"
             height="19"
             viewBox="0 0 16 19"
@@ -125,10 +126,7 @@ function DrawerAppBar(props) {
                 </svg>
                 Промокод
               </Button>
-              <Button
-                className="btn-groupLast"
-                onClick={() => router.push("https://robuy.gg/")}
-              >
+              <Button className="btn-groupLast">
                 <svg
                   width="17"
                   height="16"
@@ -176,7 +174,9 @@ function DrawerAppBar(props) {
             </svg>
           </div>
 
-          <Button>Войти</Button>
+          <Button onClick={() => router.push("https://robuy.gg/")}>
+            Войти
+          </Button>
         </Box>
       </AppBar>
     </div>

@@ -21,7 +21,7 @@
   .robuyProject {
     box-shadow: 9px -123px 71px -160px #8d00d0, -69px 0 141px -94px #399acf,
       97px 0 87px -109px #d2cc38;
-    margin-top: 62px;
+    margin-top: 20px;
     border-bottom-left-radius: 13px;
     border-top-left-radius: 19px;
   }
@@ -93,6 +93,19 @@
         border-bottom-color: #eaeef0;
         border-left-color: transparent;
       }
+      .header {
+        margin-top: 25px;
+      }
+    }
+    .description1 {
+      p {
+        font-family: "Inter";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 160.02%;
+        color: #1d2123;
+        margin-top: 25px;
+      }
     }
 
     .description2 {
@@ -102,7 +115,8 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      margin-top: 25px;
+      margin-top: -70px;
+
       p {
         font-family: "Inter";
         font-style: normal;
@@ -119,7 +133,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 160.02%;
-    margin-top: 20px;
+    margin-top: 30px;
     color: #1d2123;
     opacity: 0.9;
   }
@@ -133,7 +147,7 @@
     margin-top: 42px;
     display: flex;
     .MuiTypography-root {
-      font-family: "Inter", sans-serif;
+      font-family: "Inter";
       font-style: normal;
       font-weight: 600;
       font-size: 16px;
@@ -224,9 +238,9 @@
       }
     }
     .MuiCardContent-root {
-      // margin-top: 25px;
       .buttonParent {
-        margin-bottom: 30px;
+        margin-bottom: 25px;
+        margin-top: 25px;
         @include sm {
           display: flex;
         }
@@ -268,26 +282,9 @@
           font-weight: 600;
           font-size: 20px;
           line-height: 120%;
-          margin-bottom: 10px;
-          color: #1d2123;
-        }
-
-        .MuiTypography-body1 {
-          font-family: "Inter";
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 160.02%;
           color: #1d2123;
         }
       }
-    }
-    .description1 > p {
-      font-family: "Inter";
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 160.02%;
-      color: #1d2123;
-      // margin-left: 13px;
     }
     .cardChild {
       padding: 40px;
