@@ -25,6 +25,18 @@
     border-bottom-left-radius: 13px;
     border-top-left-radius: 19px;
   }
+  .top-icon {
+    width: 680px;
+    height: 380px !important;
+  }
+
+  img {
+    width: 100% !important;
+
+    @include sm {
+      height: auto !important;
+    }
+  }
   .robuySecConChild {
     margin: 25px;
     .box {
@@ -221,18 +233,6 @@
     border-radius: 16px;
     box-shadow: none;
 
-    .top-icon {
-      width: 680px;
-      height: 380px !important;
-    }
-
-    img {
-      width: 100%;
-
-      @include sm {
-        height: auto;
-      }
-    }
     .MuiCardContent-root {
       .buttonParent {
         margin-bottom: 25px;
