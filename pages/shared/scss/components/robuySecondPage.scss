@@ -97,15 +97,13 @@
         margin-top: 25px;
       }
     }
-    .description1 {
-      p {
-        font-family: "Inter";
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 160.02%;
-        color: #1d2123;
-        margin-top: 25px;
-      }
+    .description1 > p {
+      font-family: "Inter";
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 160.02%;
+      color: #1d2123;
+      margin-top: 20px;
     }
 
     .description2 {
@@ -115,8 +113,6 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      margin-top: -70px;
-
       p {
         font-family: "Inter";
         font-style: normal;
@@ -133,7 +129,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 160.02%;
-    margin-top: 30px;
+    margin-top: 20px;
     color: #1d2123;
     opacity: 0.9;
   }
@@ -468,127 +464,127 @@
     margin-top: 10px;
   }
 
-  .virticalCard {
-    max-width: 659px;
-    .image {
-      width: 516px;
-      border-radius: 54px;
-    }
-    @include sm {
-      display: none;
-    }
-    .MuiPaper-root {
-      width: 100%;
-      .MuiCardContent-root {
-        padding: 5px;
+  // .virticalCard {
+  //   max-width: 6px;
+  //   .image {
+  //     width: 516px;
+  //     border-radius: 54px;
+  //   }
+  //   @include sm {
+  //     display: none;
+  //   }
+  //   .MuiPaper-root {
+  //     width: 57vw;
+  //     .MuiCardContent-root {
+  //       padding: 5px;
 
-        .box {
-          position: relative;
-          margin: 2px;
-          margin-right: 0px;
+  //       .box {
+  //         position: relative;
+  //         margin: 2px;
+  //         margin-right: 0px;
 
-          .box1 {
-            border-style: solid;
-            border-width: 2px;
-            height: 15px;
-            width: 15px;
-            border-top-left-radius: 10px;
-            position: absolute;
-            top: 0px;
-            left: 1px;
-            border-color: transparent;
-            border-top-color: #eaeef0;
-            border-right-color: transparent;
-            border-bottom-color: transparent;
-            border-left-color: #eaeef0;
-          }
+  //         .box1 {
+  //           border-style: solid;
+  //           border-width: 2px;
+  //           height: 15px;
+  //           width: 15px;
+  //           border-top-left-radius: 10px;
+  //           position: absolute;
+  //           top: 0px;
+  //           left: 1px;
+  //           border-color: transparent;
+  //           border-top-color: #eaeef0;
+  //           border-right-color: transparent;
+  //           border-bottom-color: transparent;
+  //           border-left-color: #eaeef0;
+  //         }
 
-          .box2 {
-            border-style: solid;
-            border-width: 2px;
-            height: 15px;
-            width: 15px;
-            border-top-right-radius: 10px;
-            position: absolute;
-            top: 2px;
-            right: 2px;
-            border-color: transparent;
-            border-top-color: #eaeef0;
-            border-right-color: #eaeef0;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-          }
-          .box3 {
-            margin-top: 150px;
-            border-style: solid;
-            border-width: 2px;
-            height: 15px;
-            width: 15px;
-            border-bottom-left-radius: 10px;
-            position: absolute;
-            bottom: -18px;
-            left: 0px;
-            border-color: transparent;
-            border-top-color: transparent;
-            border-right-color: transparent;
-            border-bottom-color: #eaeef0;
-            border-left-color: #eaeef0;
-          }
-          .box4 {
-            margin-top: 150px;
-            border-style: solid;
-            border-width: 2px;
-            height: 15px;
-            width: 15px;
-            border-bottom-right-radius: 10px;
-            position: absolute;
-            bottom: -18px;
-            right: 4px;
-            border-color: transparent;
-            border-top-color: transparent;
-            border-right-color: #eaeef0;
-            border-bottom-color: #eaeef0;
-            border-left-color: transparent;
-          }
-        }
-      }
-      .MuiTypography-subtitle1 {
-        font-family: "Inter", sans-serif;
-        margin-left: 18px;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 120%;
-        color: #1d2123;
-        margin-bottom: 20px;
-      }
-      .MuiTypography-subtitle2 {
-        font-family: "Inter", sans-serif;
-        margin-left: 22px;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 160.02%;
+  //         .box2 {
+  //           border-style: solid;
+  //           border-width: 2px;
+  //           height: 15px;
+  //           width: 15px;
+  //           border-top-right-radius: 10px;
+  //           position: absolute;
+  //           top: 2px;
+  //           right: 2px;
+  //           border-color: transparent;
+  //           border-top-color: #eaeef0;
+  //           border-right-color: #eaeef0;
+  //           border-bottom-color: transparent;
+  //           border-left-color: transparent;
+  //         }
+  //         .box3 {
+  //           margin-top: 150px;
+  //           border-style: solid;
+  //           border-width: 2px;
+  //           height: 15px;
+  //           width: 15px;
+  //           border-bottom-left-radius: 10px;
+  //           position: absolute;
+  //           bottom: -18px;
+  //           left: 0px;
+  //           border-color: transparent;
+  //           border-top-color: transparent;
+  //           border-right-color: transparent;
+  //           border-bottom-color: #eaeef0;
+  //           border-left-color: #eaeef0;
+  //         }
+  //         .box4 {
+  //           margin-top: 150px;
+  //           border-style: solid;
+  //           border-width: 2px;
+  //           height: 15px;
+  //           width: 15px;
+  //           border-bottom-right-radius: 10px;
+  //           position: absolute;
+  //           bottom: -18px;
+  //           right: 4px;
+  //           border-color: transparent;
+  //           border-top-color: transparent;
+  //           border-right-color: #eaeef0;
+  //           border-bottom-color: #eaeef0;
+  //           border-left-color: transparent;
+  //         }
+  //       }
+  //     }
+  //     .MuiTypography-subtitle1 {
+  //       font-family: "Inter", sans-serif;
+  //       margin-left: 18px;
+  //       font-weight: 600;
+  //       font-size: 20px;
+  //       line-height: 120%;
+  //       color: #1d2123;
+  //       margin-bottom: 20px;
+  //     }
+  //     .MuiTypography-subtitle2 {
+  //       font-family: "Inter", sans-serif;
+  //       margin-left: 22px;
+  //       font-weight: 400;
+  //       font-size: 14px;
+  //       line-height: 160.02%;
 
-        color: #95a0a7;
-      }
-      img {
-        border-bottom-right-radius: 0px;
-      }
-      .MuiButtonBase-root {
-        padding: 8px 12px;
-        gap: 8px;
-        text-transform: inherit;
-        margin-left: 15px;
-        background: #ffffff;
-        border-radius: 22px;
-        font-family: "Inter", sans-serif;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 120%;
-        background: rgba(141, 0, 208, 0.1);
-        color: #8d00d0;
-        margin-bottom: 30px;
-        margin-top: 20px;
-      }
-    }
-  }
+  //       color: #95a0a7;
+  //     }
+  //     img {
+  //       border-bottom-right-radius: 0px;
+  //     }
+  //     .MuiButtonBase-root {
+  //       padding: 8px 12px;
+  //       gap: 8px;
+  //       text-transform: inherit;
+  //       margin-left: 15px;
+  //       background: #ffffff;
+  //       border-radius: 22px;
+  //       font-family: "Inter", sans-serif;
+  //       font-weight: 600;
+  //       font-size: 16px;
+  //       line-height: 120%;
+  //       background: rgba(141, 0, 208, 0.1);
+  //       color: #8d00d0;
+  //       margin-bottom: 30px;
+  //       margin-top: 20px;
+  //     }
+  //   }
+  // }
 }
