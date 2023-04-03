@@ -32,8 +32,8 @@
       margin: -7px 8px 0px 8px;
     }
     .card-content {
-      padding: 0px 15px 5px 30px;
-      height: 16vh;
+      padding: 0px 15px 5px 30px !important;
+      height: 16vh !important;
 
       .css-1sra7t5-MuiTypography-root {
         font-family: "Inter";
@@ -50,12 +50,12 @@
         line-height: 160.02%;
       }
       p {
-        width: 100%;
-        max-height: 68px;
+        width: 100% !important;
+        max-height: 68px !important;
         display: -webkit-box;
         -webkit-box-orient: horizontal;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
         font-family: "Inter";
         font-style: normal;
         font-weight: 400;
@@ -67,7 +67,7 @@
     .card-border-containerlast {
       display: flex;
       justify-content: space-between;
-      margin: 16px 8px -6px 7px;
+      margin: 16px 8px -6px 7px !important;
     }
   }
 
