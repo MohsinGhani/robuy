@@ -1,4 +1,4 @@
-.css-av45mt-MuiPaper-root-MuiCard-root {
+.MuiPaper-root-MuiCard-root {
   box-shadow: none;
   .imgButton {
     cursor: pointer;
@@ -18,7 +18,7 @@
     border-radius: 22px;
   }
 
-  .css-46bh2p-MuiCardContent-root {
+  .MuiCardContent-root {
     padding: 0%;
   }
 
@@ -34,15 +34,13 @@
     .card-content {
       padding: 0px 15px 5px 30px !important;
       height: 16vh !important;
+
       .post-title {
-        font-size: 0px;
-      }
-      .MuiTypography-root {
         font-family: "Inter";
         font-style: normal;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 120%;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 160.02%;
       }
       .post-des {
         font-family: "Inter";
@@ -50,14 +48,14 @@
         font-weight: 400;
         font-size: 14px;
         line-height: 160.02%;
-      }
-      p {
         width: 100% !important;
         max-height: 68px !important;
         display: -webkit-box !important;
         -webkit-box-orient: horizontal !important;
         overflow: hidden !important;
         text-overflow: ellipsis !important;
+      }
+      p {
         font-family: "Inter" !important;
         font-style: normal;
         font-weight: 400;
@@ -73,7 +71,7 @@
     }
   }
 
-  .css-46bh2p-MuiCardContent-root:last-child {
+  .MuiCardContent-root:last-child {
     padding-bottom: 15px !important;
     margin-top: 10px;
   }
