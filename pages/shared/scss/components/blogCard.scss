@@ -25,6 +25,14 @@
   .card-content {
     padding: 0px 15px 5px 30px;
     height: 18vh;
+    .post-title {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 120%;
+      color: #1d2123;
+    }
 
     .post-des {
       font-family: "Inter";
