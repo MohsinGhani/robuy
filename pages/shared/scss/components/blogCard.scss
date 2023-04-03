@@ -23,7 +23,7 @@
   .card-border-container {
     display: flex;
     justify-content: space-between;
-    margin: 5px 5px 0px 10px;
+    margin: -7px 8px 0px 8px;
   }
   .card-content {
     padding: 0px 15px 5px 30px;
@@ -61,12 +61,13 @@
   .card-border-containerlast {
     display: flex;
     justify-content: space-between;
-    margin: 5px 5px 0px 10px;
+    margin: 16px 8px -6px 7px;
   }
 }
 
 .css-46bh2p-MuiCardContent-root:last-child {
   padding-bottom: 15px !important;
+  margin-top: 10px;
 }
 
 .imgButton {

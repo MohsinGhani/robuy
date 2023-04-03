@@ -68,7 +68,7 @@
             border-width: 2px;
             height: 15px;
             width: 15px;
-            border-top-left-radius: 13px;
+            border-top-left-radius: 10px;
             position: absolute;
             top: 0px;
             left: 1px;
@@ -84,7 +84,7 @@
             border-width: 2px;
             height: 15px;
             width: 15px;
-            border-top-right-radius: 13px;
+            border-top-right-radius: 10px;
             position: absolute;
             top: 2px;
             right: 2px;
@@ -100,7 +100,7 @@
             border-width: 2px;
             height: 15px;
             width: 15px;
-            border-bottom-left-radius: 13px;
+            border-bottom-left-radius: 10px;
             position: absolute;
             bottom: -18px;
             left: 0px;
@@ -116,7 +116,7 @@
             border-width: 2px;
             height: 15px;
             width: 15px;
-            border-bottom-right-radius: 13px;
+            border-bottom-right-radius: 10px;
             position: absolute;
             bottom: -18px;
             right: 4px;
@@ -144,6 +144,7 @@
         font-size: 14px;
         line-height: 160.02%;
         color: #95a0a7;
+        margin-left: 19px;
       }
 
       .MuiButtonBase-root {

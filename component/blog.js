@@ -77,7 +77,9 @@ const RobuySecondPage = () => {
                       Новости и обновления
                     </Typography>
                   </div>
-                  <Button>Подписаться</Button>
+                  <Button onClick={() => router.push("https://robuy.gg/")}>
+                    Купить робуксы
+                  </Button>
                 </div>
                 <CardContent>
                   <div className="buttonParent">
