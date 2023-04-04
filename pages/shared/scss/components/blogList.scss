@@ -16,7 +16,12 @@
 }
 .MuiButtonGroup-root {
   @include sm {
-    margin-left: 10px;
+    width: 100%;
+  }
+
+  .tags-container {
+    margin-top: 15px;
+    border-radius: 22px !important;
   }
 
   .MuiButton-contained2 {
@@ -42,17 +47,18 @@
   flex-wrap: wrap;
   .productCard_container {
     max-width: 658px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 20px;
     @include sm {
-      width: 360px;
+      width: 620px;
       margin-bottom: 20px;
     }
   }
+
   .virticalCard {
-    // max-width: 650px !important;
     .image {
       width: 516px;
       border-radius: 54px;
@@ -61,7 +67,7 @@
       display: none;
     }
     .MuiPaper-root {
-      width: 39vw !important;
+      width: 39vw;
       .MuiCardContent-root {
         padding: 5px;
 

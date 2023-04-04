@@ -109,15 +109,28 @@
 
 // export default BlogCard;
 import React from "react";
-import Image from "next/image";
-import images from "../public/assets/images/index";
 import { Button, Typography } from "@mui/material";
-const BlogCard = () => {
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { useRouter } from "next/router";
+const BlogCard = ({ blog }) => {
+  const router = useRouter();
+
+  const handler = (id) => {
+    router.push({
+      pathname: "/blog",
+      query: { id },
+    });
+  };
+
+  const description = blog?.fields?.description;
+  const id = blog?.sys?.id;
   return (
-    <div className="blog-card-container">
+    <div className="blog-card-container" onClick={() => handler(id)}>
       <div className="blog-card-img">
-        <Image src={images.rolboxpapa} />
-        <Button className="img-btn">Новости</Button>
+        <img src={blog?.fields?.image?.fields?.file?.url} />
+        {blog?.fields?.tags?.map((t) => (
+          <Button className="img-btn">{t.name}</Button>
+        ))}
       </div>
       <div className="blog-card-content-parent">
         <div className="arrow-img">
@@ -153,10 +166,10 @@ const BlogCard = () => {
         </div>
         <div className="card-content">
           <Typography className="blog-card-heading">
-            Подростка в Сингапуре задержали за игру на ИГИЛ-сервере Roblox
+            {blog?.fields?.title}
           </Typography>
           <Typography className="blog-card-prg">
-            Правоохранительные органы Сингапура задержал...
+            {documentToReactComponents(description)}
           </Typography>
         </div>
         <div className="arrow-img">
