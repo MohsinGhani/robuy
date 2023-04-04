@@ -1,0 +1,53 @@
+.virticalCard {
+  width: 40%;
+  display: flex;
+  height: 247px;
+  background-color: #ffffff;
+  color: black;
+  border-radius: 14px;
+
+  .virtical-child {
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    width: 160px;
+    height: 247px;
+  }
+  @include sm {
+    display: none;
+  }
+  .border-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px 5px 5px;
+  }
+  .content-card {
+    padding: 10px 20px 10px 20px;
+
+    .btn {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 120%;
+      color: #8d00d0;
+      background: rgba(141, 0, 208, 0.1);
+      border-radius: 22px;
+    }
+    .prg {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 160.02%;
+      color: #95a0a7;
+    }
+  }
+  .border-containerlast {
+    display: flex;
+    justify-content: space-between;
+    //     padding: 0px 10px -30px 10px;
+    margin-bottom: 30px;
+  }
+}

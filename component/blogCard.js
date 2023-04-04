@@ -165,9 +165,7 @@ const BlogCard = ({ blog }) => {
           </svg>
         </div>
         <div className="card-content">
-          <Typography className="blog-card-heading">
-            {blog?.fields?.title}
-          </Typography>
+          <h2 className="blog-card-heading">{blog?.fields?.title}</h2>
           <Typography className="blog-card-prg">
             {documentToReactComponents(description)}
           </Typography>
