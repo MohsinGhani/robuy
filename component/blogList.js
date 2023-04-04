@@ -1,15 +1,12 @@
 import React from "react";
-import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import images from "../public/assets/images/index";
-import { ButtonGroup } from "@mui/material";
-import Image from "next/image";
+import { ButtonGroup, Card } from "@mui/material";
+
 import { createClient } from "contentful";
-import { Box } from "@mui/system";
 import { useState, useEffect } from "react";
-import Card from "@mui/material/Card";
 import BlogCard from "./blogCard";
+import VirticalCard from "./virticalCard";
 
 const BlogList = () => {
   const [blogs, setBlogs] = useState([]);
@@ -80,9 +77,7 @@ const BlogList = () => {
 
       <ButtonGroup>
         {tags?.map((t) => (
-          <Button className="tags-container" variant="contained2">
-            {t.name}
-          </Button>
+          <Button variant="contained2"> {t.name} </Button>
         ))}
       </ButtonGroup>
 
@@ -93,31 +88,7 @@ const BlogList = () => {
           ))}
         </div>
 
-        <div className="virticalCard">
-          <Card sx={{ display: "flex" }}>
-            <Image src={images.Roblox} />
-            <Box sx={{ display: "flex", flexDirection: "column" }}>
-              <CardContent sx={{ flex: "1 0 auto" }}>
-                <div className="virticalCard-box">
-                  <div className="virticalCard-box1"></div>
-                  <div className="virticalCard-box2"></div>
-                  <div className="virticalCard-box3"></div>
-                  <div className="virticalCard-box4"></div>
-                  <Button variant="contained4">Игры</Button>
-                  <Typography variant="h6" className="subtitle1">
-                    Roblox получила обновление графики
-                  </Typography>
-                  <Typography variant="h6" className="subtitle2">
-                    Разработчики Roblox, одной из самых популярных песочниц в
-                    мире, выпустили обновление с различными графическими
-                    улучшениями. Патч подтянул текстуры всех материалов игры:
-                    Этим релизом мы улучшили визуальное...
-                  </Typography>
-                </div>
-              </CardContent>
-            </Box>
-          </Card>
-        </div>
+        <VirticalCard />
       </div>
     </>
   );
