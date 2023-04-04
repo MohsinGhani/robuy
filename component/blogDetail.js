@@ -1,13 +1,59 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import images from "../public/assets/images/index";
 import { Button, Typography } from "@mui/material";
+import { useRouter } from "next/router";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { createClient } from "contentful";
 const BlogDetail = () => {
+  const [blog, setBlog] = useState(null);
+  const router = useRouter();
+  const { id } = router.query;
+
+  useEffect(() => {
+    const client = createClient({
+      space: "c288e1xhsyct",
+      accessToken: "9F8haQVl_uqqdxbrDbTh6noeplOE4qbhBHNn9CekcLo",
+    });
+
+    const fetchData = async () => {
+      try {
+        const response = await client.getTags();
+        const tags = response.items?.map((t) => ({
+          id: t.sys?.id,
+          name: t.name,
+        }));
+
+        const entryResponse = await client.getEntry(id);
+        const filteredTags = tags.filter((t) => {
+          const tt = entryResponse.metadata?.tags?.map((iTag) => {
+            if (iTag.sys?.id === t.id) {
+              return t;
+            }
+          });
+          return tt[0] ? tt[0] : null;
+        });
+
+        const result = {
+          ...entryResponse,
+          fields: { ...entryResponse.fields, tags: filteredTags },
+        };
+
+        setBlog(result);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchData();
+  }, [id]);
+  const description = blog?.fields?.description;
+  const description2 = blog?.fields?.description2;
+  const description3 = blog?.fields?.description3;
   return (
     <div className="blogDetail-container">
       <div className="blogDetail-img">
         {" "}
-        <img src={"/assets/images/image.svg"} alt="#" />
+        <img src={blog?.fields?.image?.fields?.file?.url} />
       </div>
       <div className="blogdetail-content">
         <div className="border-arrow">
@@ -55,49 +101,26 @@ const BlogDetail = () => {
             </div>
           </div>
           <div className="button-tag">
-            <Button className="first-button-tag">Последняя новость</Button>
-            <Button className="second-button-tag">Обновления</Button>
+            {blog?.fields?.tags?.map((t) => (
+              <Button className="first-button-tag"> {t.name} </Button>
+            ))}
+            {/* <Button className="first-button-tag">Последняя новость</Button>
+            <Button className="second-button-tag">Обновления</Button> */}
           </div>
           <div className="content">
-            <Typography variant="h6">
-              В 2022 году в Roblox ежедневно заходили 56 миллионов игроков
-            </Typography>
+            <Typography variant="h6">{blog?.fields?.title}</Typography>
             <Typography className="content-prg">
-              Основатель и генеральный директор Roblox Corporation Дэвид Башуки{" "}
-              <br></br>
-              опубликовал открытое письмо к геймерам, в котором похвастался
-              значительным ростом популярности. По его словам, в 2022 году число
-              ежедневных посетителей Roblox выросло на 23% и составило свыше 56
-              млн игроков:
+              {documentToReactComponents(description)}
             </Typography>
             <div className="color-cotent-card">
               <Typography variant="h6">
-                Инвестиции, которые мы делаем для расширения вовлеченности в
-                Roblox в разных{" "}
-                <b>
-                  географических регионах и возрастных группах, приносят свои
-                </b>
-                <br></br> плоды. В 2022 году наше сообщество выросло на 23% и
-                превысило 56 <br></br>миллионов ежедневных пользователей по
-                всему миру. Наши пользователи провели более 49.3 миллиардов
-                часов вместе, создавая, играя, исследуя, обучаясь и общаясь.
-                Сегодня более половины пользователей Roblox — это люди от 13 лет
-                и старше, что свидетельствует о привлекательности нашей{" "}
-                <br></br>платформы для широкого круга аудитории.
+                {documentToReactComponents(description2)}
               </Typography>
             </div>
             <Typography className="secondLast-text">
-              Заодно Дэвид сообщил, что студия прикладывает все возможные усилия
-              для обеспечения безопасной и комфортной игры:
+              {documentToReactComponents(description3)}
             </Typography>
-            <Typography className="Last-text">
-              Поскольку сообщество Roblox продолжает расти, мы уделяем большое
-              внимание обеспечению безопасной среды для наших пользователей. За
-              последний год мы увеличили наши инвестиции в ИИ и машинное
-              обучение для автономного обнаружения и предотвращения попыток
-              игроков вступить во вредоносные связи или загрузить вредоносный
-              контент.
-            </Typography>
+            <Typography className="Last-text"></Typography>
           </div>
         </div>
 
