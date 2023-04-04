@@ -86,11 +86,11 @@ const BlogList = () => {
 
       <div className="cardParent cp">
         <div className="productCard_container">
-          {blogs.map((blog) => (
-            <BlogCard blog={blog} />
-          ))}
+          {/* {blogs.map((blog) => (
+            // <BlogCard blog={blog} />
+          ))} */}
         </div>
-
+        <BlogCard />
         <div className="virticalCard">
           <Card sx={{ display: "flex" }}>
             <Image src={images.Roblox} />

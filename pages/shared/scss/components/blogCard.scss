@@ -1,75 +1,148 @@
-.MuiButton-contained3 {
-  align-items: center;
-  padding: 8px 12px;
-  font-family: "Inter", sans-serif;
-  color: #8d00d0;
-  height: 35px;
-  text-transform: inherit;
-  font-weight: 600;
-  font-size: 14px;
-  margin-right: 10px;
-  background: #ffffff;
-  border-radius: 22px;
-}
+// .MuiButton-contained3 {
+//   align-items: center;
+//   padding: 8px 12px;
+//   font-family: "Inter", sans-serif;
+//   color: #8d00d0;
+//   height: 35px;
+//   text-transform: inherit;
+//   font-weight: 600;
+//   font-size: 14px;
+//   margin-right: 10px;
+//   background: #ffffff;
+//   border-radius: 22px;
+// }
 
-.css-46bh2p-MuiCardContent-root {
-  padding: 0%;
-}
+// .css-46bh2p-MuiCardContent-root {
+//   padding: 0%;
+// }
 
-.firstCard {
+// .firstCard {
+//   display: flex;
+//   justify-content: space-between;
+//   flex-direction: column;
+//   .card-border-container {
+//     display: flex;
+//     justify-content: space-between;
+//     margin: -7px 8px 0px 8px;
+//   }
+//   .card-content {
+//     padding: 0px 15px 5px 30px;
+//     height: 16vh;
+
+//     .css-1sra7t5-MuiTypography-root {
+//       font-family: "Inter";
+//       font-style: normal;
+//       font-weight: 600;
+//       font-size: 20px;
+//       line-height: 120%;
+//     }
+//     .post-des {
+//       font-family: "Inter";
+//       font-style: normal;
+//       font-weight: 400;
+//       font-size: 14px;
+//       line-height: 160.02%;
+//     }
+//     p {
+//       width: 100%;
+//       max-height: 68px;
+//       display: -webkit-box;
+//       -webkit-box-orient: horizontal;
+//       overflow: hidden;
+//       text-overflow: ellipsis;
+//       font-family: "Inter";
+//       font-style: normal;
+//       font-weight: 400;
+//       font-size: 14px;
+//       line-height: 160.02%;
+//     }
+//   }
+
+//   .card-border-containerlast {
+//     display: flex;
+//     justify-content: space-between;
+//     margin: 16px 8px -6px 7px;
+//   }
+// }
+
+// .css-46bh2p-MuiCardContent-root:last-child {
+//   padding-bottom: 15px !important;
+//   margin-top: 10px;
+// }
+
+// .imgButton {
+//   cursor: pointer;
+// }
+.blog-card-container {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
-  .card-border-container {
-    display: flex;
-    justify-content: space-between;
-    margin: -7px 8px 0px 8px;
-  }
-  .card-content {
-    padding: 0px 15px 5px 30px;
-    height: 16vh;
+  background-color: white;
+  max-width: 321px;
+  border-radius: 16px;
 
-    .css-1sra7t5-MuiTypography-root {
+  .blog-card-img {
+    height: 180px;
+    .img-btn {
+      padding: 8px 12px;
+
+      height: 35px;
+
+      background: #ffffff;
+      border-radius: 22px;
       font-family: "Inter";
-      font-style: normal;
+
       font-weight: 600;
-      font-size: 20px;
+      font-size: 16px;
       line-height: 120%;
+
+      color: #8d00d0;
+      margin-top: -110px;
+      margin-left: 24px;
     }
-    .post-des {
-      font-family: "Inter";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 160.02%;
-    }
-    p {
-      width: 100%;
-      max-height: 68px;
-      display: -webkit-box;
-      -webkit-box-orient: horizontal;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      font-family: "Inter";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 160.02%;
+    img {
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
     }
   }
+  .blog-card-content-parent {
+    margin: 8px;
 
-  .card-border-containerlast {
-    display: flex;
-    justify-content: space-between;
-    margin: 16px 8px -6px 7px;
+    .arrow-img {
+      display: flex;
+      justify-content: space-between;
+    }
+    .card-content {
+      padding-left: 20px;
+
+      padding-bottom: 24px;
+
+      .blog-card-heading {
+        font-family: "Inter";
+
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 120%;
+
+        margin-bottom: 16px;
+
+        color: #1d2123;
+      }
+      .blog-card-prg {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 160.02%;
+        width: 280px;
+
+        display: -webkit-box;
+
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        color: #95a0a7;
+      }
+    }
   }
-}
-
-.css-46bh2p-MuiCardContent-root:last-child {
-  padding-bottom: 15px !important;
-  margin-top: 10px;
-}
-
-.imgButton {
-  cursor: pointer;
 }
