@@ -96,11 +96,11 @@ const BlogList = () => {
             <Image src={images.Roblox} />
             <Box sx={{ display: "flex", flexDirection: "column" }}>
               <CardContent sx={{ flex: "1 0 auto" }}>
-                <div className="box">
-                  <div className="box1"></div>
-                  <div className="box2"></div>
-                  <div className="box3"></div>
-                  <div className="box4"></div>
+                <div className="virticalCard-box">
+                  <div className="virticalCard-box1"></div>
+                  <div className="virticalCard-box2"></div>
+                  <div className="virticalCard-box3"></div>
+                  <div className="virticalCard-box4"></div>
                   <Button variant="contained4">Игры</Button>
                   <Typography variant="h6" className="subtitle1">
                     Roblox получила обновление графики

@@ -1,10 +1,11 @@
 .headerParent {
   width: 100%;
+  display: none;
   @include sm {
     position: relative;
   }
   .navbar {
-    background-color: #f6f6f6;
+    background-color: transparent;
     padding: 15px 0px;
     box-shadow: none;
     display: flex;
@@ -13,7 +14,7 @@
     position: relative;
 
     .MuiTypography-h6 {
-      font-family: "Inter", sans-serif;
+      font-family: "Inter";
       font-weight: 600;
       font-size: 16px;
       line-height: 120%;
@@ -39,7 +40,7 @@
       font-weight: 600;
       font-size: 14px;
       line-height: 160.02%;
-      font-family: "Inter", sans-serif;
+      font-family: "Inter";
       color: #ffffff;
       text-transform: inherit;
     }
@@ -100,7 +101,7 @@
         padding: 4px;
         gap: 19px;
         border: none;
-        font-family: "Inter", sans-serif;
+        font-family: "Inter";
         font-weight: 600;
         font-size: 14px;
         color: #95a0a7;
@@ -118,7 +119,7 @@
           padding: 8px;
           gap: 10px;
           border: none;
-          font-family: "Inter", sans-serif;
+          font-family: "Inter";
           font-weight: 600;
           font-size: 14px;
           text-transform: inherit;
@@ -143,7 +144,7 @@
           padding: 8px;
           gap: 10px;
           border: none;
-          font-family: "Inter", sans-serif;
+          font-family: "Inter";
           font-weight: 600;
           font-size: 14px;
           color: #95a0a7;
@@ -154,7 +155,7 @@
           padding: 8px;
           gap: 10px;
           border: none;
-          font-family: "Inter", sans-serif;
+          font-family: "Inter";
           font-weight: 600;
           font-size: 14px;
           color: #95a0a7;
@@ -165,7 +166,7 @@
           padding: 8px;
           gap: 10px;
           border: none;
-          font-family: "Inter", sans-serif;
+          font-family: "Inter";
           font-weight: 600;
           font-size: 14px;
           text-transform: inherit;

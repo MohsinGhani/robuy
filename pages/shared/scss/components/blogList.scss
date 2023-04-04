@@ -1,6 +1,6 @@
 .union {
   @include sm {
-    margin-left: 30px;
+    margin-left: 8px;
   }
   margin-top: 42px;
   display: flex;
@@ -22,7 +22,7 @@
   .MuiButton-contained2 {
     align-items: center;
     padding: 8px 12px;
-    font-family: "Inter", sans-serif;
+    font-family: "Inter";
     gap: 8px;
     text-transform: inherit;
     height: 35px;
@@ -30,7 +30,6 @@
     font-size: 16px;
     color: #8d00d0;
     margin-right: 10px;
-
     background: #ffffff;
     border-radius: 22px;
   }
@@ -38,14 +37,22 @@
 
 .cardParent {
   display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
   .productCard_container {
     max-width: 658px;
-    flex-wrap: wrap;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    @include sm {
+      width: 360px;
+      margin-bottom: 20px;
+    }
   }
   .virticalCard {
-    max-width: 659px;
+    // max-width: 650px !important;
     .image {
       width: 516px;
       border-radius: 54px;
@@ -54,16 +61,16 @@
       display: none;
     }
     .MuiPaper-root {
-      width: 100%;
+      width: 39vw !important;
       .MuiCardContent-root {
         padding: 5px;
 
-        .box {
+        .virticalCard-box {
           position: relative;
           margin: 2px;
           margin-right: 0px;
 
-          .box1 {
+          .virticalCard-box1 {
             border-style: solid;
             border-width: 2px;
             height: 15px;
@@ -79,7 +86,7 @@
             border-left-color: #eaeef0;
           }
 
-          .box2 {
+          .virticalCard-box2 {
             border-style: solid;
             border-width: 2px;
             height: 15px;
@@ -94,7 +101,7 @@
             border-bottom-color: transparent;
             border-left-color: transparent;
           }
-          .box3 {
+          .virticalCard-box3 {
             margin-top: 150px;
             border-style: solid;
             border-width: 2px;
@@ -110,7 +117,7 @@
             border-bottom-color: #eaeef0;
             border-left-color: #eaeef0;
           }
-          .box4 {
+          .virticalCard-box4 {
             margin-top: 150px;
             border-style: solid;
             border-width: 2px;
@@ -125,6 +132,21 @@
             border-right-color: #eaeef0;
             border-bottom-color: #eaeef0;
             border-left-color: transparent;
+          }
+
+          .MuiButton-contained4 {
+            align-items: center;
+            padding: 8px 12px;
+            font-weight: 600;
+            font-size: 16px;
+            text-transform: inherit;
+            font-family: "Inter", sans-serif;
+            color: #8d00d0;
+
+            margin-right: 10px;
+
+            background: #ffffff;
+            border-radius: 22px !important;
           }
         }
       }
