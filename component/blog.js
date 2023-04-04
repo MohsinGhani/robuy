@@ -8,6 +8,7 @@ import BlogList from "./blogList";
 import { useRouter } from "next/router";
 import { createClient } from "contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import BlogDetail from "./blogDetail";
 
 const RobuySecondPage = () => {
   const [blog, setBlog] = useState(null);
@@ -57,7 +58,9 @@ const RobuySecondPage = () => {
   return (
     <>
       <Header />
-      <div className="robuySecondContainer">
+
+      <BlogDetail />
+      {/* <div className="robuySecondContainer">
         <div className="robuyProject">
           <Card sx={{ maxWidth: 658 }}>
             <div className="top-icon">
@@ -106,9 +109,9 @@ const RobuySecondPage = () => {
               </div>
             </div>
           </Card>
-        </div>
-        <BlogList />
-      </div>
+        </div> */}
+      <BlogList />
+      {/* </div> */}
     </>
   );
 };
