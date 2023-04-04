@@ -267,14 +267,17 @@
 
       .blog-card-heading {
         font-family: "Inter";
-
         font-weight: 600;
         font-size: 20px;
         line-height: 120%;
-
         margin-bottom: 16px;
-
         color: #1d2123;
+        width: 280px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
       }
       .blog-card-prg {
         font-family: "Inter";
@@ -283,9 +286,7 @@
         font-size: 14px;
         line-height: 160.02%;
         width: 280px;
-
         display: -webkit-box;
-
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;

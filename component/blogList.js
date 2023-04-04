@@ -80,15 +80,17 @@ const BlogList = () => {
 
       <ButtonGroup>
         {tags?.map((t) => (
-          <Button variant="contained2"> {t.name} </Button>
+          <Button className="tags-container" variant="contained2">
+            {t.name}
+          </Button>
         ))}
       </ButtonGroup>
 
       <div className="cardParent cp">
         <div className="productCard_container">
-          {/* {blogs.map((blog) => (
-            // <BlogCard blog={blog} />
-          ))} */}
+          {blogs.map((blog) => (
+            <BlogCard blog={blog} />
+          ))}
         </div>
         <BlogCard />
         <div className="virticalCard">
