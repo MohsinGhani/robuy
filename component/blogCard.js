@@ -109,8 +109,6 @@
 
 // export default BlogCard;
 import React from "react";
-import Image from "next/image";
-import images from "../public/assets/images/index";
 import { Button, Typography } from "@mui/material";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { useRouter } from "next/router";
@@ -133,7 +131,6 @@ const BlogCard = ({ blog }) => {
         {blog?.fields?.tags?.map((t) => (
           <Button className="img-btn">{t.name}</Button>
         ))}
-        {/* // <Image src={images.rolboxpapa} /> */}
       </div>
       <div className="blog-card-content-parent">
         <div className="arrow-img">

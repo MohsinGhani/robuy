@@ -92,7 +92,7 @@ const BlogList = () => {
             <BlogCard blog={blog} />
           ))}
         </div>
-        <BlogCard />
+
         <div className="virticalCard">
           <Card sx={{ display: "flex" }}>
             <Image src={images.Roblox} />
