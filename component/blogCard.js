@@ -20,7 +20,11 @@ const BlogCard = ({ blog }) => {
   const id = blog?.sys?.id;
 
   return (
-    <Card sx={{ maxWidth: 320 }} onClick={() => handler(id)}>
+    <Card
+      className="post-card cp"
+      sx={{ maxWidth: 320 }}
+      onClick={() => handler(id)}
+    >
       <div className="imgButton">
         <img src={blog?.fields?.image?.fields?.file?.url} />
         {blog?.fields?.tags?.map((t) => (
@@ -61,7 +65,6 @@ const BlogCard = ({ blog }) => {
         </div>
 
         <div className="card-content">
-          {/* <Typography variant="h2"></Typography> */}
           <h2 className="post-title">{blog?.fields?.title}</h2>
           <Typography variant="body2" className="post-des">
             {documentToReactComponents(description)}

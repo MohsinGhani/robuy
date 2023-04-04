@@ -14,11 +14,16 @@
 
   .robuyParent {
     display: flex;
-
     position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0%;
+    left: 0%;
+    @include sm {
+      margin-right: 5px;
+    }
     .card-bg {
       position: absolute;
-
       background-image: url("/assets/images/card-background.svg");
       background-size: cover;
       background-repeat: no-repeat;
@@ -34,6 +39,72 @@
     box-shadow: 8px 120px 71px -170px #d2395e, 9px -120px 68px -170px #8d00d0,
       -69px 0 140px -94px #399acf, 97px 0 87px -107px #d2cc38;
     margin-top: 20px;
+
+    .robuy-box {
+      position: relative;
+      margin: 8px;
+      .robuy-box1 {
+        border-style: solid;
+        border-width: 2px;
+        height: 15px;
+        width: 15px;
+        border-top-left-radius: 10px;
+        border-color: transparent;
+        border-top-color: #eaeef0;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: #eaeef0;
+      }
+
+      .robuy-box2 {
+        border-style: solid;
+        border-width: 2px;
+        height: 15px;
+        width: 15px;
+        border-top-right-radius: 10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-color: transparent;
+        border-top-color: #eaeef0;
+        border-right-color: #eaeef0;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+      }
+      .robuy-box3 {
+        margin-top: 150px;
+        border-style: solid;
+        border-width: 2px;
+        height: 15px;
+        width: 15px;
+        border-bottom-left-radius: 10px;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        border-color: transparent;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: #eaeef0;
+        border-left-color: #eaeef0;
+      }
+      .robuy-box4 {
+        margin-top: 150px;
+        border-style: solid;
+        border-width: 2px;
+        height: 15px;
+        width: 15px;
+        border-bottom-right-radius: 10px;
+        position: absolute;
+        bottom: 0px;
+        right: 0;
+        border-color: transparent;
+        border-top-color: transparent;
+        border-right-color: #eaeef0;
+        border-bottom-color: #eaeef0;
+        border-left-color: transparent;
+      }
+    }
+
     .cardChild {
       box-shadow: none;
       padding: 5px 20px 15px 32px;
@@ -100,146 +171,6 @@
         }
       }
     }
-
-    .box {
-      position: relative;
-      margin: 8px;
-      .box1 {
-        border-style: solid;
-        border-width: 2px;
-        height: 15px;
-        width: 15px;
-        border-top-left-radius: 10px;
-        border-color: transparent;
-        border-top-color: #eaeef0;
-        border-right-color: transparent;
-        border-bottom-color: transparent;
-        border-left-color: #eaeef0;
-      }
-
-      .box2 {
-        border-style: solid;
-        border-width: 2px;
-        height: 15px;
-        width: 15px;
-        border-top-right-radius: 10px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        border-color: transparent;
-        border-top-color: #eaeef0;
-        border-right-color: #eaeef0;
-        border-bottom-color: transparent;
-        border-left-color: transparent;
-      }
-      .box3 {
-        margin-top: 150px;
-        border-style: solid;
-        border-width: 2px;
-        height: 15px;
-        width: 15px;
-        border-bottom-left-radius: 10px;
-        position: absolute;
-        bottom: 0px;
-        left: 0;
-        border-color: transparent;
-        border-top-color: transparent;
-        border-right-color: transparent;
-        border-bottom-color: #eaeef0;
-        border-left-color: #eaeef0;
-      }
-      .box4 {
-        margin-top: 150px;
-        border-style: solid;
-        border-width: 2px;
-        height: 15px;
-        width: 15px;
-        border-bottom-right-radius: 10px;
-        position: absolute;
-        bottom: 0px;
-        right: 0;
-        border-color: transparent;
-        border-top-color: transparent;
-        border-right-color: #eaeef0;
-        border-bottom-color: #eaeef0;
-        border-left-color: transparent;
-      }
-    }
-  }
-
-  .union {
-    margin-top: 30px;
-    display: flex;
-    .MuiTypography-root {
-      font-family: "Inter", sans-serif;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 160.02%;
-      color: #1d2123;
-      margin-right: 7px;
-    }
-  }
-  .MuiButtonGroup-root {
-    margin-right: 10px;
-    margin-top: 16px;
-
-    .MuiButton-contained1 {
-      padding: 5px 20px;
-      gap: 8px;
-      width: 54px;
-      height: 35px;
-      margin-top: 6px;
-      font-family: "Inter", sans-serif;
-      color: white;
-      background: #6f2cff;
-      border-radius: 22px !important;
-      margin-right: 10px;
-      @include sm {
-        margin-top: 5px;
-      }
-    }
-    .MuiButton-contained2 {
-      padding: 8px 12px;
-      font-family: "Inter", sans-serif;
-      gap: 8px;
-      font-weight: 600;
-      font-size: 16px;
-      color: #8d00d0;
-      margin-right: 10px;
-      text-transform: inherit;
-
-      background: #ffffff;
-      border-radius: 22px !important;
-    }
-    .MuiButton-contained3 {
-      align-items: center;
-      padding: 8px 12px;
-      font-family: "Inter", sans-serif;
-      color: #8d00d0;
-      text-transform: inherit;
-      font-weight: 600;
-      font-size: 16px;
-
-      margin-right: 10px;
-
-      background: #ffffff;
-      border-radius: 22px !important;
-    }
-    .MuiButton-contained4 {
-      align-items: center;
-      padding: 8px 12px;
-      font-weight: 600;
-      font-size: 16px;
-      text-transform: inherit;
-      font-family: "Inter", sans-serif;
-      color: #8d00d0;
-
-      margin-right: 10px;
-
-      background: #ffffff;
-      border-radius: 22px !important;
-    }
   }
 
   .MuiPaper-root {
@@ -256,132 +187,6 @@
       @include sm {
         max-width: 294px;
         margin-left: -10px;
-      }
-    }
-    .secondCard {
-      padding: 28px;
-      .box {
-        position: relative;
-        margin: 12px;
-        .box1 {
-          border-style: solid;
-          border-width: 2px;
-          height: 15px;
-          width: 15px;
-          border-top-left-radius: 13px;
-          position: absolute;
-          top: -34px;
-          left: -30px;
-          border-color: transparent;
-          border-top-color: #eaeef0;
-          border-right-color: transparent;
-          border-bottom-color: transparent;
-          border-left-color: #eaeef0;
-        }
-
-        .box2 {
-          border-style: solid;
-          border-width: 2px;
-          height: 15px;
-          width: 15px;
-          border-top-right-radius: 13px;
-          position: absolute;
-          top: -34px;
-          right: -30px;
-          border-color: transparent;
-          border-top-color: #eaeef0;
-          border-right-color: #eaeef0;
-          border-bottom-color: transparent;
-          border-left-color: transparent;
-        }
-        .box3 {
-          margin-top: 150px;
-          border-style: solid;
-          border-width: 2px;
-          height: 15px;
-          width: 15px;
-          border-bottom-left-radius: 13px;
-          position: absolute;
-          bottom: -32px;
-          left: -32px;
-          border-color: transparent;
-          border-top-color: transparent;
-          border-right-color: transparent;
-          border-bottom-color: #eaeef0;
-          border-left-color: #eaeef0;
-        }
-        .box4 {
-          margin-top: 150px;
-          border-style: solid;
-          border-width: 2px;
-          height: 15px;
-          width: 15px;
-          border-bottom-right-radius: 13px;
-          position: absolute;
-          bottom: -32px;
-          right: -32px;
-          border-color: transparent;
-          border-top-color: transparent;
-          border-right-color: #eaeef0;
-          border-bottom-color: #eaeef0;
-          border-left-color: transparent;
-        }
-      }
-      .buttonParent {
-        @include sm {
-          margin-top: 8px;
-          margin-right: 10px;
-          margin-left: -16px;
-        }
-        margin-bottom: 30px;
-        .MuiButton-contained2 {
-          color: #8d00d0;
-          background: rgba(141, 0, 208, 0.1);
-          border-radius: 22px;
-          font-family: "Inter", sans-serif;
-          font-weight: 600;
-          font-size: 16px;
-          margin-right: 10px;
-        }
-        .MuiButton-contained1 {
-          color: #6f2cff;
-
-          background: rgba(141, 0, 208, 0.1);
-          border-radius: 22px;
-          font-family: "Inter", sans-serif;
-          font-weight: 600;
-          font-size: 16px;
-          @include sm {
-            margin-top: 10px;
-          }
-        }
-      }
-      .text {
-        @include sm {
-          margin-top: -6px;
-          margin-right: 10px;
-          margin-left: -10px;
-          max-width: 288px;
-        }
-
-        .MuiTypography-body2 {
-          font-family: "Inter", sans-serif;
-          font-weight: 600;
-          font-size: 19px;
-          line-height: 120%;
-          margin-bottom: 10px;
-
-          color: #1d2123;
-        }
-        .MuiTypography-body1 {
-          font-family: "Inter", sans-serif;
-
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 160.02%;
-
-          color: #95a0a7;
-        }
       }
     }
 
@@ -443,255 +248,316 @@
       }
     }
   }
-  .cardParent {
-    display: flex;
-    // .productCard_container {
-    //   display: flex;
-    //   max-width: 668px;
-    //   flex-wrap: wrap;
-    // }
 
-    .parentChild {
-      display: flex;
-      justify-content: space-between;
-      @include sm {
-        max-width: 356px;
+  // .union {
+  //   margin-top: 30px;
+  //   display: flex;
+  //   .MuiTypography-root {
+  //     font-family: "Inter", sans-serif;
+  //     font-style: normal;
+  //     font-weight: 600;
+  //     font-size: 16px;
+  //     line-height: 160.02%;
+  //     color: #1d2123;
+  //     margin-right: 7px;
+  //   }
+  // }
 
-        display: flex;
-        flex-direction: column;
-      }
-    }
-    .parentChild2 {
-      display: flex;
-      justify-content: space-between;
-      @include sm {
-        max-width: 356px;
+  // .MuiButtonGroup-root {
+  //   margin-right: 10px;
+  //   margin-top: 16px;
 
-        display: flex;
-        flex-direction: column;
-      }
-      .MuiPaper-root {
-        @include sm {
-          display: none;
-        }
-      }
-      .firstChild {
-        .box {
-          position: relative;
-          margin: 12px;
-          .box1 {
-            border-style: solid;
-            border-width: 2px;
-            height: 15px;
-            width: 15px;
-            border-top-left-radius: 13px;
-            position: absolute;
-            top: -24px;
-            left: -20px;
-            border-color: transparent;
-            border-top-color: #eaeef0;
-            border-right-color: transparent;
-            border-bottom-color: transparent;
-            border-left-color: #eaeef0;
-          }
+  //   .MuiButton-contained1 {
+  //     padding: 5px 20px;
+  //     gap: 8px;
+  //     width: 54px;
+  //     height: 35px;
+  //     margin-top: 6px;
+  //     font-family: "Inter", sans-serif;
+  //     color: white;
+  //     background: #6f2cff;
+  //     border-radius: 22px !important;
+  //     margin-right: 10px;
+  //     @include sm {
+  //       margin-top: 5px;
+  //     }
+  //   }
+  //   .MuiButton-contained2 {
+  //     padding: 8px 12px;
+  //     font-family: "Inter", sans-serif;
+  //     gap: 8px;
+  //     font-weight: 600;
+  //     font-size: 16px;
+  //     color: #8d00d0;
+  //     margin-right: 10px;
+  //     text-transform: inherit;
 
-          .box2 {
-            border-style: solid;
-            border-width: 2px;
-            height: 15px;
-            width: 15px;
-            border-top-right-radius: 13px;
-            position: absolute;
-            top: -24px;
-            right: -20px;
-            border-color: transparent;
-            border-top-color: #eaeef0;
-            border-right-color: #eaeef0;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-          }
-          .box3 {
-            margin-top: 150px;
-            border-style: solid;
-            border-width: 2px;
-            height: 15px;
-            width: 15px;
-            border-bottom-left-radius: 13px;
-            position: absolute;
-            bottom: -51px;
-            left: -17px;
-            border-color: transparent;
-            border-top-color: transparent;
-            border-right-color: transparent;
-            border-bottom-color: #eaeef0;
-            border-left-color: #eaeef0;
-          }
-          .box4 {
-            margin-top: 150px;
-            border-style: solid;
-            border-width: 2px;
-            height: 15px;
-            width: 15px;
-            border-bottom-right-radius: 13px;
-            position: absolute;
-            bottom: -51px;
-            right: -16px;
-            border-color: transparent;
-            border-top-color: transparent;
-            border-right-color: #eaeef0;
-            border-bottom-color: #eaeef0;
-            border-left-color: transparent;
-          }
-        }
-      }
-      .secondChild {
-        .box {
-          position: relative;
-          margin: 12px;
-          .box1 {
-            border-style: solid;
-            border-width: 2px;
-            height: 15px;
-            width: 15px;
-            border-top-left-radius: 13px;
-            position: absolute;
-            top: -24px;
-            left: -20px;
-            border-color: transparent;
-            border-top-color: #eaeef0;
-            border-right-color: transparent;
-            border-bottom-color: transparent;
-            border-left-color: #eaeef0;
-          }
+  //     background: #ffffff;
+  //     border-radius: 22px !important;
+  //   }
+  //   .MuiButton-contained3 {
+  //     align-items: center;
+  //     padding: 8px 12px;
+  //     font-family: "Inter", sans-serif;
+  //     color: #8d00d0;
+  //     text-transform: inherit;
+  //     font-weight: 600;
+  //     font-size: 16px;
 
-          .box2 {
-            border-style: solid;
-            border-width: 2px;
-            height: 15px;
-            width: 15px;
-            border-top-right-radius: 13px;
-            position: absolute;
-            top: -24px;
-            right: -20px;
-            border-color: transparent;
-            border-top-color: #eaeef0;
-            border-right-color: #eaeef0;
-            border-bottom-color: transparent;
-            border-left-color: transparent;
-          }
-          .box3 {
-            margin-top: 150px;
-            border-style: solid;
-            border-width: 2px;
-            height: 15px;
-            width: 15px;
-            border-bottom-left-radius: 13px;
-            position: absolute;
-            bottom: -27px;
-            left: -17px;
-            border-color: transparent;
-            border-top-color: transparent;
-            border-right-color: transparent;
-            border-bottom-color: #eaeef0;
-            border-left-color: #eaeef0;
-          }
-          .box4 {
-            margin-top: 150px;
-            border-style: solid;
-            border-width: 2px;
-            height: 15px;
-            width: 15px;
-            border-bottom-right-radius: 13px;
-            position: absolute;
-            bottom: -28px;
-            right: -16px;
-            border-color: transparent;
-            border-top-color: transparent;
-            border-right-color: #eaeef0;
-            border-bottom-color: #eaeef0;
-            border-left-color: transparent;
-          }
-        }
-      }
-    }
-    justify-content: space-between;
-    flex-direction: column;
-    .MuiPaper-root {
-      .imgButton {
-        position: relative;
-        .MuiButtonBase-root {
-          position: absolute;
-          bottom: 0;
-          padding: 8px 12px;
-          gap: 8px;
+  //     margin-right: 10px;
 
-          background: #ffffff;
-          border-radius: 22px;
-          font-family: "Inter", sans-serif;
-          font-weight: 600;
-          font-size: 16px;
-          line-height: 120%;
+  //     background: #ffffff;
+  //     border-radius: 22px !important;
+  //   }
+  //   .MuiButton-contained4 {
+  //     align-items: center;
+  //     padding: 8px 12px;
+  //     font-weight: 600;
+  //     font-size: 16px;
+  //     text-transform: inherit;
+  //     font-family: "Inter", sans-serif;
+  //     color: #8d00d0;
 
-          color: #6f2cff;
-          margin-bottom: 30px;
-          margin-left: 30px;
-          text-transform: inherit;
-        }
-        .MuiButton-contained4 {
-          position: absolute;
-          bottom: 0;
-          padding: 8px 12px;
-          gap: 8px;
+  //     margin-right: 10px;
 
-          background: #ffffff;
-          border-radius: 22px;
-          font-family: "Inter", sans-serif;
-          font-weight: 600;
-          font-size: 16px;
-          line-height: 120%;
-          text-transform: inherit;
-          color: #8d00d0;
-          margin-bottom: 30px;
-          margin-left: 30px;
-        }
-      }
-      img {
-        border-bottom-right-radius: 0px;
-        border-bottom-left-radius: 0px;
-        @include sm {
-          max-width: 374px;
-          display: flex;
-          flex-direction: column;
-          width: 364px;
-        }
-      }
-      margin-top: 16px;
-      margin-right: 14px;
+  //     background: #ffffff;
+  //     border-radius: 22px !important;
+  //   }
+  // }
 
-      .MuiCardContent-root {
-        .MuiTypography-h5 {
-          font-family: "Inter", sans-serif;
+  // .cardParent {
 
-          font-style: normal;
-          font-weight: 600;
-          font-size: 20px;
-          line-height: 120%;
+  //   .parentChild2 {
+  //     display: flex;
+  //     justify-content: space-between;
+  //     @include sm {
+  //       max-width: 356px;
 
-          color: #1d2123;
-          margin-bottom: 15px;
-        }
-        .MuiTypography-body2 {
-          font-family: "Inter", sans-serif;
+  //       display: flex;
+  //       flex-direction: column;
+  //     }
+  //     .MuiPaper-root {
+  //       @include sm {
+  //         display: none;
+  //       }
+  //     }
+  //     .firstChild {
+  //       .box {
+  //         position: relative;
+  //         margin: 12px;
+  //         .box1 {
+  //           border-style: solid;
+  //           border-width: 2px;
+  //           height: 15px;
+  //           width: 15px;
+  //           border-top-left-radius: 13px;
+  //           position: absolute;
+  //           top: -24px;
+  //           left: -20px;
+  //           border-color: transparent;
+  //           border-top-color: #eaeef0;
+  //           border-right-color: transparent;
+  //           border-bottom-color: transparent;
+  //           border-left-color: #eaeef0;
+  //         }
 
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 160.02%;
+  //         .box2 {
+  //           border-style: solid;
+  //           border-width: 2px;
+  //           height: 15px;
+  //           width: 15px;
+  //           border-top-right-radius: 13px;
+  //           position: absolute;
+  //           top: -24px;
+  //           right: -20px;
+  //           border-color: transparent;
+  //           border-top-color: #eaeef0;
+  //           border-right-color: #eaeef0;
+  //           border-bottom-color: transparent;
+  //           border-left-color: transparent;
+  //         }
+  //         .box3 {
+  //           margin-top: 150px;
+  //           border-style: solid;
+  //           border-width: 2px;
+  //           height: 15px;
+  //           width: 15px;
+  //           border-bottom-left-radius: 13px;
+  //           position: absolute;
+  //           bottom: -51px;
+  //           left: -17px;
+  //           border-color: transparent;
+  //           border-top-color: transparent;
+  //           border-right-color: transparent;
+  //           border-bottom-color: #eaeef0;
+  //           border-left-color: #eaeef0;
+  //         }
+  //         .box4 {
+  //           margin-top: 150px;
+  //           border-style: solid;
+  //           border-width: 2px;
+  //           height: 15px;
+  //           width: 15px;
+  //           border-bottom-right-radius: 13px;
+  //           position: absolute;
+  //           bottom: -51px;
+  //           right: -16px;
+  //           border-color: transparent;
+  //           border-top-color: transparent;
+  //           border-right-color: #eaeef0;
+  //           border-bottom-color: #eaeef0;
+  //           border-left-color: transparent;
+  //         }
+  //       }
+  //     }
+  //     // .secondChild {
+  //     //   .box {
+  //     //     position: relative;
+  //     //     margin: 12px;
+  //     //     .box1 {
+  //     //       border-style: solid;
+  //     //       border-width: 2px;
+  //     //       height: 15px;
+  //     //       width: 15px;
+  //     //       border-top-left-radius: 13px;
+  //     //       position: absolute;
+  //     //       top: -24px;
+  //     //       left: -20px;
+  //     //       border-color: transparent;
+  //     //       border-top-color: #eaeef0;
+  //     //       border-right-color: transparent;
+  //     //       border-bottom-color: transparent;
+  //     //       border-left-color: #eaeef0;
+  //     //     }
 
-          color: #95a0a7;
-        }
-      }
-    }
-  }
+  //     //     .box2 {
+  //     //       border-style: solid;
+  //     //       border-width: 2px;
+  //     //       height: 15px;
+  //     //       width: 15px;
+  //     //       border-top-right-radius: 13px;
+  //     //       position: absolute;
+  //     //       top: -24px;
+  //     //       right: -20px;
+  //     //       border-color: transparent;
+  //     //       border-top-color: #eaeef0;
+  //     //       border-right-color: #eaeef0;
+  //     //       border-bottom-color: transparent;
+  //     //       border-left-color: transparent;
+  //     //     }
+  //     //     .box3 {
+  //     //       margin-top: 150px;
+  //     //       border-style: solid;
+  //     //       border-width: 2px;
+  //     //       height: 15px;
+  //     //       width: 15px;
+  //     //       border-bottom-left-radius: 13px;
+  //     //       position: absolute;
+  //     //       bottom: -27px;
+  //     //       left: -17px;
+  //     //       border-color: transparent;
+  //     //       border-top-color: transparent;
+  //     //       border-right-color: transparent;
+  //     //       border-bottom-color: #eaeef0;
+  //     //       border-left-color: #eaeef0;
+  //     //     }
+  //     //     .box4 {
+  //     //       margin-top: 150px;
+  //     //       border-style: solid;
+  //     //       border-width: 2px;
+  //     //       height: 15px;
+  //     //       width: 15px;
+  //     //       border-bottom-right-radius: 13px;
+  //     //       position: absolute;
+  //     //       bottom: -28px;
+  //     //       right: -16px;
+  //     //       border-color: transparent;
+  //     //       border-top-color: transparent;
+  //     //       border-right-color: #eaeef0;
+  //     //       border-bottom-color: #eaeef0;
+  //     //       border-left-color: transparent;
+  //     //     }
+  //     //   }
+  //     // }
+  //   }
+  //   justify-content: space-between;
+  //   flex-direction: column;
+  //   // .MuiPaper-root {
+  //   //   .imgButton {
+  //   //     position: relative;
+  //   //     .MuiButtonBase-root {
+  //   //       position: absolute;
+  //   //       bottom: 0;
+  //   //       padding: 8px 12px;
+  //   //       gap: 8px;
+
+  //   //       background: #ffffff;
+  //   //       border-radius: 22px;
+  //   //       font-family: "Inter", sans-serif;
+  //   //       font-weight: 600;
+  //   //       font-size: 16px;
+  //   //       line-height: 120%;
+
+  //   //       color: #6f2cff;
+  //   //       margin-bottom: 30px;
+  //   //       margin-left: 30px;
+  //   //       text-transform: inherit;
+  //   //     }
+  //   //     .MuiButton-contained4 {
+  //   //       position: absolute;
+  //   //       bottom: 0;
+  //   //       padding: 8px 12px;
+  //   //       gap: 8px;
+
+  //   //       background: #ffffff;
+  //   //       border-radius: 22px;
+  //   //       font-family: "Inter", sans-serif;
+  //   //       font-weight: 600;
+  //   //       font-size: 16px;
+  //   //       line-height: 120%;
+  //   //       text-transform: inherit;
+  //   //       color: #8d00d0;
+  //   //       margin-bottom: 30px;
+  //   //       margin-left: 30px;
+  //   //     }
+  //   //   }
+  //   //   img {
+  //   //     border-bottom-right-radius: 0px;
+  //   //     border-bottom-left-radius: 0px;
+  //   //     @include sm {
+  //   //       max-width: 374px;
+  //   //       display: flex;
+  //   //       flex-direction: column;
+  //   //       width: 364px;
+  //   //     }
+  //   //   }
+  //   //   margin-top: 16px;
+  //   //   // margin-right: 14px;
+
+  //   //   .MuiCardContent-root {
+  //   //     .MuiTypography-h5 {
+  //   //       font-family: "Inter", sans-serif;
+
+  //   //       font-style: normal;
+  //   //       font-weight: 600;
+  //   //       font-size: 20px;
+  //   //       line-height: 120%;
+
+  //   //       color: #1d2123;
+  //   //       margin-bottom: 15px;
+  //   //     }
+  //   //     .MuiTypography-body2 {
+  //   //       font-family: "Inter", sans-serif;
+
+  //   //       font-weight: 400;
+  //   //       font-size: 14px;
+  //   //       line-height: 160.02%;
+
+  //   //       color: #95a0a7;
+  //   //     }
+  //   //   }
+  //   // }
+  // }
   .virticalCard {
     max-width: 659px;
     @include sm {

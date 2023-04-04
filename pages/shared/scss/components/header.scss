@@ -1,5 +1,6 @@
 .headerParent {
   width: 100%;
+  display: none;
   @include sm {
     position: relative;
   }

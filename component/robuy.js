@@ -16,11 +16,11 @@ const Robuy = () => {
       <div className="robuyContainer">
         <div className="robuyParent">
           <Card className="robuychildcontainer" sx={{ maxWidth: 658 }}>
-            <div className="box">
-              <div className="box1"></div>
-              <div className="box2"></div>
-              <div className="box3"></div>
-              <div className="box4"></div>
+            <div className="robuy-box">
+              <div className="robuy-box1"></div>
+              <div className="robuy-box2"></div>
+              <div className="robuy-box3"></div>
+              <div className="robuy-box4"></div>
               <Card className="cardChild">
                 <div className="header">
                   <div className="headerChild">
