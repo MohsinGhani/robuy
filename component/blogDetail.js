@@ -97,7 +97,12 @@ const BlogDetail = () => {
             </div>
             <div>
               {" "}
-              <Button className="header-button">Подписаться</Button>
+              <Button
+                className="header-button"
+                onClick={() => router.push("https://robuy.gg/")}
+              >
+                Купить робуксы
+              </Button>
             </div>
           </div>
           <div className="button-tag">

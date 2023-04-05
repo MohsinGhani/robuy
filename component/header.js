@@ -20,10 +20,10 @@ function DrawerAppBar(props) {
           variant="h6"
           component="div"
           className="cp"
-          onClick={() => router.push("/")}
+          onClick={() => router.push("https://robuy.gg/")}
         >
           <svg
-            onClick={() => router.push("/")}
+            onClick={() => router.push("https://robuy.gg/")}
             width="16"
             height="19"
             viewBox="0 0 16 19"
