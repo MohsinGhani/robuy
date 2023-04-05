@@ -110,7 +110,7 @@ const RobuySecondPage = () => {
             </div>
           </Card>
         </div> */}
-      <BlogList />
+
       {/* </div> */}
     </>
   );

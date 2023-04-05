@@ -4,11 +4,7 @@
   justify-content: space-between;
   align-items: center;
   min-height: 100vh;
-  .btn-group {
-    @include sm {
-      margin-left: 10px;
-    }
-  }
+
   .button-content {
     display: flex;
     margin-top: 10px;
@@ -27,6 +23,14 @@
       color: #8d00d0;
       margin-right: 10px;
       background: #ffffff;
+      @include sm {
+        max-width: 358px;
+      }
+    }
+  }
+  .blogList {
+    @include sm {
+      max-width: 343px;
     }
   }
 }

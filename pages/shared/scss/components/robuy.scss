@@ -10,9 +10,9 @@
   @include sm {
     max-width: 358px;
     display: flex;
-    margin-left: 72px;
+    margin-left: 22px;
     margin-top: 63px;
-    margin-right: 69px;
+    /* margin-right: 69px; */
   }
 
   .button-content {
@@ -34,6 +34,9 @@
       color: #8d00d0;
       margin-right: 10px;
       background: #ffffff;
+      @include sm {
+        max-width: 358px;
+      }
     }
   }
 
