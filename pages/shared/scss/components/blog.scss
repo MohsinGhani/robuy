@@ -4,11 +4,15 @@
   justify-content: space-between;
   align-items: center;
   min-height: 100vh;
-
-  .MuiButtonGroup-root {
+  .btn-group {
+    @include sm {
+      margin-left: 10px;
+    }
+  }
+  .button-content {
     display: flex;
     margin-top: 10px;
-    .MuiButton-contained2 {
+    .MuiButtonBase-root {
       border-radius: 22px;
 
       display: flex;

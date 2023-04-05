@@ -15,7 +15,8 @@
     margin-right: 69px;
   }
 
-  .MuiButtonGroup-root {
+  .button-content {
+    display: flex;
     margin-top: 10px;
     .MuiButtonBase-root {
       border-radius: 22px;

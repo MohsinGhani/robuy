@@ -46,6 +46,7 @@
   justify-content: space-between;
   flex-direction: column;
   flex-wrap: wrap;
+
   .productCard_container {
     max-width: 658px;
     // width: 100%;
@@ -56,7 +57,7 @@
     @include sm {
       margin-bottom: 20px;
       max-width: 358px;
-      margin-left: 20px;
+      margin-left: 32px;
     }
   }
 }

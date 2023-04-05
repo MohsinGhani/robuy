@@ -75,12 +75,14 @@ const BlogList = () => {
           </Typography>
           <Typography> Посты блога</Typography>
         </div>
-
-        <ButtonGroup>
+        <div className="button-content">
           {tags?.map((t) => (
-            <Button variant="contained2"> {t.name} </Button>
+            <Button className="btns" variant="contained2">
+              {" "}
+              {t.name}{" "}
+            </Button>
           ))}
-        </ButtonGroup>
+        </div>
       </div>
       <div className="cardParent cp">
         <div className="productCard_container">
