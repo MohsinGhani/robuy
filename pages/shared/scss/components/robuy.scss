@@ -15,30 +15,32 @@
     /* margin-right: 69px; */
   }
 
-  // .button-content {
-  //   display: flex;
-  //   margin-top: 10px;
-  //   .MuiButtonBase-root {
-  //     border-radius: 22px;
-  //     text-align: center;
-  //     display: flex;
-  //     align-items: center;
-  //     align-items: center;
-  //     padding: 8px 12px;
-  //     font-family: "Inter";
-  //     gap: 8px;
-  //     text-transform: inherit;
-  //     height: 35px;
-  //     font-weight: 600;
-  //     font-size: 16px;
-  //     color: #8d00d0;
-  //     margin-right: 10px;
-  //     background: #ffffff;
-  //     @include sm {
-  //       max-width: 358px;
-  //     }
-  //   }
-  // }
+  .button-content {
+    display: flex;
+    margin-top: 10px;
+    overflow: auto;
+    .MuiButtonBase-root {
+      border-radius: 22px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      align-items: center;
+      padding: 8px 12px;
+      font-family: "Inter";
+      gap: 8px;
+      text-transform: inherit;
+      height: 35px;
+      font-weight: 600;
+      font-size: 16px;
+      color: #8d00d0;
+      margin-right: 10px;
+      background: #ffffff;
+      @include sm {
+        max-width: 358px;
+        min-width: auto;
+      }
+    }
+  }
 
   .robuyParent {
     display: flex;

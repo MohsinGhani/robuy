@@ -4,39 +4,33 @@
   justify-content: space-between;
   align-items: center;
   min-height: 100vh;
+
   .button-content {
     display: flex;
-    width: 100%;
-    .MuiButtonBase-root {
-      background-color: red;
-      min-width: 0;
-      width: 100%;
+    margin-top: 10px;
+    overflow: auto;
+    .btns {
+      border-radius: 22px;
+
+      display: flex;
+
+      padding: 8px 12px;
+      font-family: "Inter";
+      gap: 8px;
+      text-transform: inherit;
+      height: 35px;
+      font-weight: 600;
+      font-size: 16px;
+      color: #8d00d0;
+      margin-right: 10px;
+      background: #ffffff;
+
+      @include sm {
+        max-width: 358px;
+        min-width: auto;
+      }
     }
   }
-  // .button-content {
-  //   display: flex;
-  //   margin-top: 10px;
-  //   .MuiButtonBase-root {
-  //     border-radius: 22px;
-
-  //     display: flex;
-
-  //     padding: 8px 12px;
-  //     font-family: "Inter";
-  //     gap: 8px;
-  //     text-transform: inherit;
-  //     height: 35px;
-  //     font-weight: 600;
-  //     font-size: 16px;
-  //     color: #8d00d0;
-  //     margin-right: 10px;
-  //     background: #ffffff;
-  //     min-width: 0px !important;
-  //     @include sm {
-  //       max-width: 358px;
-  //     }
-  //   }
-  // }
   .blogList {
     @include sm {
       max-width: 343px;

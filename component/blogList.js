@@ -77,10 +77,7 @@ const BlogList = () => {
         </div>
         <div className="button-content">
           {tags?.map((t) => (
-            <Button className="btns" variant="contained2">
-              {" "}
-              {t.name}{" "}
-            </Button>
+            <Button className="btns"> {t.name} </Button>
           ))}
         </div>
       </div>
