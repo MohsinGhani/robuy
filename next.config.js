@@ -13,15 +13,7 @@ module.exports = (phase, { defaultConfig }) => {
    */
   const nextConfig = {
     /* config options here */
-    basePath: '/blog',
-    async rewrites() {
-      return [
-        {
-          source: '/blog',
-          destination: '/',
-        },
-      ]
-    },
+    //basePath: '/blog',
   };
   return nextConfig;
 };

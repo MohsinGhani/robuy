@@ -2,6 +2,7 @@
   "name": "robuyproject",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/blog",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
