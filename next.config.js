@@ -13,7 +13,7 @@ module.exports = (phase, { defaultConfig }) => {
    */
   const nextConfig = {
     /* config options here */
-    basePath: '/blog',
+    //basePath: '/blog',
   };
   return nextConfig;
 };
