@@ -50,7 +50,7 @@ const BlogDetail = () => {
   const description2 = blog?.fields?.description2;
   const description3 = blog?.fields?.description3;
   return (
-    <div className="blogDetail-container">
+    <div className="blogDetail-container  fade-in">
       <div className="blogDetail-img">
         {" "}
         <img src={blog?.fields?.image?.fields?.file?.url} />

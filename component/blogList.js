@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { ButtonGroup, Card } from "@mui/material";
@@ -8,9 +8,18 @@ import { useState, useEffect } from "react";
 import BlogCard from "./blogCard";
 import VirticalCard from "./virticalCard";
 
-const BlogList = () => {
+const BlogList = ({ blog }) => {
   const [blogs, setBlogs] = useState([]);
-  const [tags, setTags] = useState([]);
+  console.log("🚀 ~ blogs:", blogs);
+  const [tags, setTags] = useState();
+
+  const [activeTag, setActiveTag] = useState(null);
+
+  const handleButtonClick = (tag) => {
+    console.log("🚀 ~ tag:", tag);
+    setActiveTag(tag);
+    console.log("wqfqwe", tags);
+  };
 
   useEffect(() => {
     const client = createClient({
@@ -53,10 +62,24 @@ const BlogList = () => {
     fetchData();
   }, []);
 
+  // const selectedBlogs = allBlogs.filter((blog) =>
+  //   activeTag ? blog.tags.includes(activeTag) : true
+  // );
+
+  const blogsList = useMemo(() => {
+    if (!activeTag) {
+      return blogs;
+    } else {
+      return blogs?.filter((blog) =>
+        blog?.fields?.tags.some((tg) => tg.name === activeTag)
+      );
+    }
+  }, [blogs, activeTag]);
+
   return (
-    <div>
-      <div className="btn-group">
-        <div className="union">
+    <div className=" fade-in">
+      <div className="btn-group  fade-in">
+        <div className="union  fade-in">
           <Typography>
             <svg
               width="17"
@@ -75,15 +98,25 @@ const BlogList = () => {
           </Typography>
           <Typography> Посты блога</Typography>
         </div>
-        <div className="button-content">
+        <div className="button-content  fade-in">
           {tags?.map((t) => (
-            <Button className="btns"> {t.name} </Button>
+            <Button
+              key={t.name}
+              className={`btns ${t.name === activeTag ? "active" : ""}`}
+              style={{
+                backgroundColor: t.name === activeTag ? "#6F2CFF" : "white",
+                color: t.name === activeTag ? "white" : "#8D00D0",
+              }}
+              onClick={() => handleButtonClick(t.name)}
+            >
+              {t.name}
+            </Button>
           ))}
         </div>
       </div>
-      <div className="cardParent cp">
+      <div className="cardParent cp  fade-in">
         <div className="productCard_container">
-          {blogs.map((blog) => (
+          {blogsList.map((blog) => (
             <BlogCard blog={blog} />
           ))}
         </div>

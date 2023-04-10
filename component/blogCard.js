@@ -125,11 +125,15 @@ const BlogCard = ({ blog }) => {
   const description = blog?.fields?.description;
   const id = blog?.sys?.id;
   return (
-    <div className="blog-card-container" onClick={() => handler(id)}>
+    <div className="blog-card-container  fade-in" onClick={() => handler(id)}>
       <div className="blog-card-img">
         <img src={blog?.fields?.image?.fields?.file?.url} />
         {blog?.fields?.tags?.map((t) => (
-          <Button className="img-btn">{t.name}</Button>
+          <Button className="img-btn">
+            {t.name}
+
+            {console.log("🚀 ~ t.name:")}
+          </Button>
         ))}
       </div>
       <div className="blog-card-content-parent">

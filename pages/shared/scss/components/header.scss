@@ -26,8 +26,9 @@
       width: 120px;
     }
     .MuiButton-textPrimary {
-      width: 4.5vw;
+      // width: 4.5vw;
       height: 42px;
+      min-width: auto;
 
       background: linear-gradient(
           89.08deg,
