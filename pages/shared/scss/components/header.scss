@@ -24,6 +24,9 @@
       margin-left: 23px;
       margin-top: 10px;
       width: 120px;
+      @include sm {
+        margin-left: 17px;
+      }
     }
     .MuiButton-textPrimary {
       // width: 4.5vw;
@@ -163,6 +166,9 @@
           color: #95a0a7;
           text-transform: inherit;
           padding-left: 19px;
+          @include sm {
+            padding: 0px;
+          }
         }
         .btn-group4 {
           padding: 8px;
