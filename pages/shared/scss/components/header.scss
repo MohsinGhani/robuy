@@ -130,18 +130,26 @@
           text-transform: inherit;
           color: #95a0a7;
           padding-left: 19px;
+          .svg {
+            // color: #95a0a7 !important;
+            fill: #95a0a7;
+            @include sm {
+              fill: #1d2123;
+              // color: #1d2123 !imp/ortant;
+            }
+          }
           @include sm {
             background-color: white;
-            border-radius: 12px;
+            border-radius: 14px;
             margin-top: 0px;
-            margin-bottom: 2px;
+            margin-bottom: 0px;
             margin-left: 1px;
             color: black;
             font-weight: 600;
             font-size: 13px;
             line-height: 160.02%;
             width: 64%;
-
+            padding-left: 0px;
             color: #1d2123;
           }
         }
@@ -193,6 +201,15 @@
           margin-right: 2px;
           padding-left: 12px;
           padding-right: 11px;
+          @include sm {
+            margin-left: 0;
+            margin-right: 0px;
+            padding-left: -15px;
+
+            padding: 0px;
+            margin-bottom: 0px;
+            margin-top: 0px;
+          }
         }
       }
     }
