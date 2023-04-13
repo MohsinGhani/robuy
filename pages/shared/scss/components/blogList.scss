@@ -15,6 +15,11 @@
   }
 }
 .MuiButtonGroup-root {
+  border: none;
+  height: 42px;
+  justify-content: center;
+  gap: 15px;
+  display: flex;
   @include sm {
     width: 100%;
   }
