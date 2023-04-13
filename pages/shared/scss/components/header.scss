@@ -85,15 +85,28 @@
       background: #eaeef0;
       color: #95a0a7;
       @include sm {
+        background-color: rgb(245, 245, 245);
+      }
+      .btn {
+        @include sm {
+          margin-left: 44px;
+          max-width: inherit;
+          width: 180%;
+          background: #eaeef0;
+          border-radius: 14px;
+        }
+      }
+      @include sm {
         position: absolute;
         top: 50px;
         overflow: scroll;
         width: 100%;
 
-        margin-left: 31px;
+        // margin-left: 31px;
         margin-top: 21px;
 
-        margin-left: 15px;
+        // margin-left: 15px;
+        background-color: none;
       }
 
       .MuiButton-outlined {
@@ -121,9 +134,7 @@
         justify-content: space-between;
 
         @include sm {
-          width: 200%;
           padding: 2px;
-          margin: 1px;
         }
         .btn-group1 {
           padding: 8px;
