@@ -115,6 +115,10 @@
       .MuiButtonGroup-root {
         border: none;
         height: 42px;
+        gap: 0px;
+        display: flex;
+        justify-content: space-between;
+
         @include sm {
           width: 200%;
           padding: 2px;
