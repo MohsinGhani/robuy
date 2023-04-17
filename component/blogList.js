@@ -116,9 +116,13 @@ const BlogList = ({ blog }) => {
       </div>
       <div className="cardParent cp  fade-in">
         <div className="productCard_container">
-          {blogsList.map((blog) => (
-            <BlogCard blog={blog} />
-          ))}
+          {blogsList.map((blog) => {
+            {
+              console.log("🚀 ~ blog:", blog);
+            }
+            if (blog.isHorizontal) return;
+            return <BlogCard blog={blog} />;
+          })}
         </div>
       </div>
       <VirticalCard />
