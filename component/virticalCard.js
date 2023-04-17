@@ -2,13 +2,27 @@ import React from "react";
 import images from "../public/assets/images/index";
 import Image from "next/image";
 import { Button } from "@mui/material";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { useRouter } from "next/router";
 
-const VirticalCard = () => {
+const VirticalCard = ({ blog }) => {
+  const router = useRouter();
+
+  const description = blog?.fields?.description;
+  const id = blog?.sys?.id;
+
+  const handler = (id) => {
+    router.push({
+      pathname: "/blog",
+      query: { id },
+    });
+  };
+
   return (
     <>
-      <div className="virticalCard">
+      <div className="virticalCard cp" onClick={() => handler(id)}>
         <div className="virtical-child">
-          <Image src={images.Roblox} />
+          <img src={blog?.fields?.image?.fields?.file?.url} />
         </div>
 
         <div className="content-container">
@@ -45,14 +59,11 @@ const VirticalCard = () => {
           </div>
 
           <div className="content-card">
-            <Button className="btn">Игры</Button>
-            <h2>Roblox получила обновление графики</h2>
-            <p className="prg">
-              Разработчики Roblox, одной из самых популярных песочниц в мире,
-              выпустили обновление с различными графическими улучшениями. Патч
-              подтянул текстуры всех материалов игры: Этим релизом мы улучшили
-              визуальное...
-            </p>
+            {blog?.fields?.tags?.map((t) => (
+              <Button className="btn">{t.name}</Button>
+            ))}
+            <h2 className="vati-hed">{blog?.fields?.title}</h2>
+            <p className="prg">{documentToReactComponents(description)}</p>
           </div>
 
           <div className="border-containerlast">

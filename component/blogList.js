@@ -8,11 +8,10 @@ import { useState, useEffect } from "react";
 import BlogCard from "./blogCard";
 import VirticalCard from "./virticalCard";
 
-const BlogList = ({ blog }) => {
+const BlogList = ({ setMainBlog }) => {
   const [blogs, setBlogs] = useState([]);
-  console.log("🚀 ~ blogs:", blogs);
   const [tags, setTags] = useState();
-
+  const [horizontalCard, setHorizontalCard] = useState(undefined);
   const [activeTag, setActiveTag] = useState(null);
 
   const handleButtonClick = (tag) => {
@@ -54,6 +53,12 @@ const BlogList = ({ blog }) => {
           };
         });
         setBlogs(resultData);
+        setHorizontalCard(
+          resultData.find((item) => item?.fields?.isHorizontalCard)
+        );
+        if (setMainBlog) {
+          setMainBlog(resultData.find((item) => item?.fields?.isMainCard));
+        }
       } catch (error) {
         console.log(error);
       }
@@ -61,10 +66,6 @@ const BlogList = ({ blog }) => {
 
     fetchData();
   }, []);
-
-  // const selectedBlogs = allBlogs.filter((blog) =>
-  //   activeTag ? blog.tags.includes(activeTag) : true
-  // );
 
   const blogsList = useMemo(() => {
     if (!activeTag) {
@@ -117,15 +118,14 @@ const BlogList = ({ blog }) => {
       <div className="cardParent cp  fade-in">
         <div className="productCard_container">
           {blogsList.map((blog) => {
-            {
-              console.log("🚀 ~ blog:", blog);
-            }
-            if (blog.isHorizontal) return;
+            if (blog?.fields?.isHorizontalCard || blog?.fields?.isMainCard)
+              return;
+
             return <BlogCard blog={blog} />;
           })}
         </div>
       </div>
-      <VirticalCard />
+      {horizontalCard && <VirticalCard blog={horizontalCard} />}
     </div>
   );
 };
