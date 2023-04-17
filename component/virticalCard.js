@@ -11,7 +11,7 @@ const VirticalCard = () => {
           <Image src={images.Roblox} />
         </div>
 
-        <div>
+        <div className="content-container">
           <div className="border-container">
             <svg
               width="17"
