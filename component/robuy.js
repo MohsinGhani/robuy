@@ -6,10 +6,15 @@ import Header from "./header";
 import Card from "@mui/material/Card";
 import BlogList from "./blogList";
 import { useRouter } from "next/router";
+import { useState } from "react";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 const Robuy = () => {
   const router = useRouter();
+  const [mainBlog, setMainBlog] = useState(undefined);
+  console.log("mainBlog", mainBlog);
 
+  const description2 = mainBlog?.fields?.description;
   return (
     <>
       <Header />
@@ -35,7 +40,12 @@ const Robuy = () => {
                     Купить робуксы
                   </Button>
                 </div>
-                <img src={"/assets/images/image.svg"} alt="#" />
+                {mainBlog ? (
+                  <img src={mainBlog?.fields?.image?.fields?.file?.url} />
+                ) : (
+                  <img src={"/assets/images/image.svg"} alt="#" />
+                )}
+
                 <CardContent className="newsCard">
                   <div className="buttonParent">
                     <Button variant="contained2">Последняя новость</Button>
@@ -43,13 +53,14 @@ const Robuy = () => {
                   </div>
                   <div className="text">
                     <Typography variant="body2">
-                      В 2022 году в Roblox ежедневно заходили 56 миллионов
-                      игроков
+                      {mainBlog
+                        ? mainBlog?.fields?.title
+                        : "В 2022 году в Roblox ежедневно заходили 56 миллионов  игроков"}
                     </Typography>
                     <Typography variant="body1">
-                      Roblox опубликовала свои финансовые результаты за
-                      четвертый квартал 2022. У компании скачок выручки и
-                      заказов, но убытки значительно увеличились.
+                      {mainBlog
+                        ? documentToReactComponents(description2)
+                        : "Roblox опубликовала свои финансовые результаты за четвертый квартал 2022 У компании скачок выручки и заказов, но убытки значительно увеличились"}
                     </Typography>
                   </div>
                 </CardContent>
@@ -57,7 +68,7 @@ const Robuy = () => {
             </div>
           </Card>
         </div>
-        <BlogList />
+        <BlogList setMainBlog={setMainBlog} />
       </div>
     </>
   );

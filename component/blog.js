@@ -60,58 +60,6 @@ const RobuySecondPage = () => {
       <Header />
 
       <BlogDetail />
-      {/* <div className="robuySecondContainer">
-        <div className="robuyProject">
-          <Card sx={{ maxWidth: 658 }}>
-            <div className="top-icon">
-              <img src={blog?.fields?.image?.fields?.file?.url} />
-            </div>
-
-            <div className="robuySecConChild">
-              <div className="robuySecCon-box">
-                <div className="robuySecCon-box1"></div>
-                <div className="robuySecCon-box2"></div>
-                <div className="robuySecCon-box3"></div>
-                <div className="robuySecCon-box4"></div>
-                <div className="header">
-                  <div className="headerChild">
-                    <Typography variant="subtitle2">Блог Robuy</Typography>
-                    <Typography variant="subtitle1">
-                      Новости и обновления
-                    </Typography>
-                  </div>
-                  <Button onClick={() => router.push("https://robuy.gg/")}>
-                    Купить робуксы
-                  </Button>
-                </div>
-                <CardContent>
-                  <div className="buttonParent">
-                    {blog?.fields?.tags?.map((t) => (
-                      <Button variant="contained1"> {t.name} </Button>
-                    ))}
-                  </div>
-                  <div className="text">
-                    <Typography variant="body2">
-                      {blog?.fields?.title}
-                    </Typography>
-                  </div>
-                </CardContent>
-                <div className="description1">
-                  {documentToReactComponents(description)}
-                </div>
-
-                <div className="description2">
-                  {documentToReactComponents(description2)}
-                </div>
-                <div className="description3">
-                  {documentToReactComponents(description3)}
-                </div>
-              </div>
-            </div>
-          </Card>
-        </div> */}
-
-      {/* </div> */}
     </>
   );
 };

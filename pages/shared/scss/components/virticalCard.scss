@@ -39,6 +39,19 @@
       background: rgba(141, 0, 208, 0.1);
       border-radius: 22px;
     }
+    .vati-hed{
+      font-family: "Inter";
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 120%;
+      margin-bottom: 16px;
+      color: #1d2123;
+      width: 480px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      -webkit-line-clamp: 2;
+    }
     .prg {
       font-family: "Inter";
       font-style: normal;
@@ -46,6 +59,11 @@
       font-size: 14px;
       line-height: 160.02%;
       color: #95a0a7;
+      width: 440px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      -webkit-line-clamp: 3;
     }
   }
   .border-containerlast {
