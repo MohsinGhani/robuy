@@ -27,6 +27,7 @@
   }
   .content-card {
     padding: 10px 20px 10px 20px;
+    height: 81%;
 
     .btn {
       font-family: "Inter";
@@ -56,5 +57,9 @@
     margin-top: -24px;
     margin-right: 6px;
     margin-left: 6px;
+  }
+  .content-container {
+    height: 100%;
+    width: 100%;
   }
 }
