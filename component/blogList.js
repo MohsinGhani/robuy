@@ -15,9 +15,11 @@ const BlogList = ({ setMainBlog }) => {
   const [activeTag, setActiveTag] = useState(null);
 
   const handleButtonClick = (tag) => {
-    console.log("🚀 ~ tag:", tag);
-    setActiveTag(tag);
-    console.log("wqfqwe", tags);
+    if (activeTag === tag) {
+      setActiveTag(null);
+    } else {
+      setActiveTag(tag);
+    }
   };
 
   useEffect(() => {

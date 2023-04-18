@@ -12,7 +12,6 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 const Robuy = () => {
   const router = useRouter();
   const [mainBlog, setMainBlog] = useState(undefined);
-  console.log("mainBlog", mainBlog);
 
   const description2 = mainBlog?.fields?.description;
   return (

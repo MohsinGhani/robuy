@@ -8,12 +8,10 @@
   border-radius: 14px;
 
   .virtical-child {
-    display: flex;
-    flex-direction: column;
+    overflow: hidden;
   }
   img {
-    width: 160px;
-    height: 247px;
+    height: 100%;
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
   }
@@ -46,7 +44,7 @@
       line-height: 120%;
       margin-bottom: 16px;
       color: #1d2123;
-      width: 480px;
+      width: 460px;
       display: -webkit-box;
       -webkit-box-orient: vertical;
       overflow: hidden;
@@ -63,7 +61,7 @@
       display: -webkit-box;
       -webkit-box-orient: vertical;
       overflow: hidden;
-      -webkit-line-clamp: 3;
+      -webkit-line-clamp: 2;
     }
   }
   .border-containerlast {
