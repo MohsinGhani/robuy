@@ -7,7 +7,6 @@ import { useRouter } from "next/router";
 
 const VirticalCard = ({ blog }) => {
   const router = useRouter();
-
   const description = blog?.fields?.description;
   const id = blog?.sys?.id;
 
