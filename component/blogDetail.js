@@ -46,9 +46,11 @@ const BlogDetail = () => {
     };
     fetchData();
   }, [id]);
+
   const description = blog?.fields?.description;
   const description2 = blog?.fields?.description2;
   const description3 = blog?.fields?.description3;
+
   return (
     <div className="blogDetail-container  fade-in">
       <div className="blogDetail-img">
@@ -109,8 +111,6 @@ const BlogDetail = () => {
             {blog?.fields?.tags?.map((t) => (
               <Button className="first-button-tag"> {t.name} </Button>
             ))}
-            {/* <Button className="first-button-tag">Последняя новость</Button>
-            <Button className="second-button-tag">Обновления</Button> */}
           </div>
           <div className="content">
             <Typography variant="h6">{blog?.fields?.title}</Typography>

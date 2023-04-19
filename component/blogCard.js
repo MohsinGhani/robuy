@@ -4,14 +4,12 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { useRouter } from "next/router";
 const BlogCard = ({ blog }) => {
   const router = useRouter();
-
   const handler = (id) => {
     router.push({
       pathname: "/blog",
       query: { id },
     });
   };
-
   const description = blog?.fields?.description;
   const id = blog?.sys?.id;
   return (
@@ -75,7 +73,6 @@ const BlogCard = ({ blog }) => {
               stroke-linecap="round"
             />
           </svg>
-
           <svg
             width="17"
             height="17"
