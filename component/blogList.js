@@ -1,8 +1,6 @@
 import React, { useMemo } from "react";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { ButtonGroup, Card } from "@mui/material";
-
 import { createClient } from "contentful";
 import { useState, useEffect } from "react";
 import BlogCard from "./blogCard";

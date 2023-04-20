@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import images from "../public/assets/images/index";
-import { Button, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { createClient } from "contentful";

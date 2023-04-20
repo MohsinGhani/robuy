@@ -1,6 +1,4 @@
 import React from "react";
-import images from "../public/assets/images/index";
-import Image from "next/image";
 import { Button } from "@mui/material";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { useRouter } from "next/router";

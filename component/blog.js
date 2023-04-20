@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 import Header from "./header";
-import BlogList from "./blogList";
 import { useRouter } from "next/router";
 import { createClient } from "contentful";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import BlogDetail from "./blogDetail";
 
 const RobuySecondPage = () => {
@@ -51,9 +45,6 @@ const RobuySecondPage = () => {
     };
     fetchData();
   }, [id]);
-  const description = blog?.fields?.description;
-  const description2 = blog?.fields?.description2;
-  const description3 = blog?.fields?.description3;
 
   return (
     <>

@@ -10,7 +10,7 @@ const Index = () => {
       <div className="blogList">
         <BlogList />
       </div>
-      {/* <BlogDetail /> */}
+      <BlogDetail />
     </div>
   );
 };
