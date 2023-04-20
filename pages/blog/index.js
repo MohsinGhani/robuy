@@ -1,5 +1,4 @@
 import RobuySecondPage from "@/component/blog";
-import BlogDetail from "@/component/blogDetail";
 import BlogList from "@/component/blogList";
 import React from "react";
 
@@ -10,7 +9,6 @@ const Index = () => {
       <div className="blogList">
         <BlogList />
       </div>
-      <BlogDetail />
     </div>
   );
 };

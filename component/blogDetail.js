@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { createClient } from "contentful";
+import { Button, Typography } from "@mui/material";
 const BlogDetail = () => {
   const [blog, setBlog] = useState(null);
   const router = useRouter();
