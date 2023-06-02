@@ -49,7 +49,6 @@ const RobuySecondPage = () => {
   return (
     <>
       <Header />
-
       <BlogDetail />
     </>
   );
