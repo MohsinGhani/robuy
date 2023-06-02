@@ -13,9 +13,9 @@ const BlogCard = ({ blog }) => {
   const description = blog?.fields?.description;
   const id = blog?.sys?.id;
   return (
-    <div className="blog-card-container  fade-in" onClick={() => handler(id)}>
+    <div className="blog-card-container  fade-in">
       <div className="blog-card-img">
-        <img src={blog?.fields?.image?.fields?.file?.url} />
+        <a href="#" onClick={() => handler(id)}> <img src={blog?.fields?.image?.fields?.file?.url} /></a>
         {blog?.fields?.tags?.map((t) => (
           <Button className="img-btn">{t.name}</Button>
         ))}
@@ -53,7 +53,7 @@ const BlogCard = ({ blog }) => {
           </svg>
         </div>
         <div className="card-content">
-          <h2 className="blog-card-heading">{blog?.fields?.title}</h2>
+          <h2 className="blog-card-heading"> <a onClick={() => handler(id)} href="#">{blog?.fields?.title}</a> </h2>
           <Typography className="blog-card-prg">
             {documentToReactComponents(description)}
           </Typography>

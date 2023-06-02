@@ -29,7 +29,6 @@
       }
     }
     .MuiButton-textPrimary {
-      // width: 4.5vw;
       height: 42px;
       min-width: auto;
 
@@ -88,6 +87,11 @@
         background-color: rgb(245, 245, 245);
       }
       .btn {
+        @include md {
+          width: 120%;
+        }
+      }
+      .btn {
         @include sm {
           margin-left: 44px;
           max-width: inherit;
@@ -101,11 +105,7 @@
         top: 50px;
         overflow: scroll;
         width: 100%;
-
-        // margin-left: 31px;
         margin-top: 21px;
-
-        // margin-left: 15px;
         background-color: none;
       }
 

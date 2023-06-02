@@ -18,13 +18,10 @@
 
     .img-btn {
       padding: 8px 12px;
-
       height: 35px;
-
       background: #ffffff;
       border-radius: 22px;
       font-family: "Inter";
-
       font-weight: 600;
       font-size: 16px;
       line-height: 120%;
@@ -59,7 +56,7 @@
       padding-left: 20px;
       padding-bottom: 24px;
 
-      .blog-card-heading {
+      .blog-card-heading a{
         font-family: "Inter";
         font-weight: 600;
         font-size: 20px;
@@ -71,6 +68,8 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         -webkit-line-clamp: 2;
+        text-decoration: none;
+        cursor: pointer;
       }
       .blog-card-prg {
         font-family: "Inter";
