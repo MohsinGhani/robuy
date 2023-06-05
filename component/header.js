@@ -58,7 +58,7 @@ function DrawerAppBar() {
               </Button>
               <Button
                 className="btn-group2"
-                onClick={() => router.push("https://robuy.gg/free")}
+                onClick={() => router.push("https://robuy.gg/free/")}
               >
                 <svg
                   width="17"

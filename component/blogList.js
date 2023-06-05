@@ -125,6 +125,7 @@ const BlogList = ({ setMainBlog }) => {
           })}
         </div>
       </div>
+      
       {horizontalCard && <VirticalCard blog={horizontalCard} />}
     </div>
   );

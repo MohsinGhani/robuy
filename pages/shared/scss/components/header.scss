@@ -1,6 +1,5 @@
 .headerParent {
   width: 100%;
-  // display: none;
   @include sm {
     position: relative;
   }
@@ -31,7 +30,6 @@
     .MuiButton-textPrimary {
       height: 42px;
       min-width: auto;
-
       background: linear-gradient(
           89.08deg,
           #4095d2 0.84%,

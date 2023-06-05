@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { createClient } from "contentful";
 import { Button, Typography } from "@mui/material";
+import Head from "next/head";
 const BlogDetail = () => {
   const [blog, setBlog] = useState(null);
   const router = useRouter();
@@ -51,6 +52,9 @@ const BlogDetail = () => {
 
   return (
     <div className="blogDetail-container  fade-in">
+      <Head>
+        <title>Robuy | Блог про робуксы и их выгодную покупку""</title>
+      </Head>
       <div className="blogDetail-img">
         {" "}
         <img src={blog?.fields?.image?.fields?.file?.url} />

@@ -35,7 +35,9 @@ const Robuy = () => {
                       Новости и обновления
                     </Typography>
                   </div>
-                  <Button onClick={() => router.push("https://robuy.gg/")}>
+                  <Button
+                    onClick={() => router.push("https://robuy.gg/purchase")}
+                  >
                     Купить робуксы
                   </Button>
                 </div>
