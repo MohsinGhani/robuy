@@ -2,12 +2,12 @@ import React from "react";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import Header from "./header";
 import Card from "@mui/material/Card";
 import BlogList from "./blogList";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import Head from "next/head";
 
 const Robuy = () => {
   const router = useRouter();
@@ -16,7 +16,9 @@ const Robuy = () => {
   const description2 = mainBlog?.fields?.description;
   return (
     <>
-      <Header />
+      <Head>
+        <link rel="canonical" href="https://robuy.gg/blog"></link>
+      </Head>
       <div className="robuyContainer  fade-in">
         <div className="robuyParent">
           <Card className="robuychildcontainer fade-in" sx={{ maxWidth: 658 }}>

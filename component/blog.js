@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Header from "./header";
 import { useRouter } from "next/router";
 import { createClient } from "contentful";
-import BlogDetail from "./blogDetail";
+import BlogDetail from "@/pages/blog/[id]";
 
 const RobuySecondPage = () => {
   const [blog, setBlog] = useState(null);
+  console.log("🚀 ~ blog:", blog);
   const router = useRouter();
   const { id } = router.query;
 
@@ -48,7 +48,6 @@ const RobuySecondPage = () => {
 
   return (
     <>
-      <Header />
       <BlogDetail />
     </>
   );

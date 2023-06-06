@@ -6,8 +6,6 @@ import Robuy from "../component/robuy";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const canonicalUrl =
-    typeof window !== "undefined" ? window.location.href : "";
   return (
     <>
       <Head>
@@ -42,8 +40,6 @@ export default function Home() {
           property="twitter:description"
           content="Robuy - магазин для покупки робуксов по самой выгодной цене (1₽ = 4R$). Самый проверенный и известный  способ купить робуксы дёшево, быстро и безопасно. Бесплатный бонус 100 робуксов на первую покупку, покупай робуксы с нами!"
         />
-        {/* <link rel="canonical" href={window?.location?.href} /> */}
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>

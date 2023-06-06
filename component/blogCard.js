@@ -4,18 +4,21 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { useRouter } from "next/router";
 const BlogCard = ({ blog }) => {
   const router = useRouter();
-  const handler = (id) => {
-    router.push({
-      pathname: "/blog",
-      query: { id },
-    });
-  };
+
   const description = blog?.fields?.description;
-  const id = blog?.sys?.id;
+  const slug = blog?.fields?.slug;
+
+  const handler = (id) => {
+    router.push({ pathname: `/blog/${id}` });
+  };
+
   return (
     <div className="blog-card-container  fade-in">
       <div className="blog-card-img">
-        <a href="#" onClick={() => handler(id)}> <img src={blog?.fields?.image?.fields?.file?.url} /></a>
+        <a onClick={() => handler(slug)}>
+          {" "}
+          <img src={blog?.fields?.image?.fields?.file?.url} />
+        </a>
         {blog?.fields?.tags?.map((t) => (
           <Button className="img-btn">{t.name}</Button>
         ))}
@@ -53,7 +56,10 @@ const BlogCard = ({ blog }) => {
           </svg>
         </div>
         <div className="card-content">
-          <h2 className="blog-card-heading"> <a onClick={() => handler(id)} href="#">{blog?.fields?.title}</a> </h2>
+          <h2 className="blog-card-heading">
+            {" "}
+            <a onClick={() => handler(slug)}>{blog?.fields?.title}</a>{" "}
+          </h2>
           <Typography className="blog-card-prg">
             {documentToReactComponents(description)}
           </Typography>

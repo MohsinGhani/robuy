@@ -6,9 +6,7 @@ const Index = () => {
   return (
     <div className="Index">
       <RobuySecondPage />
-      <div className="blogList">
-        <BlogList />
-      </div>
+      <div className="blogList">{/* <BlogList /> */}</div>
     </div>
   );
 };
