@@ -4,7 +4,6 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { useRouter } from "next/router";
 const BlogCard = ({ blog }) => {
   const router = useRouter();
-
   const description = blog?.fields?.description;
   const slug = blog?.fields?.slug;
 
@@ -16,7 +15,6 @@ const BlogCard = ({ blog }) => {
     <div className="blog-card-container  fade-in">
       <div className="blog-card-img">
         <a onClick={() => handler(slug)}>
-          {" "}
           <img src={blog?.fields?.image?.fields?.file?.url} />
         </a>
         {blog?.fields?.tags?.map((t) => (
@@ -57,7 +55,6 @@ const BlogCard = ({ blog }) => {
         </div>
         <div className="card-content">
           <h2 className="blog-card-heading">
-            {" "}
             <a onClick={() => handler(slug)}>{blog?.fields?.title}</a>{" "}
           </h2>
           <Typography className="blog-card-prg">

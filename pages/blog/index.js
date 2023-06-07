@@ -1,5 +1,4 @@
 import RobuySecondPage from "@/component/blog";
-import BlogList from "@/component/blogList";
 import React from "react";
 
 const Index = () => {

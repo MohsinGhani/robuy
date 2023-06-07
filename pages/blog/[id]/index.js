@@ -10,7 +10,6 @@ const BlogDetail = () => {
   const [blog, setBlog] = useState(null);
   const router = useRouter();
   const { id } = router?.query;
-  console.log("🚀 ~ blog:", blog);
 
   useEffect(() => {
     const client = createClient({
@@ -35,12 +34,11 @@ const BlogDetail = () => {
           });
           return tt[0] ? tt[0] : null;
         });
-
         const result = {
           ...entryResponse,
           fields: { ...entryResponse.fields, tags: filteredTags },
+          tags,
         };
-
         setBlog(result);
       } catch (error) {
         console.log(error);
@@ -49,9 +47,14 @@ const BlogDetail = () => {
     fetchData();
   }, [id]);
 
-  const description = blog?.items?.[0]?.fields?.description;
-  const description2 = blog?.items?.[0]?.fields?.description2;
-  const description3 = blog?.items?.[0]?.fields?.description3;
+  const findItem = blog?.items?.find((x) => x?.fields?.slug == id);
+
+  const description = findItem?.fields?.description;
+  const description2 = findItem?.fields?.description2;
+  const description3 = findItem?.fields?.description3;
+  const tagDet = blog?.tags?.find(
+    (item) => item?.id === findItem?.metadata?.tags[0]?.sys?.id
+  );
 
   return (
     <div className="Index">
@@ -62,7 +65,7 @@ const BlogDetail = () => {
 
       <div className="blogDetail-container  fade-in">
         <div className="blogDetail-img">
-          <img src={blog?.items?.[0]?.fields?.image?.fields?.file?.url} />
+          <img src={findItem?.fields?.image?.fields?.file?.url} />
         </div>
         <div className="blogdetail-content">
           <div className="border-arrow">
@@ -114,14 +117,10 @@ const BlogDetail = () => {
               </div>
             </div>
             <div className="button-tag">
-              {blog?.fields?.tags?.map((t) => (
-                <Button className="first-button-tag"> {t.name} </Button>
-              ))}
+              <Button className="first-button-tag"> {tagDet?.name} </Button>
             </div>
             <div className="content">
-              <Typography variant="h6">
-                {blog?.items?.map((item) => item?.fields?.title)}
-              </Typography>
+              <Typography variant="h6">{findItem?.fields?.title}</Typography>
               <Typography className="content-prg">
                 {documentToReactComponents(description)}
               </Typography>

@@ -12,8 +12,8 @@ import Head from "next/head";
 const Robuy = () => {
   const router = useRouter();
   const [mainBlog, setMainBlog] = useState(undefined);
-
   const description2 = mainBlog?.fields?.description;
+
   return (
     <>
       <Head>

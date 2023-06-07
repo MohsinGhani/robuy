@@ -5,7 +5,6 @@ import BlogDetail from "@/pages/blog/[id]";
 
 const RobuySecondPage = () => {
   const [blog, setBlog] = useState(null);
-  console.log("🚀 ~ blog:", blog);
   const router = useRouter();
   const { id } = router.query;
 
