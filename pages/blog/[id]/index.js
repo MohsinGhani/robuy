@@ -59,13 +59,13 @@ const BlogDetail = () => {
   return (
     <div className="Index">
       <Head>
-        <title>Robuy | Блог про робуксы и их выгодную покупку""</title>
+        <title>Robuy | Блог про робуксы и их выгодную покупку</title>
         <link rel="canonical" href="https://robuy.gg/blog"></link>
       </Head>
 
       <div className="blogDetail-container  fade-in">
         <div className="blogDetail-img">
-          <Img src={findItem?.fields?.image?.fields?.file?.url} />
+          <img src={findItem?.fields?.image?.fields?.file?.url} alt="" />
         </div>
         <div className="blogdetail-content">
           <div className="border-arrow">
