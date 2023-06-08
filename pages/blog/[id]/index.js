@@ -65,7 +65,7 @@ const BlogDetail = () => {
 
       <div className="blogDetail-container  fade-in">
         <div className="blogDetail-img">
-          <img src={findItem?.fields?.image?.fields?.file?.url} />
+          <Img src={findItem?.fields?.image?.fields?.file?.url} />
         </div>
         <div className="blogdetail-content">
           <div className="border-arrow">
