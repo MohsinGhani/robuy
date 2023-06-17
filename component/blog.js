@@ -11,7 +11,7 @@ const RobuySecondPage = () => {
   useEffect(() => {
     const client = createClient({
       space: process.env.NEXT_PUBLIC_SPACE,
-      token: process.env.NEXT_PUBLIC_ACCESS_TOKEN,
+      accessToken: process.env.NEXT_PUBLIC_ACCESS_TOKEN,
     });
 
     const fetchData = async () => {
