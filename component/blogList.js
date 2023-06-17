@@ -23,7 +23,7 @@ const BlogList = ({ setMainBlog }) => {
   useEffect(() => {
     const client = createClient({
       space: process.env.NEXT_PUBLIC_SPACE,
-      accessToken: process.env.NEXT_PUBLIC_ACCESS_TOKEN,
+      token: process.env.NEXT_PUBLIC_ACCESS_TOKEN,
     });
 
     const fetchData = async () => {
