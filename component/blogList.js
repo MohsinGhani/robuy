@@ -22,8 +22,8 @@ const BlogList = ({ setMainBlog }) => {
 
   useEffect(() => {
     const client = createClient({
-      space: "c288e1xhsyct",
-      accessToken: "9F8haQVl_uqqdxbrDbTh6noeplOE4qbhBHNn9CekcLo",
+      space: process.env.NEXT_PUBLIC_SPACE,
+      accessToken: process.env.NEXT_PUBLIC_ACCESS_TOKEN,
     });
 
     const fetchData = async () => {
@@ -125,7 +125,7 @@ const BlogList = ({ setMainBlog }) => {
           })}
         </div>
       </div>
-      
+
       {horizontalCard && <VirticalCard blog={horizontalCard} />}
     </div>
   );
